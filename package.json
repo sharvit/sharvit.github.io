@@ -21,9 +21,11 @@
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-sass": "^2.1.4",
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-source-filesystem": "^2.1.7",
     "gatsby-transformer-sharp": "^2.2.5",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -32,7 +34,8 @@
   "devDependencies": {
     "eslint": "^6.1.0",
     "eslint-plugin-patternfly-react": "^0.2.3",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "resolve-url-loader": "^3.1.0"
   },
   "engines": {
     "node": ">=8"
