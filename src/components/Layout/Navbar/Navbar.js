@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Link } from 'gatsby';
 
-const Navbar = ({ siteTitle }) => (
-  <nav className="navbar navbar-ct-transparent" role="navigation">
+const Navbar = ({ siteTitle, transparent }) => (
+  <nav
+    className={classNames(
+      'navbar',
+      transparent ? 'navbar-ct-transparent' : 'navbar-ct-primary'
+    )}
+    role="navigation"
+  >
     <div className="container">
-      {/* <!-- Brand and toggle get grouped for better mobile display --> */}
       <div className="navbar-header">
         <button
           type="button"
@@ -22,8 +28,6 @@ const Navbar = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </div>
-
-      {/* <!-- Collect the nav links, forms, and other content for toggling --> */}
       <div className="collapse navbar-collapse" id="navigation">
         <ul className="nav navbar-nav navbar-right">
           <li>
@@ -43,10 +47,12 @@ const Navbar = ({ siteTitle }) => (
 
 Navbar.propTypes = {
   siteTitle: PropTypes.string,
+  transparent: PropTypes.bool,
 };
 
 Navbar.defaultProps = {
   siteTitle: ``,
+  transparent: false,
 };
 
 export default Navbar;

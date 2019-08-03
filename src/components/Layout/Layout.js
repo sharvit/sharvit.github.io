@@ -1,40 +1,25 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 
 import Navbar from './Navbar';
 import '../../stylesheet/main.scss';
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  return (
-    <>
-      <Navbar siteTitle={data.site.siteMetadata.title} />
-      <div className="wrapper">
-        <main>{children}</main>
-      </div>
-    </>
-  );
-};
+const Layout = ({ siteTitle, transparent, children }) => (
+  <>
+    <Navbar siteTitle={siteTitle} transparent={transparent} />
+    <div className="wrapper">{children}</div>
+  </>
+);
 
 Layout.propTypes = {
+  transparent: PropTypes.bool,
+  siteTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
+};
+
+Layout.defaultProps = {
+  siteTitle: '',
+  transparent: false,
 };
 
 export default Layout;

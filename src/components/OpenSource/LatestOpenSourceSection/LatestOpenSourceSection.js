@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Link } from 'gatsby';
 
 import OpenSourceCard from '../OpenSourceCard';
 
-import './LatestOpenSourceSection.scss';
+import styles from './LatestOpenSourceSection.module.scss';
 
 const LatestOpenSourceSection = ({ repositories }) => (
-  <div className="section posts-section open-source-section section-light-brown">
+  <div
+    className={classNames(
+      'section posts-section section-light-brown',
+      styles.container
+    )}
+  >
     <div className="container">
       <div className="row">
         <div className="col-md-10 col-md-offset-1">

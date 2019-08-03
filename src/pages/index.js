@@ -6,7 +6,7 @@ import ProfileSection from '../components/Profile/ProfileSection';
 import LatestOpenSourceSection from '../components/OpenSource/LatestOpenSourceSection';
 
 const IndexPage = () => (
-  <Layout>
+  <Layout transparent>
     <SEO title="Home" />
     <ProfileSection
       name="Avi Sharvit"

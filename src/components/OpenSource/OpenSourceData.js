@@ -11,6 +11,7 @@ export const getUserRepositories = async username => {
     fullName: repository.full_name,
     description: repository.description,
     language: repository.language,
+    htmlUrl: repository.html_url,
     stargazersCount: repository.stargazers_count,
     forksCount: repository.forks_count,
     fork: repository.fork,
