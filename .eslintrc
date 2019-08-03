@@ -1,0 +1,10 @@
+{
+  "plugins": ["patternfly-react"],
+  "extends": ["plugin:patternfly-react/recommended"],
+  "rules": {
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "es5"
+    }]
+  }
+}
