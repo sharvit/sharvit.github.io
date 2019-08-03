@@ -1,8 +1,12 @@
+const author = require('./content/meta/author');
+const socialLinks = require('./content/meta/socialLinks');
+
 module.exports = {
   siteMetadata: {
     title: 'Avi Sharvit',
     description: 'Expert Full Stack Developer',
-    author: `@avi_sharvit`,
+    author,
+    socialLinks,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

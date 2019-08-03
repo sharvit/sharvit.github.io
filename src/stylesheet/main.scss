@@ -3,17 +3,19 @@
 //
 
 // @import "reset";
-// @import "variables";
+@import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 @import "themes/ct-paper";
 
 @import "icons/svg-icons";
 @import "icons/themify-icons";
 
-@import "_highlights";
+@import "highlights";
 
-// @import 'font-awesome-sprockets'; @import 'font-awesome';
+@import '~@fortawesome/fontawesome-free/css/all.css';
 
 @import "pages/pages";
