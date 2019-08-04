@@ -1,0 +1,23 @@
+$medium-pale-bg:             #F1EAE0 !default;
+
+.article {
+  border-top: 1px solid $medium-pale-bg;
+  margin-top: 30px;
+
+  .title {
+    font-weight: 600;
+  }
+
+  .article-content {
+    text-align: center;
+
+    p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .read-more-button {
+      margin-top: 10px;
+    }
+  }
+}

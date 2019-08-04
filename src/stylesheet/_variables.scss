@@ -1,7 +1,8 @@
-
 //
 // VARIABLES
 //
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 // Colors
 $blue: #4183C4;
@@ -25,3 +26,6 @@ $georgia: Georgia, serif;
     @content;
   }
 }
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "./themes/ct-paper/variables";

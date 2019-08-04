@@ -4,11 +4,8 @@
 
 // @import "reset";
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
 
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
-
 @import "themes/ct-paper";
 
 @import "icons/svg-icons";
@@ -17,5 +14,3 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "highlights";
 
 @import '~@fortawesome/fontawesome-free/css/all.css';
-
-@import "pages/pages";

@@ -6,7 +6,7 @@ import AllOpenSourceSection from '../components/OpenSource/AllOpenSourceSection'
 
 const OpenSourcePage = () => (
   <Layout>
-    <SEO title="open source" />
+    <SEO title="Open Source Projects" />
     <AllOpenSourceSection />
   </Layout>
 );

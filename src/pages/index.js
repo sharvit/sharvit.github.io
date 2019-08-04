@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ProfileSection from '../components/Profile/ProfileSection';
 import LatestOpenSourceSection from '../components/OpenSource/LatestOpenSourceSection';
+import LatestBlogPostsSection from '../components/Blog/LatestBlogPostsSection';
 
 const IndexPage = () => (
   <Layout transparent>
@@ -14,6 +15,7 @@ const IndexPage = () => (
       avatar="https://avatars0.githubusercontent.com/u/1262502"
     />
     <LatestOpenSourceSection />
+    <LatestBlogPostsSection />
   </Layout>
 );
 
