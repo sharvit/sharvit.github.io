@@ -5,6 +5,7 @@
  */
 
 const path = require('path');
+const siteMetadata = require('./content/meta/siteMetadata');
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -38,11 +39,12 @@ exports.createPages = async ({ actions, graphql }) => {
     const date = `${year}-${month}-${day}`;
 
     const postPath = `/blog/${title.join('-')}`;
+    const postUrl = `${siteMetadata.siteUrl}${postPath}`;
 
     createPage({
       component,
       path: postPath,
-      context: { name, date },
+      context: { name, date, postPath, postUrl },
     });
   });
 };

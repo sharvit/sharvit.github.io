@@ -1,13 +1,7 @@
-const author = require('./content/meta/author');
-const socialLinks = require('./content/meta/socialLinks');
+const siteMetadata = require('./content/meta/siteMetadata');
 
 module.exports = {
-  siteMetadata: {
-    title: 'Avi Sharvit',
-    description: 'Expert Full Stack Developer',
-    author,
-    socialLinks,
-  },
+  siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -50,6 +44,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: ['gatsby-remark-prismjs'],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: siteMetadata.author.disqus,
       },
     },
     {

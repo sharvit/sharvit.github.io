@@ -5,4 +5,5 @@ module.exports = {
   github: 'sharvit',
   twitter: 'avi_sharvit',
   stackoverflow: '5800965',
+  disqus: 'sharvit',
 };
