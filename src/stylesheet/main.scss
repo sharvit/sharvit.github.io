@@ -1,16 +1,12 @@
 //
 // IMPORTS
 //
-
-// @import "reset";
 @import "variables";
 
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "themes/ct-paper";
+@import "~prismjs/themes/prism-solarizedlight.css";
 
 @import "icons/svg-icons";
 @import "icons/themify-icons";
-
-@import "highlights";
-
 @import '~@fortawesome/fontawesome-free/css/all.css';
