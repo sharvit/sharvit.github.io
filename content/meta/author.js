@@ -6,4 +6,5 @@ module.exports = {
   twitter: 'avi_sharvit',
   stackoverflow: '5800965',
   disqus: 'sharvit',
+  avatar: 'https://avatars0.githubusercontent.com/u/1262502',
 };

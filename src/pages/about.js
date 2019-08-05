@@ -7,11 +7,7 @@ import AboutSection from '../components/Profile/AboutSection';
 const AboutPage = () => (
   <Layout transparent>
     <SEO title="About" />
-    <ProfileSection
-      name="Avi Sharvit"
-      description="Expert Full Stack Developer"
-      avatar="https://avatars0.githubusercontent.com/u/1262502"
-    />
+    <ProfileSection />
     <AboutSection />
   </Layout>
 );
