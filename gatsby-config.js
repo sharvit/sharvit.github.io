@@ -1,4 +1,5 @@
 const siteMetadata = require('./content/meta/siteMetadata');
+const feedOptions = require('./config/feedOptions');
 
 module.exports = {
   siteMetadata,
@@ -51,6 +52,10 @@ module.exports = {
       options: {
         shortname: siteMetadata.author.disqus,
       },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: feedOptions,
     },
     {
       resolve: `gatsby-plugin-manifest`,
