@@ -58,6 +58,13 @@ module.exports = {
       trackingId: 'UA-72542809-1',
     },
     {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 252668,
+        sv: 5,
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: feedOptions,
     },
