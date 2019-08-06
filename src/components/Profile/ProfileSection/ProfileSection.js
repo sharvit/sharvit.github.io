@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import ProfileBackground from './ProfileBackground';
 import ProfileIconLinks from './ProfileIconLinks';
@@ -52,12 +53,12 @@ const ProfileSection = ({ name, description, avatar }) => (
               bytes.
             </p>
             <div className={styles.resumeButton}>
-              <a
+              <OutboundLink
                 href="/avi-sharvit-resume.pdf"
                 className="btn btn-danger btn-fill"
               >
                 DOWNLOAD RESUME PDF
-              </a>
+              </OutboundLink>
             </div>
           </div>
         </div>
