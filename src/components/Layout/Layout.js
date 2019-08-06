@@ -24,7 +24,7 @@ Layout.propTypes = {
 
 Layout.defaultProps = {
   siteTitle: '',
-  breadcrumbs: null,
+  breadcrumbs: [],
   transparent: false,
 };
 
