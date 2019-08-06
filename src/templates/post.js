@@ -7,7 +7,7 @@ import SEO from '../components/SEO';
 import BlogPost from '../components/Blog/BlogPost';
 
 const PostTemplate = ({
-  pageContext: { name, date, postUrl },
+  pageContext: { name, date, postPath, postUrl },
   data: {
     file: {
       childMarkdownRemark: {
@@ -17,7 +17,9 @@ const PostTemplate = ({
     },
   },
 }) => (
-  <Layout>
+  <Layout
+    breadcrumbs={[{ title: 'Blog', path: '/blog' }, { title, path: postPath }]}
+  >
     <SEO title="About" />
     <BlogPost
       id={name}
@@ -33,6 +35,7 @@ PostTemplate.propTypes = {
   pageContext: PropTypes.shape({
     name: PropTypes.string,
     date: PropTypes.string,
+    postPath: PropTypes.string,
     postUrl: PropTypes.string,
   }).isRequired,
   data: PropTypes.shape({

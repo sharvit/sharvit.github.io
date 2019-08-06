@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import AllBlogPostsSection from '../components/Blog/AllBlogPostsSection';
 
 const BlogPage = () => (
-  <Layout>
+  <Layout breadcrumbs={[{ title: 'Blog', path: '/blog' }]}>
     <SEO title="Blog" />
     <AllBlogPostsSection />
   </Layout>
