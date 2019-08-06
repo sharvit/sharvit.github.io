@@ -3,13 +3,15 @@ node_js: 12
 env:
   GITHUB_NAME: "Avi Sharvit"
   GITHUB_EMAIL: sharvita@gmail.com
-before_install:
-  - git config --global user.email "${GITHUB_EMAIL}"
-  - git config --global user.name "${GITHUB_NAME}"
-script: yarn build
+script:
+  - yarn lint
+  - yarn build
 deploy:
   on:
     branch: develop
   provider: script
   skip_cleanup: true
+  before_script:
+    - git config --global user.email "${GITHUB_EMAIL}"
+    - git config --global user.name "${GITHUB_NAME}"
   script: yarn deploy
