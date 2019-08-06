@@ -1,1 +1,0 @@
-{"errors":[{"message":"String cannot represent value: { name: \"Avi Sharvit\", twitter: \"avi_sharvit\" }","locations":[{"line":6,"column":7}],"path":["site","siteMetadata","author"]}],"data":{"site":{"siteMetadata":{"title":"Avi Sharvit","description":"Expert Full Stack Developer","author":null}}}}
