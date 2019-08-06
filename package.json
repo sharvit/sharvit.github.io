@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "deploy": "gh-pages -d public -b master",
+    "deploy": "gh-pages --dist public --branch master",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {

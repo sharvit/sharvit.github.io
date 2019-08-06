@@ -3,6 +3,10 @@ node_js: 12
 env:
   GITHUB_NAME: "Avi Sharvit"
   GITHUB_EMAIL: sharvita@gmail.com
+before_script:
+  - git config --global user.email "${GITHUB_EMAIL}"
+  - git config --global user.name "${GITHUB_NAME}"
+  - git remote set-url origin "https://${GH_TOKEN}@github.com/sharvit/sharvit.github.io.git"
 script:
   - yarn lint
   - yarn build
@@ -11,7 +15,4 @@ deploy:
     branch: develop
   provider: script
   skip_cleanup: true
-  before_script:
-    - git config --global user.email "${GITHUB_EMAIL}"
-    - git config --global user.name "${GITHUB_NAME}"
   script: yarn deploy
