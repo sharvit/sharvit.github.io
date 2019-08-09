@@ -7,7 +7,7 @@ import ProfileIconLinks from './ProfileIconLinks';
 
 import styles from './ProfileSection.module.scss';
 
-const ProfileSection = ({ name, description, avatar }) => (
+const ProfileSection = ({ name, description, avatar, bio }) => (
   <>
     <ProfileBackground />
     <div className={`${styles.profileSection} section-nude`}>
@@ -39,19 +39,7 @@ const ProfileSection = ({ name, description, avatar }) => (
         </div>
         <div className={`row ${styles.ownerAbout}`}>
           <div className="col-md-6 col-md-offset-3 text-center">
-            <p>
-              Expert full stack software developer with more than 12 years of
-              experience.
-              <br />I started to learn and write code when I was 10 years old
-              because I thought that this very cool and it can actually give me
-              super powers.
-            </p>
-            <p>
-              All my knowledge is from self-learning and I don’t believe that a
-              course or an academic degree can make you a developer. In my
-              opinion, self-learning is the best way to control the bits and
-              bytes.
-            </p>
+            <div dangerouslySetInnerHTML={{ __html: bio }} />
             <div className={styles.resumeButton}>
               <OutboundLink
                 href="/avi-sharvit-resume.pdf"
@@ -71,6 +59,7 @@ ProfileSection.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
+  bio: PropTypes.string.isRequired,
 };
 
 ProfileSection.defaultProps = {};
