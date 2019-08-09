@@ -1,12 +1,14 @@
 //
 // IMPORTS
 //
-@import "variables";
+@import "./variables";
 
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import "themes/ct-paper";
+@import "./themes/ct-paper";
 @import "~prismjs/themes/prism-solarizedlight.css";
 
 @import "icons/svg-icons";
 @import "icons/themify-icons";
 @import '~@fortawesome/fontawesome-free/css/all.css';
+
+@import "./markdown";
