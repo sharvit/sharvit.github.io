@@ -16,7 +16,7 @@ const LatestBlogPostsSection = () => (
         </div>
       </div>
 
-      <BlogPostList limit={3} />
+      <BlogPostList limit={5} />
 
       <div className={classNames('row', styles.morePostsRow)}>
         <div className="col-md-10 col-md-offset-1">
