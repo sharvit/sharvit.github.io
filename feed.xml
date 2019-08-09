@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Avi Sharvit]]></title><description><![CDATA[Expert Full Stack Developer]]></description><link>https://sharvit.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Aug 2019 11:40:04 GMT</lastBuildDate><item><title><![CDATA[Hello Gatsby World]]></title><description><![CDATA[Its took a few days to set everything up and now my blog running with GatsbyJS. see the source-code of my blog at: https://github.com…]]></description><link>https://sharvit.github.io/blog/hello-gatsby-world</link><guid isPermaLink="false">https://sharvit.github.io/blog/hello-gatsby-world</guid><pubDate>Fri, 09 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Its took a few days to set everything up and now my blog running with &lt;a href=&quot;(https://www.gatsbyjs.org/)&quot;&gt;GatsbyJS&lt;/a&gt;.&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Avi Sharvit]]></title><description><![CDATA[Expert Full Stack Developer]]></description><link>https://sharvit.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Aug 2019 16:02:57 GMT</lastBuildDate><item><title><![CDATA[Using TravisCI to automate your GatsbyJs website deployment to Github pages]]></title><description><![CDATA[Gatsby is a free and open-source framework based on React that helps developers build blazing-fast websites and apps.
+In this blog post, you…]]></description><link>https://sharvit.github.io/blog/using-travisci-to-automate-your-gatsbyjs-website-deployment-to-github-pages</link><guid isPermaLink="false">https://sharvit.github.io/blog/using-travisci-to-automate-your-gatsbyjs-website-deployment-to-github-pages</guid><pubDate>Fri, 09 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;Gatsby&lt;/a&gt; is a free and open-source framework based on React that helps developers build blazing-fast websites and apps.
+In this blog post, you will learn how I deploy my &lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;Gatsby&lt;/a&gt; website to &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; using &lt;a href=&quot;https://travis-ci.org/&quot;&gt;TravisCI&lt;/a&gt; to automate the process.&lt;/p&gt;
+&lt;h2&gt;Choose your Github Pages type&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;domain&lt;/th&gt;
+&lt;th&gt;repository name&lt;/th&gt;
+&lt;th&gt;&lt;code class=&quot;language-text&quot;&gt;deploy&lt;/code&gt; branch&lt;/th&gt;
+&lt;th&gt;&lt;code class=&quot;language-text&quot;&gt;source-code&lt;/code&gt; branch&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;User or Organization website&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;your-github-username&amp;gt;.github.io&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;your-github-username&amp;gt;.github.io&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;master&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;develop&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Project website&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;your-github-username&amp;gt;.github.io/&amp;lt;your-project-name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;can be any name&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;master&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;You &lt;code class=&quot;language-text&quot;&gt;Github Pages&lt;/code&gt; website will start existing once you have a repository on Github with the right name and branch.&lt;/p&gt;
+&lt;h2&gt;Setup your repository&lt;/h2&gt;
+&lt;p&gt;First, create your Github repository based on the website type you wish to have, clone your repository, and put your project source-code in the &lt;code class=&quot;language-text&quot;&gt;source-code&lt;/code&gt; branch.&lt;/p&gt;
+&lt;h2&gt;Install gh-pages&lt;/h2&gt;
+&lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; library can publish files to a branch on GitHub. It is useful to push anything to Github.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;npm install --save-dev gh-pages&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Create a deploy script&lt;/h2&gt;
+&lt;p&gt;Add a deploy script to your &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; scripts:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;deploy&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gh-pages --dist public --branch DEPLOY_BRANCH_NAME&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Replace &lt;code class=&quot;language-text&quot;&gt;DEPLOY_BRANCH_NAME&lt;/code&gt; with your &lt;code class=&quot;language-text&quot;&gt;deploy-branch&lt;/code&gt; name&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Manually deploy your website&lt;/h2&gt;
+&lt;p&gt;Now, once you installed &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; and configured your deployment script, you can deploy your website manually to &lt;code class=&quot;language-text&quot;&gt;Github Pages&lt;/code&gt;.&lt;br&gt;
+Run &lt;code class=&quot;language-text&quot;&gt;yarn build &amp;amp;&amp;amp; yarn deploy&lt;/code&gt; (or &lt;code class=&quot;language-text&quot;&gt;npm run build &amp;amp;&amp;amp; npm run deploy&lt;/code&gt; if working with &lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt;) and go to your website URL.&lt;br&gt;
+You should see your website there.&lt;/p&gt;
+&lt;h2&gt;Setup Travis&lt;/h2&gt;
+&lt;p&gt;TravisCI let you test and deploy your Github project easily. Use it to run the deploy script on each update to the &lt;code class=&quot;language-text&quot;&gt;source-code&lt;/code&gt; branch.&lt;/p&gt;
+&lt;h3&gt;Setup your &lt;code class=&quot;language-text&quot;&gt;.travis.yml&lt;/code&gt; file&lt;/h3&gt;
+&lt;p&gt;To setup Travis, first, add the following &lt;code class=&quot;language-text&quot;&gt;.travis.yml&lt;/code&gt; file to the root of your &lt;code class=&quot;language-text&quot;&gt;source-code&lt;/code&gt; branch.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; node_js
+&lt;span class=&quot;token key atrule&quot;&gt;node_js&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;12&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;GITHUB_NAME&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;YOUR_GITHUB_NAME&quot;&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;GITHUB_EMAIL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; your&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;email@example.com
+&lt;span class=&quot;token key atrule&quot;&gt;before_script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; git config &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;global user.email &quot;$&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;GITHUB_EMAIL&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&quot;
+  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; git config &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;global user.name &quot;$&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;GITHUB_NAME&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&quot;
+  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; git remote set&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;url origin &quot;https&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;//$&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;GH_TOKEN&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;@github.com/sharvit/sharvit.github.io.git&quot;
+&lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; yarn build &lt;span class=&quot;token comment&quot;&gt;# replace with `npm run build` if using npm&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; SOURCE_CODE_BRANCH_NAME
+  &lt;span class=&quot;token key atrule&quot;&gt;provider&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; script
+  &lt;span class=&quot;token key atrule&quot;&gt;skip_cleanup&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; yarn deploy &lt;span class=&quot;token comment&quot;&gt;# replace with `npm run deploy` if using npm&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Replace &lt;code class=&quot;language-text&quot;&gt;YOUR_GITHUB_NAME&lt;/code&gt; with your real name, I am using &quot;Avi sharvit&quot;, this used as the committer name.&lt;br&gt;
+Replace &lt;code class=&quot;language-text&quot;&gt;your-email@example.com&lt;/code&gt; with your email, this used as the committer email.&lt;br&gt;
+Replace &lt;code class=&quot;language-text&quot;&gt;SOURCE_CODE_BRANCH_NAME&lt;/code&gt; with your &lt;code class=&quot;language-text&quot;&gt;source-code&lt;/code&gt; branch name.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Enable Travis&lt;/h3&gt;
+&lt;p&gt;To enable Travis for your project, you can go to Travis website and use their dashboard, or you can use the CLI:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;gem install travis
+travis enable&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Create a Github token&lt;/h3&gt;
+&lt;p&gt;To let Travis deploy to GitHub, Travis needs to have the right credentials.&lt;br&gt;
+To do so, you to create a Github token with a &lt;code class=&quot;language-text&quot;&gt;repo&lt;/code&gt; scope.&lt;br&gt;
+This can be done by visiting &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;https://github.com/settings/tokens&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Set your Github token in Travis&lt;/h3&gt;
+&lt;p&gt;Set up an environment variable in Travis with the name &lt;code class=&quot;language-text&quot;&gt;GH_TOKEN&lt;/code&gt; and the value of the created token.&lt;br&gt;
+This can be done from Travis dashboard or by the cli by running:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;travis env set GH_TOKEN GITHUB_TOKEN_VALUE_HERE&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Replace &lt;code class=&quot;language-text&quot;&gt;GITHUB_TOKEN_VALUE_HERE&lt;/code&gt; with your newly created token.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Commit and Push&lt;/h3&gt;
+&lt;p&gt;Now you should be ready to go and push your changes to Github.
+Travis will deploy your website to &lt;code class=&quot;language-text&quot;&gt;Github Pages&lt;/code&gt; with every commit pushed to your &lt;code class=&quot;language-text&quot;&gt;source-code&lt;/code&gt; branch in GitHub.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello Gatsby World]]></title><description><![CDATA[Its took a few days to set everything up and now my blog running with GatsbyJS. see the source-code of my blog at: https://github.com…]]></description><link>https://sharvit.github.io/blog/hello-gatsby-world</link><guid isPermaLink="false">https://sharvit.github.io/blog/hello-gatsby-world</guid><pubDate>Fri, 09 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Its took a few days to set everything up and now my blog running with &lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;GatsbyJS&lt;/a&gt;.&lt;br&gt;
 see the source-code of my blog at: &lt;a href=&quot;https://github.com/sharvit/sharvit.github.io&quot;&gt;https://github.com/sharvit/sharvit.github.io&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Serving angular client with node.js micro service]]></title><description><![CDATA[So you build your angularjs app and you need to serve the app in production.
 The common mistake is serving your client side from your main…]]></description><link>https://sharvit.github.io/blog/serving-your-angular-client-with-nodejs-microservice</link><guid isPermaLink="false">https://sharvit.github.io/blog/serving-your-angular-client-with-nodejs-microservice</guid><pubDate>Fri, 01 Jul 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;So you build your angularjs app and you need to serve the app in production.
 The common mistake is serving your client side from your main API.
