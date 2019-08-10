@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Disqus } from 'gatsby-plugin-disqus';
 
+import ShareButtons from './ShareButtons';
+
 const BlogPost = ({ id, title, date, url, html }) => {
   const disqusConfig = {
     identifier: id,
@@ -13,15 +15,20 @@ const BlogPost = ({ id, title, date, url, html }) => {
       <div className="container">
         <article className="post">
           <h1>{title}</h1>
-
-          <p className="date">
+          <div className="date">
             Written on{' '}
             <time dateTime={date.toJSON()}>{date.toDateString()}</time>
-          </p>
+          </div>
           <br />
-
-          <div className="entry" dangerouslySetInnerHTML={{ __html: html }} />
-
+          <br />
+          <p className="entry" dangerouslySetInnerHTML={{ __html: html }} />
+          <br />
+          <br />
+          <ShareButtons url={url} />
+          <br />
+          <br />
+          <br />
+          <br />
           <Disqus config={disqusConfig} />
         </article>
       </div>
