@@ -6,14 +6,16 @@ import { Link } from 'gatsby';
 import styles from './BlogPostListItem.module.scss';
 
 const BlogPostListItem = ({ title, path, date, excerpt }) => (
-  <div className={styles.article}>
+  <article className={styles.article}>
     <div className="row">
       <div className="col-md-10 col-md-offset-1">
         <div className="text-center">
           <Link to={path}>
-            <h3 className={styles.title}>{title}</h3>
+            <h2 className={styles.title}>{title}</h2>
           </Link>
-          <h6 className="title-uppercase">{date.toDateString()}</h6>
+          <div className="title-uppercase">
+            <time dateTime={date.toJSON()}>{date.toDateString()}</time>
+          </div>
         </div>
       </div>
     </div>
@@ -33,7 +35,7 @@ const BlogPostListItem = ({ title, path, date, excerpt }) => (
         </div>
       </div>
     </div>
-  </div>
+  </article>
 );
 
 BlogPostListItem.propTypes = {

@@ -7,7 +7,7 @@ const AllBlogPostsSection = () => (
       <div className="row">
         <div className="col-md-10 col-md-offset-1">
           <div className="text-center">
-            <h2>Latest Blog Posts</h2>
+            <h1>Latest Blog Posts</h1>
           </div>
         </div>
       </div>

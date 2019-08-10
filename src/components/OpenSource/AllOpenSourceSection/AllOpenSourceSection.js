@@ -9,7 +9,7 @@ import styles from './AllOpenSourceSection.module.scss';
 const AllOpenSourceSection = ({ repositories }) => (
   <div className={classNames('section section-nude', styles.container)}>
     <div className="container">
-      <h1>Open Source Projects</h1>
+      <h1>Latest Open Source Projects</h1>
 
       <div className="row open-source">
         {repositories.map(repository => (
