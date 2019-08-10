@@ -34,7 +34,7 @@ const LatestOpenSourceSection = ({ repositories }) => (
       <div className="row">
         <div className="col-md-10 col-md-offset-1">
           <div className="text-center">
-            <Link to="/open-source" className="btn btn-default">
+            <Link to="/open-source" className="btn btn-default btn-fill btn-lg">
               All Open Source Projects
             </Link>
           </div>
