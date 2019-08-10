@@ -23,6 +23,7 @@ function SEO({ description, lang, meta, title }) {
             description
             author {
               twitter
+              avatar
             }
           }
         }
@@ -62,6 +63,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: 'og:image',
+          content: siteMetadata.author.avatar,
         },
         {
           property: `og:type`,
