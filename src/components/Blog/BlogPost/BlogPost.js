@@ -14,9 +14,13 @@ const BlogPost = ({ id, title, date, url, html }) => {
         <article className="post">
           <h1>{title}</h1>
 
-          <div className="entry" dangerouslySetInnerHTML={{ __html: html }} />
+          <p className="date">
+            Written on{' '}
+            <time dateTime={date.toJSON()}>{date.toDateString()}</time>
+          </p>
+          <br />
 
-          <div className="date">Written on {date.toDateString()}</div>
+          <div className="entry" dangerouslySetInnerHTML={{ __html: html }} />
 
           <Disqus config={disqusConfig} />
         </article>
