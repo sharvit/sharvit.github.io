@@ -11,7 +11,10 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const {
+    site: { siteMetadata },
+    file,
+  } = useStaticQuery(
     graphql`
       query {
         site {
@@ -23,19 +26,30 @@ function SEO({ description, lang, meta, title }) {
             }
           }
         }
+        file(sourceInstanceName: { eq: "bio" }, name: { eq: "short-bio" }) {
+          childMarkdownRemark {
+            rawMarkdownBody
+          }
+        }
       }
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const titleTemplate = title ? `${siteMetadata.title} | %s` : '%s';
+
+  const metaTitle =
+    title || `${siteMetadata.title} | ${siteMetadata.description}`;
+
+  const metaDescription =
+    description || file.childMarkdownRemark.rawMarkdownBody;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`${site.siteMetadata.title} | %s`}
+      title={metaTitle}
+      titleTemplate={titleTemplate}
       meta={[
         {
           name: `description`,
@@ -43,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -58,16 +72,12 @@ function SEO({ description, lang, meta, title }) {
           content: `summary`,
         },
         {
+          name: `twitter:site`,
+          content: `@${siteMetadata.author.twitter}`,
+        },
+        {
           name: `twitter:creator`,
-          content: site.siteMetadata.author.twitter,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
+          content: `@${siteMetadata.author.twitter}`,
         },
       ].concat(meta)}
     />

@@ -12,6 +12,7 @@ const PostTemplate = ({
     file: {
       childMarkdownRemark: {
         html,
+        excerpt,
         frontmatter: { title },
       },
     },
@@ -20,7 +21,7 @@ const PostTemplate = ({
   <Layout
     breadcrumbs={[{ title: 'Blog', path: '/blog' }, { title, path: postPath }]}
   >
-    <SEO title="About" />
+    <SEO title={title} description={excerpt} />
     <BlogPost
       id={name}
       title={title}
@@ -42,6 +43,7 @@ PostTemplate.propTypes = {
     file: PropTypes.shape({
       childMarkdownRemark: PropTypes.shape({
         html: PropTypes.string,
+        excerpt: PropTypes.string,
         frontmatter: PropTypes.shape({
           title: PropTypes.string,
         }),
@@ -57,6 +59,7 @@ export const pageQuery = graphql`
     file(sourceInstanceName: { eq: "posts" }, name: { eq: $name }) {
       childMarkdownRemark {
         html
+        excerpt
         frontmatter {
           title
         }

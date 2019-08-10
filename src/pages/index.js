@@ -8,7 +8,7 @@ import LatestBlogPostsSection from '../components/Blog/LatestBlogPostsSection';
 
 const IndexPage = () => (
   <Layout transparent>
-    <SEO title="Home" />
+    <SEO />
     <ProfileSection />
     <LatestOpenSourceSection />
     <LatestBlogPostsSection />
