@@ -68,6 +68,7 @@ module.exports = {
       resolve: `gatsby-plugin-feed`,
       options: feedOptions,
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
