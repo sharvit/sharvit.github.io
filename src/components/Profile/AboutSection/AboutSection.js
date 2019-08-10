@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const AboutSection = ({ aboutHtml }) => (
-  <div className="about-section section-white">
+  <main className="about-section section-white">
     <div className="container">
       <div className="row">
         <div
@@ -11,7 +11,7 @@ const AboutSection = ({ aboutHtml }) => (
         />
       </div>
     </div>
-  </div>
+  </main>
 );
 
 AboutSection.propTypes = {

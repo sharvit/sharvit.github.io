@@ -6,7 +6,7 @@ import BlogPostList from './BlogPostList';
 import styles from './LatestBlogPostsSection.module.scss';
 
 const LatestBlogPostsSection = () => (
-  <div className={classNames('section section-white', styles.container)}>
+  <section className={classNames('section section-white', styles.container)}>
     <div className="container">
       <div className="row">
         <div className="col-md-10 col-md-offset-1">
@@ -28,7 +28,7 @@ const LatestBlogPostsSection = () => (
         </div>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default LatestBlogPostsSection;

@@ -7,7 +7,7 @@ import OpenSourceCard from '../OpenSourceCard';
 import styles from './AllOpenSourceSection.module.scss';
 
 const AllOpenSourceSection = ({ repositories }) => (
-  <div className={classNames('section section-nude', styles.container)}>
+  <main className={classNames('section section-nude', styles.container)}>
     <div className="container">
       <h1>Latest Open Source Projects</h1>
 
@@ -19,7 +19,7 @@ const AllOpenSourceSection = ({ repositories }) => (
         ))}
       </div>
     </div>
-  </div>
+  </main>
 );
 
 AllOpenSourceSection.propTypes = {

@@ -10,7 +10,7 @@ import styles from './ProfileSection.module.scss';
 const ProfileSection = ({ name, description, avatar, bio }) => (
   <>
     <ProfileBackground />
-    <div className={`${styles.profileSection} section-nude`}>
+    <header className={`${styles.profileSection} section-nude`}>
       <div className="container">
         <div className={`row ${styles.ownerAvatar}`}>
           <div className="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3 text-center">
@@ -51,7 +51,7 @@ const ProfileSection = ({ name, description, avatar, bio }) => (
           </div>
         </div>
       </div>
-    </div>
+    </header>
   </>
 );
 

@@ -8,7 +8,7 @@ import OpenSourceCard from '../OpenSourceCard';
 import styles from './LatestOpenSourceSection.module.scss';
 
 const LatestOpenSourceSection = ({ repositories }) => (
-  <div
+  <section
     className={classNames(
       'section posts-section section-light-brown',
       styles.container
@@ -41,7 +41,7 @@ const LatestOpenSourceSection = ({ repositories }) => (
         </div>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 LatestOpenSourceSection.propTypes = {

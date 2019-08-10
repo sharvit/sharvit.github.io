@@ -34,10 +34,10 @@ const Navbar = ({ siteTitle, transparent }) => (
             <Link to="/blog">Blog</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/open-source">Open Source</Link>
           </li>
           <li>
-            <Link to="/open-source">Open Source</Link>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </div>
