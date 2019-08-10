@@ -22,7 +22,7 @@ const LatestBlogPostsSection = () => (
         <div className="col-md-10 col-md-offset-1">
           <div className="text-center">
             <Link to="/blog" className="btn btn-fill btn-primary btn-lg">
-              All Posts
+              All Blog Posts
             </Link>
           </div>
         </div>
