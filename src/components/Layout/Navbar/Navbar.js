@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
 
-const Navbar = ({ siteTitle, transparent }) => (
+import styles from './Navbar.module.scss';
+
+const Navbar = ({ siteTitle, transparent, collapse, toggleNavigation }) => (
   <nav
     className={classNames(
       'navbar',
+      styles.container,
       transparent ? 'navbar-ct-transparent' : 'navbar-ct-primary'
     )}
     role="navigation"
@@ -15,20 +18,19 @@ const Navbar = ({ siteTitle, transparent }) => (
       <div className="navbar-header">
         <button
           type="button"
-          className="navbar-toggle"
-          data-toggle="collapse"
-          data-target="#navigation"
+          className={classNames('navbar-toggle', styles.navbarToggle)}
+          onClick={() => toggleNavigation()}
         >
           <span className="sr-only">Toggle navigation</span>
-          <span className="icon-bar" />
-          <span className="icon-bar" />
-          <span className="icon-bar" />
+          <span className={classNames('icon-bar', styles.iconBar)} />
+          <span className={classNames('icon-bar', styles.iconBar)} />
+          <span className={classNames('icon-bar', styles.iconBar)} />
         </button>
         <Link to="/" className="navbar-brand">
           {siteTitle}
         </Link>
       </div>
-      <div className="collapse navbar-collapse" id="navigation">
+      <div className={classNames({ collapse }, 'navbar-collapse')}>
         <ul className="nav navbar-nav navbar-right">
           <li>
             <Link to="/blog">Blog</Link>
@@ -48,11 +50,15 @@ const Navbar = ({ siteTitle, transparent }) => (
 Navbar.propTypes = {
   siteTitle: PropTypes.string,
   transparent: PropTypes.bool,
+  collapse: PropTypes.bool,
+  toggleNavigation: PropTypes.func,
 };
 
 Navbar.defaultProps = {
   siteTitle: ``,
   transparent: false,
+  collapse: false,
+  toggleNavigation: () => null,
 };
 
 export default Navbar;

@@ -1,3 +1,5 @@
+@import "../../../../stylesheet/mixins";
+
 .container {
   background-image: url('./profile-background.jpg');
   background-position: center top;
@@ -5,6 +7,16 @@
   height: 300px;
   position: relative;
   margin-top: -110px;
+
+  @include mobile() {
+    margin-top: -299px;
+  }
+
+  &.navbarCollapsed {
+    @include mobile() {
+      margin-top: -110px;
+    }
+  }
 
   .filter::after {
     background-color: rgba(0, 0, 0, 0.2);

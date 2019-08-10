@@ -1,21 +1,25 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import styles from './ProfileBackground.module.scss';
 
-const ProfileBackground = () => (
+const ProfileBackground = ({ navbarCollapsed }) => (
   <div
-    className={styles.container}
-    style={{
-      backgroundImage: 'yooo',
-    }}
+    className={classNames(styles.container, {
+      [styles.navbarCollapsed]: navbarCollapsed,
+    })}
   >
     <div className={styles.filter} />
   </div>
 );
 
-ProfileBackground.propTypes = {};
+ProfileBackground.propTypes = {
+  navbarCollapsed: PropTypes.bool,
+};
 
-ProfileBackground.defaultProps = {};
+ProfileBackground.defaultProps = {
+  navbarCollapsed: false,
+};
 
 export default ProfileBackground;

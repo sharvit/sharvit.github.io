@@ -8,7 +8,7 @@ import '../../stylesheet/main.scss';
 const Layout = ({ siteTitle, transparent, breadcrumbs, children }) => (
   <>
     <Navbar siteTitle={siteTitle} transparent={transparent} />
-    {breadcrumbs && breadcrumbs.length && (
+    {breadcrumbs && breadcrumbs.length > 0 && (
       <Breadcrumbs items={[{ title: siteTitle, path: '/' }, ...breadcrumbs]} />
     )}
     <div className="wrapper">{children}</div>
