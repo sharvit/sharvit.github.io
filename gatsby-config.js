@@ -48,8 +48,8 @@ module.exports = {
           {
             resolve: '@raae/gatsby-remark-oembed',
             options: {
-              usePrefix: ["oembed", "video"],
-            }
+              usePrefix: ['oembed', 'video'],
+            },
           },
           'gatsby-remark-prismjs',
         ],
