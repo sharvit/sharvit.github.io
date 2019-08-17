@@ -1,5 +1,6 @@
 module.exports = {
   name: 'Avi Sharvit',
+  website: 'https://sharvit.github.io',
   email: 'sharvita@gmail.com',
   facebook: 'sharvitavi',
   github: 'sharvit',

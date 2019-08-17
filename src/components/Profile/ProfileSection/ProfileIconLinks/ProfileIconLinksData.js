@@ -8,7 +8,9 @@ export const getSocialLinks = () =>
           siteMetadata {
             socialLinks {
               id
+              label
               link
+              pdfLink
               buttonClassName
               iconClassName
             }

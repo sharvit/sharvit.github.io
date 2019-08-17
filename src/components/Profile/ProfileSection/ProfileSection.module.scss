@@ -6,6 +6,10 @@
       position:relative;
       z-index: 3;
     }
+
+    @media print {
+      display: none;
+    }
   }
   .owner {
     .name {
@@ -20,6 +24,10 @@
   .owner-about {
     .resume-button {
       padding: 20px;
+
+      @media print {
+        display: none;
+      }
     }
   }
 }
