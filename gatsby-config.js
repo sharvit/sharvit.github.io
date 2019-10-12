@@ -4,6 +4,10 @@ const feedOptions = require('./config/feedOptions');
 module.exports = {
   siteMetadata,
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      trackingId: 'UA-72542809-1',
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-sass',
@@ -60,10 +64,6 @@ module.exports = {
       options: {
         shortname: siteMetadata.author.disqus,
       },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      trackingId: 'UA-72542809-1',
     },
     {
       resolve: `gatsby-plugin-hotjar`,
