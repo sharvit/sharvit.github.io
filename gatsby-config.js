@@ -43,12 +43,19 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `post-images`,
+        path: `${__dirname}/content/post-images`,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          'gatsby-plugin-sharp',
+          'gatsby-remark-images',
           {
             resolve: '@raae/gatsby-remark-oembed',
             options: {
@@ -59,6 +66,8 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-disqus`,
       options: {

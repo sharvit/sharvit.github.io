@@ -1,21 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import BlogPost from '../components/Blog/BlogPost';
 
 const PostTemplate = ({
-  pageContext: { name, date, postPath, postUrl },
-  data: {
-    file: {
-      childMarkdownRemark: {
-        html,
-        excerpt,
-        frontmatter: { title },
-      },
-    },
+  pageContext: {
+    name,
+    date,
+    postPath,
+    postUrl,
+    html,
+    excerpt,
+    title,
+    coverImage,
   },
 }) => (
   <Layout
@@ -25,6 +24,7 @@ const PostTemplate = ({
     <BlogPost
       id={name}
       title={title}
+      coverImage={coverImage}
       date={new Date(date)}
       url={postUrl}
       html={html}
@@ -34,36 +34,15 @@ const PostTemplate = ({
 
 PostTemplate.propTypes = {
   pageContext: PropTypes.shape({
-    name: PropTypes.string,
-    date: PropTypes.string,
-    postPath: PropTypes.string,
-    postUrl: PropTypes.string,
-  }).isRequired,
-  data: PropTypes.shape({
-    file: PropTypes.shape({
-      childMarkdownRemark: PropTypes.shape({
-        html: PropTypes.string,
-        excerpt: PropTypes.string,
-        frontmatter: PropTypes.shape({
-          title: PropTypes.string,
-        }),
-      }),
-    }),
+    name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    postPath: PropTypes.string.isRequired,
+    postUrl: PropTypes.string.isRequired,
+    excerpt: PropTypes.string.isRequired,
+    html: PropTypes.string.isRequired,
+    coverImage: PropTypes.object,
   }).isRequired,
 };
 
 export default PostTemplate;
-
-export const pageQuery = graphql`
-  query($name: String!) {
-    file(sourceInstanceName: { eq: "posts" }, name: { eq: $name }) {
-      childMarkdownRemark {
-        html
-        excerpt
-        frontmatter {
-          title
-        }
-      }
-    }
-  }
-`;
