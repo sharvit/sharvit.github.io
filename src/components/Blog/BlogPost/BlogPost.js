@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Disqus } from 'gatsby-plugin-disqus';
+import Image from 'gatsby-image';
 
 import ShareButtons from './ShareButtons';
 
-const BlogPost = ({ id, title, date, url, html }) => {
+const BlogPost = ({ id, title, coverImage, date, url, html }) => {
   const disqusConfig = {
     identifier: id,
     url,
@@ -14,6 +15,14 @@ const BlogPost = ({ id, title, date, url, html }) => {
     <div className="section section-nude">
       <div className="container">
         <article className="post">
+          {coverImage && (
+            <Image
+              fluid={coverImage}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt={title}
+            />
+          )}
           <h1>{title}</h1>
           <div className="date">
             Written on{' '}
@@ -39,6 +48,7 @@ const BlogPost = ({ id, title, date, url, html }) => {
 BlogPost.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
+  coverImage: PropTypes.object,
   date: PropTypes.instanceOf(Date),
   url: PropTypes.string,
   html: PropTypes.string,
@@ -47,6 +57,7 @@ BlogPost.propTypes = {
 BlogPost.defaultProps = {
   id: '',
   title: '',
+  coverImage: null,
   date: new Date(),
   url: '',
   html: '',

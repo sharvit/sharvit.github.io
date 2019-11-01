@@ -2,15 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
+import Image from 'gatsby-image';
 
 import styles from './BlogPostListItem.module.scss';
 
-const BlogPostListItem = ({ title, path, date, excerpt }) => (
+const BlogPostListItem = ({ title, coverImage, path, date, excerpt }) => (
   <article className={styles.article}>
     <div className="row">
       <div className="col-md-10 col-md-offset-1">
         <div className="text-center">
           <Link to={path}>
+            {coverImage && (
+              <Image
+                fluid={coverImage}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt={title}
+              />
+            )}
             <h2 className={styles.title}>{title}</h2>
           </Link>
           <div className="title-uppercase">
@@ -40,6 +49,7 @@ const BlogPostListItem = ({ title, path, date, excerpt }) => (
 
 BlogPostListItem.propTypes = {
   title: PropTypes.string,
+  coverImage: PropTypes.object,
   path: PropTypes.string,
   date: PropTypes.instanceOf(Date),
   excerpt: PropTypes.string,
@@ -47,6 +57,7 @@ BlogPostListItem.propTypes = {
 
 BlogPostListItem.defaultProps = {
   title: '',
+  coverImage: null,
   path: '',
   date: new Date(),
   excerpt: '',

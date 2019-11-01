@@ -16,6 +16,24 @@ export const getBlogPosts = () =>
                 excerpt
                 frontmatter {
                   title
+                  coverImage {
+                    childImageSharp {
+                      fluid(maxHeight: 500, maxWidth: 1200) {
+                        base64
+                        tracedSVG
+                        aspectRatio
+                        src
+                        srcSet
+                        srcWebp
+                        srcSetWebp
+                        sizes
+                        originalImg
+                        originalName
+                        presentationWidth
+                        presentationHeight
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -30,19 +48,22 @@ export const fileToBlogPost = ({
     name,
     childMarkdownRemark: {
       excerpt,
-      frontmatter: { title },
+      frontmatter: { title, coverImage: coverImageFile },
     },
   },
-}) => formatBlogPost({ name, title, excerpt });
+}) => formatBlogPost({ name, title, excerpt, coverImageFile });
 
-export const formatBlogPost = ({ name, title, excerpt }) => {
-  const [year, month, day, ...nameWithoutDate] = name.split('-');
+export const formatBlogPost = ({ name, title, excerpt, coverImageFile }) => {
+  const [year, month, day] = name.split('-');
   const date = new Date(`${year}-${month}-${day}`);
+
+  const coverImage = coverImageFile && coverImageFile.childImageSharp.fluid;
 
   return {
     title,
     date,
     excerpt,
-    path: `/blog/${nameWithoutDate.join('-')}`,
+    coverImage,
+    path: `/blog/${name}`,
   };
 };
