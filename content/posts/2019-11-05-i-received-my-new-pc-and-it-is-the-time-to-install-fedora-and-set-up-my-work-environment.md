@@ -1,16 +1,16 @@
 ---
-title: I recived my new PC and it is the time to install Fedora and setup my work enviorment
-coverImage: ../post-images/2019-11-05-i-recived-my-new-pc-and-it-is-the-time-to-install-fedora-and-setup-my-work-enviorment.JPEG
+title: I received my new PC, and it is the time to install Fedora and set up my work environment
+coverImage: ../post-images/2019-11-05-i-received-my-new-pc-and-it-is-the-time-to-install-fedora-and-set-up-my-work-environment.JPEG
 ---
 
-Two years after I joined Redhat to work on the [foreman](https://theforeman.org) project, I recived a new PC (lenovo T480s) and it's time for a fresh start.
-In this post I will describe my process of setting up a new PC.
+Two years after I joined Redhat to work on the [foreman](https://theforeman.org) project, I received a new PC (Lenovo T480s), and it's time for a fresh start.
+In this post, I will describe my process of setting up a new PC.
 
 ## Goals
 - Be able to work inside Redhat and use Redhat office tools
 - Have a javascript development environment
 - Have a ruby development environment
-- Have Atom as my IDE and sync it back with my previus settings
+- Have Atom as my IDE and sync it back with my previous settings
 - Have a [forklift](https://github.com/theforeman/forklift) development environment so I can work on [the foreman project](https://theforeman.org).
 
 ## My Tools
@@ -23,16 +23,16 @@ In this post I will describe my process of setting up a new PC.
 
 ## Installing Fedora
 
-1. Install the latest version of Fedora, in my case, I installed fedora 30 from redhat PXE server and then updated to version 31.
+1. Install the latest version of Fedora, in my case, I installed fedora 30 from Redhat PXE server and then updated to version 31.
    1. Another option is to download fedora from https://getfedora.org/en/workstation/download/
 2. Run `sudo dnf upgrade` and `sudo dnf update`
 
 ## Install google-chrome browser
 
-Install google chrome by running `sudo dnf install google-chrome-stable` and sign in to sync with my previus setup.
+Install google chrome by running `sudo dnf install google-chrome-stable` and sign in to sync with my previous setup.
 
 
-## Installing ZSH and some basic terminal tools
+## Installing ZSH and some essential terminal tools
 
 ### Install ZSH
 ```bash
@@ -46,7 +46,7 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 sudo hostname sharvit-fedorabook-t480s
 ```
 
-### Install some baisc tools
+### Install some essential tools
 ```bash
 sudo dnf install vim hub
 ```
@@ -75,7 +75,7 @@ ssh-keygen -t rsa -b 4096 -C "sharvita@gmail.com"
 eval "$(ssh-agent -s)"
 ```
 
-> Add the ssh key to your github account https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+> Add the ssh key to your Github account https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
 
 ## Redhat workspace related
 
@@ -124,17 +124,17 @@ sudo systemctl enable cups-browsed
 sudo systemctl restart cups-browsed
 ```
 
-The printers should be installed now.
+Once you installed the printers, you should find them in the printer settings.
 
 ## Install Ferdi to manage my social interactions
 
 1. Download the appimage from https://getferdi.com/ and put it in the `~/Applications` folder.
 2. Give it exec permissions using `chmod +x filename`
-3. Run it and signin to get my saved workspace
+3. Run it and sign in to get my saved workspace
 
 ## Install Ruby and RVM
 
-First fix the gnome-terminal cmmand login using: https://rvm.io/integration/gnome-terminal
+First fix the gnome-terminal command login using: https://rvm.io/integration/gnome-terminal
 
 Install Ruby and RVM 
 ```bash
@@ -147,7 +147,7 @@ gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D69
 
 **Restart the terminal.**
 
-Install ruby using RVM
+Install Ruby using RVM
 ```bash
 # enable autolibs
 rvm get stable --autolibs=enable
@@ -227,7 +227,7 @@ sudo dnf install atom
 4. Set access-token
 5. Set gist id to `88fddc82d91cdd7cd33fdfdbe03dd161`
 6. Restart atom
-7. Click restore when you recived the message from sync-settings
+7. Click restore when you receive the message from sync-settings
 
 ## Configure my [forklift](https://github.com/theforeman/forklift) development environment so I can work on [the foreman project](https://theforeman.org)
 
@@ -275,7 +275,7 @@ centos7-luna-devel:
       katello_devel_github_username: sharvit
 ```
 
-Set the `host_path` to a preferred location on your machine and make sure it's exist so you can have access to the foreman source code.
+Set the `host_path` to a preferred location on your machine and make sure it exists so you can have access to the foreman source code.
 
 ### Run `centos7-luna-devel`
 
@@ -287,7 +287,7 @@ vagrant up centos7-luna-devel
 vagrant up centos7-luna-devel --provision
 ```
 
-After a successful provisioning, ssh into the machine and run foreman:
+After successful provisioning, ssh into the machine and run foreman:
 ```bash
 vagrant ssh centos7-luna-devel
 cd foreman
@@ -304,7 +304,7 @@ bundle exec foreman start
 Now foreman is running so I can open it in my browser:
 https://centos7-luna-devel.sharvit-fedorabook-t480s.example.com/
 
-Login with the username `admin` and password `changeme`.
+Log in with the username `admin` and password `changeme`.
 
 Go to my `host_path` and open the source code with atom:
 ```bash
@@ -312,7 +312,7 @@ cd /home/asharvit/Projects/theforeman/vagrant-shares/centos7-luna-devel/foreman
 atom .
 ```
 
-Happy Hacking...
+Happy Hacking
 
 To stop `centos7-luna-devel` run
 ```bash
