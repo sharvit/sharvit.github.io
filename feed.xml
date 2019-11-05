@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Avi Sharvit Blog's RSS Feed]]></title><description><![CDATA[Expert Full Stack Developer]]></description><link>https://sharvit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Nov 2019 08:01:53 GMT</lastBuildDate><item><title><![CDATA[I recived my new PC and it is the time to install Fedora and setup my work enviorment]]></title><description><![CDATA[Two years after I joined Redhat to work on the foreman project, I recived a new PC (lenovo T480s) and it's time for a fresh start.
-In this…]]></description><link>https://sharvit.github.io/blog/i-recived-my-new-pc-and-it-is-the-time-to-install-fedora-and-setup-my-work-enviorment</link><guid isPermaLink="false">https://sharvit.github.io/blog/i-recived-my-new-pc-and-it-is-the-time-to-install-fedora-and-setup-my-work-enviorment</guid><pubDate>Tue, 05 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Two years after I joined Redhat to work on the &lt;a href=&quot;https://theforeman.org&quot;&gt;foreman&lt;/a&gt; project, I recived a new PC (lenovo T480s) and it&apos;s time for a fresh start.
-In this post I will describe my process of setting up a new PC.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Avi Sharvit Blog's RSS Feed]]></title><description><![CDATA[Expert Full Stack Developer]]></description><link>https://sharvit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Nov 2019 09:02:33 GMT</lastBuildDate><item><title><![CDATA[I received my new PC, and it is the time to install Fedora and set up my work environment]]></title><description><![CDATA[Two years after I joined Redhat to work on the foreman project, I received a new PC (Lenovo T480s), and it's time for a fresh start.
+In this…]]></description><link>https://sharvit.github.io/blog/i-received-my-new-pc-and-it-is-the-time-to-install-fedora-and-set-up-my-work-environment</link><guid isPermaLink="false">https://sharvit.github.io/blog/i-received-my-new-pc-and-it-is-the-time-to-install-fedora-and-set-up-my-work-environment</guid><pubDate>Tue, 05 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Two years after I joined Redhat to work on the &lt;a href=&quot;https://theforeman.org&quot;&gt;foreman&lt;/a&gt; project, I received a new PC (Lenovo T480s), and it&apos;s time for a fresh start.
+In this post, I will describe my process of setting up a new PC.&lt;/p&gt;
 &lt;h2&gt;Goals&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Be able to work inside Redhat and use Redhat office tools&lt;/li&gt;
 &lt;li&gt;Have a javascript development environment&lt;/li&gt;
 &lt;li&gt;Have a ruby development environment&lt;/li&gt;
-&lt;li&gt;Have Atom as my IDE and sync it back with my previus settings&lt;/li&gt;
+&lt;li&gt;Have Atom as my IDE and sync it back with my previous settings&lt;/li&gt;
 &lt;li&gt;Have a &lt;a href=&quot;https://github.com/theforeman/forklift&quot;&gt;forklift&lt;/a&gt; development environment so I can work on &lt;a href=&quot;https://theforeman.org&quot;&gt;the foreman project&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;My Tools&lt;/h2&gt;
@@ -20,7 +20,7 @@ In this post I will describe my process of setting up a new PC.&lt;/p&gt;
 &lt;h2&gt;Installing Fedora&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Install the latest version of Fedora, in my case, I installed fedora 30 from redhat PXE server and then updated to version 31.&lt;/p&gt;
+&lt;p&gt;Install the latest version of Fedora, in my case, I installed fedora 30 from Redhat PXE server and then updated to version 31.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Another option is to download fedora from &lt;a href=&quot;https://getfedora.org/en/workstation/download/&quot;&gt;https://getfedora.org/en/workstation/download/&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -28,14 +28,14 @@ In this post I will describe my process of setting up a new PC.&lt;/p&gt;
 &lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;sudo dnf upgrade&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;sudo dnf update&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;Install google-chrome browser&lt;/h2&gt;
-&lt;p&gt;Install google chrome by running &lt;code class=&quot;language-text&quot;&gt;sudo dnf install google-chrome-stable&lt;/code&gt; and sign in to sync with my previus setup.&lt;/p&gt;
-&lt;h2&gt;Installing ZSH and some basic terminal tools&lt;/h2&gt;
+&lt;p&gt;Install google chrome by running &lt;code class=&quot;language-text&quot;&gt;sudo dnf install google-chrome-stable&lt;/code&gt; and sign in to sync with my previous setup.&lt;/p&gt;
+&lt;h2&gt;Installing ZSH and some essential terminal tools&lt;/h2&gt;
 &lt;h3&gt;Install ZSH&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;zsh&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;sh&lt;/span&gt; -c &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Set my new PC hostname&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hostname&lt;/span&gt; sharvit-fedorabook-t480s&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Install some baisc tools&lt;/h3&gt;
+&lt;h3&gt;Install some essential tools&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;vim&lt;/span&gt; hub&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Restart your computer&lt;/strong&gt;&lt;/p&gt;
 &lt;h3&gt;Install rpmfusion&lt;/h3&gt;
@@ -49,7 +49,7 @@ In this post I will describe my process of setting up a new PC.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ssh-keygen -t rsa -b &lt;span class=&quot;token number&quot;&gt;4096&lt;/span&gt; -C &lt;span class=&quot;token string&quot;&gt;&quot;sharvita@gmail.com&quot;&lt;/span&gt;
 &lt;span class=&quot;token builtin class-name&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;ssh-agent -s&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Add the ssh key to your github account &lt;a href=&quot;https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account&quot;&gt;https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Add the ssh key to your Github account &lt;a href=&quot;https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account&quot;&gt;https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;Redhat workspace related&lt;/h2&gt;
 &lt;h3&gt;Connect to Redhat VPN&lt;/h3&gt;
@@ -88,15 +88,15 @@ In this post I will describe my process of setting up a new PC.&lt;/p&gt;
 &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;BrowsePoll cups.tlv.redhat.com&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; /etc/cups/cups-browsed.conf
 &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; systemctl &lt;span class=&quot;token builtin class-name&quot;&gt;enable&lt;/span&gt; cups-browsed
 &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; systemctl restart cups-browsed&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The printers should be installed now.&lt;/p&gt;
+&lt;p&gt;Once you installed the printers, you should find them in the printer settings.&lt;/p&gt;
 &lt;h2&gt;Install Ferdi to manage my social interactions&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Download the appimage from &lt;a href=&quot;https://getferdi.com/&quot;&gt;https://getferdi.com/&lt;/a&gt; and put it in the &lt;code class=&quot;language-text&quot;&gt;~/Applications&lt;/code&gt; folder.&lt;/li&gt;
 &lt;li&gt;Give it exec permissions using &lt;code class=&quot;language-text&quot;&gt;chmod +x filename&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Run it and signin to get my saved workspace&lt;/li&gt;
+&lt;li&gt;Run it and sign in to get my saved workspace&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;Install Ruby and RVM&lt;/h2&gt;
-&lt;p&gt;First fix the gnome-terminal cmmand login using: &lt;a href=&quot;https://rvm.io/integration/gnome-terminal&quot;&gt;https://rvm.io/integration/gnome-terminal&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;First fix the gnome-terminal command login using: &lt;a href=&quot;https://rvm.io/integration/gnome-terminal&quot;&gt;https://rvm.io/integration/gnome-terminal&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Install Ruby and RVM &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# install system ruby&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; ruby
@@ -104,7 +104,7 @@ In this post I will describe my process of setting up a new PC.&lt;/p&gt;
 gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;curl -sSL https://get.rvm.io &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt; -s stable&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Restart the terminal.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Install ruby using RVM&lt;/p&gt;
+&lt;p&gt;Install Ruby using RVM&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# enable autolibs&lt;/span&gt;
 rvm get stable --autolibs&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;enable
 &lt;span class=&quot;token comment&quot;&gt;# Install the latest stable ruby version&lt;/span&gt;
@@ -162,7 +162,7 @@ compinit&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;Set access-token&lt;/li&gt;
 &lt;li&gt;Set gist id to &lt;code class=&quot;language-text&quot;&gt;88fddc82d91cdd7cd33fdfdbe03dd161&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Restart atom&lt;/li&gt;
-&lt;li&gt;Click restore when you recived the message from sync-settings&lt;/li&gt;
+&lt;li&gt;Click restore when you receive the message from sync-settings&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;Configure my &lt;a href=&quot;https://github.com/theforeman/forklift&quot;&gt;forklift&lt;/a&gt; development environment so I can work on &lt;a href=&quot;https://theforeman.org&quot;&gt;the foreman project&lt;/a&gt;&lt;/h2&gt;
 &lt;h3&gt;Clone forklift&lt;/h3&gt;
@@ -201,14 +201,14 @@ centos7-luna-devel:
     group: &apos;devel&apos;
     variables:
       katello_devel_github_username: sharvit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Set the &lt;code class=&quot;language-text&quot;&gt;host_path&lt;/code&gt; to a preferred location on your machine and make sure it&apos;s exist so you can have access to the foreman source code.&lt;/p&gt;
+&lt;p&gt;Set the &lt;code class=&quot;language-text&quot;&gt;host_path&lt;/code&gt; to a preferred location on your machine and make sure it exists so you can have access to the foreman source code.&lt;/p&gt;
 &lt;h3&gt;Run &lt;code class=&quot;language-text&quot;&gt;centos7-luna-devel&lt;/code&gt;&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;rvm use system
 vagrant up centos7-luna-devel
 &lt;span class=&quot;token comment&quot;&gt;# the provisioning may fail by unknown reasons&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# in this case keep running until a successful provisioning &lt;/span&gt;
 vagrant up centos7-luna-devel --provision&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;After a successful provisioning, ssh into the machine and run foreman:&lt;/p&gt;
+&lt;p&gt;After successful provisioning, ssh into the machine and run foreman:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;vagrant &lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; centos7-luna-devel
 &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; foreman
 bundle
@@ -220,11 +220,11 @@ bundle &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; 
 &lt;h3&gt;Happy Hacking!&lt;/h3&gt;
 &lt;p&gt;Now foreman is running so I can open it in my browser:
 &lt;a href=&quot;https://centos7-luna-devel.sharvit-fedorabook-t480s.example.com/&quot;&gt;https://centos7-luna-devel.sharvit-fedorabook-t480s.example.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Login with the username &lt;code class=&quot;language-text&quot;&gt;admin&lt;/code&gt; and password &lt;code class=&quot;language-text&quot;&gt;changeme&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Log in with the username &lt;code class=&quot;language-text&quot;&gt;admin&lt;/code&gt; and password &lt;code class=&quot;language-text&quot;&gt;changeme&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Go to my &lt;code class=&quot;language-text&quot;&gt;host_path&lt;/code&gt; and open the source code with atom:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; /home/asharvit/Projects/theforeman/vagrant-shares/centos7-luna-devel/foreman
 atom &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Happy Hacking...&lt;/p&gt;
+&lt;p&gt;Happy Hacking&lt;/p&gt;
 &lt;p&gt;To stop &lt;code class=&quot;language-text&quot;&gt;centos7-luna-devel&lt;/code&gt; run&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;vagrant &lt;span class=&quot;token function&quot;&gt;halt&lt;/span&gt; centos7-luna-devel&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Testing React-Redux Applications with Jest - QECAMP2019 Brno]]></title><description><![CDATA[In this talk, you will learn about testing React-Redux applications with Jest using the best practices I learned and developed while working…]]></description><link>https://sharvit.github.io/blog/testing-react-redux-applications-with-jest---qecamp2019-brno</link><guid isPermaLink="false">https://sharvit.github.io/blog/testing-react-redux-applications-with-jest---qecamp2019-brno</guid><pubDate>Sat, 17 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In this talk, you will learn about testing React-Redux applications with Jest using the best practices I learned and developed while working on &lt;a href=&quot;https://theforeman.org&quot;&gt;https://theforeman.org&lt;/a&gt; UI.&lt;/p&gt;
 &lt;p&gt;&lt;iframe width=&quot;480&quot; height=&quot;270&quot; src=&quot;https://www.youtube.com/embed/O4NHrmQ0XLY?feature=oembed&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
