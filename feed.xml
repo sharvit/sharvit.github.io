@@ -1,4 +1,232 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Avi Sharvit Blog's RSS Feed]]></title><description><![CDATA[Expert Full Stack Developer]]></description><link>https://sharvit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 04 Nov 2019 14:02:13 GMT</lastBuildDate><item><title><![CDATA[Testing React-Redux Applications with Jest - QECAMP2019 Brno]]></title><description><![CDATA[In this talk, you will learn about testing React-Redux applications with Jest using the best practices I learned and developed while working…]]></description><link>https://sharvit.github.io/blog/testing-react-redux-applications-with-jest---qecamp2019-brno</link><guid isPermaLink="false">https://sharvit.github.io/blog/testing-react-redux-applications-with-jest---qecamp2019-brno</guid><pubDate>Sat, 17 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In this talk, you will learn about testing React-Redux applications with Jest using the best practices I learned and developed while working on &lt;a href=&quot;https://theforeman.org&quot;&gt;https://theforeman.org&lt;/a&gt; UI.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Avi Sharvit Blog's RSS Feed]]></title><description><![CDATA[Expert Full Stack Developer]]></description><link>https://sharvit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Nov 2019 08:01:53 GMT</lastBuildDate><item><title><![CDATA[I recived my new PC and it is the time to install Fedora and setup my work enviorment]]></title><description><![CDATA[Two years after I joined Redhat to work on the foreman project, I recived a new PC (lenovo T480s) and it's time for a fresh start.
+In this…]]></description><link>https://sharvit.github.io/blog/i-recived-my-new-pc-and-it-is-the-time-to-install-fedora-and-setup-my-work-enviorment</link><guid isPermaLink="false">https://sharvit.github.io/blog/i-recived-my-new-pc-and-it-is-the-time-to-install-fedora-and-setup-my-work-enviorment</guid><pubDate>Tue, 05 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Two years after I joined Redhat to work on the &lt;a href=&quot;https://theforeman.org&quot;&gt;foreman&lt;/a&gt; project, I recived a new PC (lenovo T480s) and it&apos;s time for a fresh start.
+In this post I will describe my process of setting up a new PC.&lt;/p&gt;
+&lt;h2&gt;Goals&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Be able to work inside Redhat and use Redhat office tools&lt;/li&gt;
+&lt;li&gt;Have a javascript development environment&lt;/li&gt;
+&lt;li&gt;Have a ruby development environment&lt;/li&gt;
+&lt;li&gt;Have Atom as my IDE and sync it back with my previus settings&lt;/li&gt;
+&lt;li&gt;Have a &lt;a href=&quot;https://github.com/theforeman/forklift&quot;&gt;forklift&lt;/a&gt; development environment so I can work on &lt;a href=&quot;https://theforeman.org&quot;&gt;the foreman project&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;My Tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Zsh - &lt;a href=&quot;https://ohmyz.sh/&quot;&gt;https://ohmyz.sh/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NVM - &lt;a href=&quot;https://github.com/nvm-sh/nvm&quot;&gt;https://github.com/nvm-sh/nvm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RVM - &lt;a href=&quot;https://rvm.io/&quot;&gt;https://rvm.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ATOM - &lt;a href=&quot;https://atom.io/&quot;&gt;https://atom.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ferdi - &lt;a href=&quot;https://getferdi.com/&quot;&gt;https://getferdi.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Installing Fedora&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Install the latest version of Fedora, in my case, I installed fedora 30 from redhat PXE server and then updated to version 31.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Another option is to download fedora from &lt;a href=&quot;https://getfedora.org/en/workstation/download/&quot;&gt;https://getfedora.org/en/workstation/download/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;sudo dnf upgrade&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;sudo dnf update&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Install google-chrome browser&lt;/h2&gt;
+&lt;p&gt;Install google chrome by running &lt;code class=&quot;language-text&quot;&gt;sudo dnf install google-chrome-stable&lt;/code&gt; and sign in to sync with my previus setup.&lt;/p&gt;
+&lt;h2&gt;Installing ZSH and some basic terminal tools&lt;/h2&gt;
+&lt;h3&gt;Install ZSH&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;zsh&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sh&lt;/span&gt; -c &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Set my new PC hostname&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hostname&lt;/span&gt; sharvit-fedorabook-t480s&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Install some baisc tools&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;vim&lt;/span&gt; hub&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Restart your computer&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Install rpmfusion&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-31.noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-31.noarch.rpm
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf groupupdate core
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf groupupdate sound-and-video&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Configure git&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.name &lt;span class=&quot;token string&quot;&gt;&quot;Avi Sharvit&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.email sharvita@gmail.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Generate an ssh key&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ssh-keygen -t rsa -b &lt;span class=&quot;token number&quot;&gt;4096&lt;/span&gt; -C &lt;span class=&quot;token string&quot;&gt;&quot;sharvita@gmail.com&quot;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;ssh-agent -s&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Add the ssh key to your github account &lt;a href=&quot;https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account&quot;&gt;https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Redhat workspace related&lt;/h2&gt;
+&lt;h3&gt;Connect to Redhat VPN&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; NetworkManager-openvpn NetworkManager-openvpn-gnome
+
+&lt;span class=&quot;token comment&quot;&gt;# download the redhat certificate&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/pki/tls/certs/RH-IT-Root-CA.crt https://password.corp.redhat.com/RH-IT-Root-CA.crt
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; /etc/pki/tls/certs/RH-IT-Root-CA.crt /etc/pki/tls/certs/2015-RH-IT-Root-CA.pem
+
+&lt;span class=&quot;token comment&quot;&gt;# download some vpn profiles&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/AMS2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/AMS2.ovpn&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;?h&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/PEK2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/PEK2.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/BNE.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/BNE.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/BRQ.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/BRQ.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/FAB.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/FAB.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/PHX2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/PHX2.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/PNQ2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/PNQ2.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/RDU2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/RDU2.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/GRU2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/GRU2.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/SIN2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/SIN2.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/TLV.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/TLV.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; -O /etc/NetworkManager/system-connections/NRT.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/NRT.ovpn?h&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;it-csb-rhel-7
+
+&lt;span class=&quot;token comment&quot;&gt;# enable the redhat VPN&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; restorecon -RvF /etc/pki/tls/certs/
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; restorecon -RvF /etc/NetworkManager/system-connections/
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;644&lt;/span&gt; /etc/pki/tls/certs/2015-RH-IT-Root-CA.pem
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;chown&lt;/span&gt; root:root /etc/NetworkManager/system-connections/*
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;600&lt;/span&gt; /etc/NetworkManager/system-connections/*
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; nmcli connection reload&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Go to &lt;code class=&quot;language-text&quot;&gt;Settings&lt;/code&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;Network&lt;/code&gt; and add your username to each VPN profile.&lt;/p&gt;
+&lt;h3&gt;Connect to Redhat printers&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Adds the TelAviv printers to the cups config&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Replace TLV with another office code to connect to a different office printers&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# See office codes here: https://redhat.service-now.com/help?id=kb_article&amp;amp;sysparm_article=KB0002202&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;BrowsePoll cups.tlv.redhat.com&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; /etc/cups/cups-browsed.conf
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; systemctl &lt;span class=&quot;token builtin class-name&quot;&gt;enable&lt;/span&gt; cups-browsed
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; systemctl restart cups-browsed&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The printers should be installed now.&lt;/p&gt;
+&lt;h2&gt;Install Ferdi to manage my social interactions&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the appimage from &lt;a href=&quot;https://getferdi.com/&quot;&gt;https://getferdi.com/&lt;/a&gt; and put it in the &lt;code class=&quot;language-text&quot;&gt;~/Applications&lt;/code&gt; folder.&lt;/li&gt;
+&lt;li&gt;Give it exec permissions using &lt;code class=&quot;language-text&quot;&gt;chmod +x filename&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run it and signin to get my saved workspace&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Install Ruby and RVM&lt;/h2&gt;
+&lt;p&gt;First fix the gnome-terminal cmmand login using: &lt;a href=&quot;https://rvm.io/integration/gnome-terminal&quot;&gt;https://rvm.io/integration/gnome-terminal&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install Ruby and RVM &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# install system ruby&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; ruby
+&lt;span class=&quot;token comment&quot;&gt;# install RVM&lt;/span&gt;
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+&lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;curl -sSL https://get.rvm.io &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt; -s stable&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Restart the terminal.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Install ruby using RVM&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# enable autolibs&lt;/span&gt;
+rvm get stable --autolibs&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;enable
+&lt;span class=&quot;token comment&quot;&gt;# Install the latest stable ruby version&lt;/span&gt;
+rvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; ruby-2.6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Install NodeJS and NVM&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# install system nodejs and npm&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -y nodejs &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# install NVM&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Restart the terminal&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# install latest node-js&lt;/span&gt;
+nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;12&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# install yarn&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; --silent --location https://dl.yarnpkg.com/rpm/yarn.repo &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; /etc/yum.repos.d/yarn.repo
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Install vagrant&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;rvm use system
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; libvirt-daemon-kvm ansible vagrant-libvirt
+&lt;span class=&quot;token comment&quot;&gt;# enable libvirt&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; systemctl &lt;span class=&quot;token builtin class-name&quot;&gt;enable&lt;/span&gt; --now libvirtd
+&lt;span class=&quot;token comment&quot;&gt;# add your user to the libvirt group to avoid password prompts on running vagrant commands with libvirt provider&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; gpasswd -a &lt;span class=&quot;token variable&quot;&gt;${&lt;span class=&quot;token environment constant&quot;&gt;USER&lt;/span&gt;}&lt;/span&gt; libvirt
+newgrp libvirt
+&lt;span class=&quot;token comment&quot;&gt;# install vagrant plugins&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; sshfs vagrant-hostmanager vagrant-sshfs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTICE: before working with vagrant make sure you work with the system ruby (&lt;code class=&quot;language-text&quot;&gt;rvm use system&lt;/code&gt;) &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Customizing the zsh&lt;/h2&gt;
+&lt;p&gt;I ended up with the following &lt;code class=&quot;language-text&quot;&gt;.zshrc&lt;/code&gt; file in my home directory.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Path to your oh-my-zsh installation.&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;ZSH&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/home/sharvit/.oh-my-zsh&quot;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;LANG&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;en_US.UTF-8
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;EDITOR&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;vim&apos;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;ARCHFLAGS&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;-arch x86_64&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token assign-left variable&quot;&gt;ZSH_THEME&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;robbyrussell&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token assign-left variable&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;git github dnf vagrant nvm &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; rvm bundler&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token builtin class-name&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$ZSH&lt;/span&gt;/oh-my-zsh.sh
+
+&lt;span class=&quot;token comment&quot;&gt;# enable autocomplete&lt;/span&gt;
+autoload -U compinit
+compinit&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Install Atom&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rpm&lt;/span&gt; --import https://packagecloud.io/AtomEditor/atom/gpgkey
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sh&lt;/span&gt; -c &lt;span class=&quot;token string&quot;&gt;&apos;echo -e &quot;[Atom]&lt;span class=&quot;token entity&quot; title=&quot;\n&quot;&gt;\n&lt;/span&gt;name=Atom Editor&lt;span class=&quot;token entity&quot; title=&quot;\n&quot;&gt;\n&lt;/span&gt;baseurl=https://packagecloud.io/AtomEditor/atom/el/7/\&lt;span class=&quot;token variable&quot;&gt;$basearch&lt;/span&gt;&lt;span class=&quot;token entity&quot; title=&quot;\n&quot;&gt;\n&lt;/span&gt;enabled=1&lt;span class=&quot;token entity&quot; title=&quot;\n&quot;&gt;\n&lt;/span&gt;gpgcheck=0&lt;span class=&quot;token entity&quot; title=&quot;\n&quot;&gt;\n&lt;/span&gt;repo_gpgcheck=1&lt;span class=&quot;token entity&quot; title=&quot;\n&quot;&gt;\n&lt;/span&gt;gpgkey=https://packagecloud.io/AtomEditor/atom/gpgkey&quot; &gt; /etc/yum.repos.d/atom.repo&apos;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; atom&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Install my personal settings&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code class=&quot;language-text&quot;&gt;apm install sync-settings&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Open Atom&lt;/li&gt;
+&lt;li&gt;Open the sync-settings package settings&lt;/li&gt;
+&lt;li&gt;Set access-token&lt;/li&gt;
+&lt;li&gt;Set gist id to &lt;code class=&quot;language-text&quot;&gt;88fddc82d91cdd7cd33fdfdbe03dd161&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Restart atom&lt;/li&gt;
+&lt;li&gt;Click restore when you recived the message from sync-settings&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Configure my &lt;a href=&quot;https://github.com/theforeman/forklift&quot;&gt;forklift&lt;/a&gt; development environment so I can work on &lt;a href=&quot;https://theforeman.org&quot;&gt;the foreman project&lt;/a&gt;&lt;/h2&gt;
+&lt;h3&gt;Clone forklift&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# clone forklift&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone git@github.com:theforeman/forklift.git
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; forklift
+&lt;span class=&quot;token comment&quot;&gt;# setup vagrant boxes&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; vagrant/boxes.d/99-local.yaml.example vagrant/boxes.d/99-local.yaml
+&lt;span class=&quot;token function&quot;&gt;sed&lt;/span&gt; -i.bak &lt;span class=&quot;token string&quot;&gt;&quot;s/&amp;lt;REPLACE ME&gt;/sharvit/g&quot;&lt;/span&gt; vagrant/boxes.d/99-local.yaml
+&lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; vagrant/boxes.d/99-local.yaml.bak&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Edit the &lt;code class=&quot;language-text&quot;&gt;vagrant/boxes.d/99-local.yaml&lt;/code&gt; file with the following changes:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;diff&quot;&gt;&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;centos7-katello-devel:
+&lt;span class=&quot;token unchanged&quot;&gt;  primary: true
+  box: centos7
+&lt;/span&gt;&lt;span class=&quot;token inserted-arrow inserted&quot;&gt;&gt; sshfs:
+&gt;   host_path: &apos;/home/sharvit/Projects/theforeman/vagrant-shares/centos7-katello-devel&apos;
+&gt;   guest_path: &apos;/home/vagrant&apos;
+&gt;   reverse: True
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;  ansible:
+    playbook: &apos;playbooks/katello_devel.yml&apos;
+    group: &apos;devel&apos;
+    variables:
+      ssh_forward_agent: true
+      foreman_devel_github_push_ssh: True
+      katello_devel_github_username: sharvit
+&lt;/span&gt;
+centos7-luna-devel:
+&lt;span class=&quot;token unchanged&quot;&gt;  box: centos7
+  memory: 9000
+&lt;/span&gt;&lt;span class=&quot;token inserted-arrow inserted&quot;&gt;&gt; sshfs:
+&gt;   host_path: &apos;/home/sharvit/Projects/theforeman/vagrant-shares/centos7-luna-devel&apos;
+&gt;   guest_path: &apos;/home/vagrant&apos;
+&gt;   reverse: True
+&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;  ansible:
+    playbook: &apos;playbooks/luna-devel.yml&apos;
+    group: &apos;devel&apos;
+    variables:
+      katello_devel_github_username: sharvit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Set the &lt;code class=&quot;language-text&quot;&gt;host_path&lt;/code&gt; to a preferred location on your machine and make sure it&apos;s exist so you can have access to the foreman source code.&lt;/p&gt;
+&lt;h3&gt;Run &lt;code class=&quot;language-text&quot;&gt;centos7-luna-devel&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;rvm use system
+vagrant up centos7-luna-devel
+&lt;span class=&quot;token comment&quot;&gt;# the provisioning may fail by unknown reasons&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# in this case keep running until a successful provisioning &lt;/span&gt;
+vagrant up centos7-luna-devel --provision&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After a successful provisioning, ssh into the machine and run foreman:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;vagrant &lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; centos7-luna-devel
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; foreman
+bundle
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# add some faked data to `foreman`&lt;/span&gt;
+bundle &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; rake seed:forgeries
+&lt;span class=&quot;token comment&quot;&gt;# run foreman&lt;/span&gt;
+bundle &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; foreman start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Happy Hacking!&lt;/h3&gt;
+&lt;p&gt;Now foreman is running so I can open it in my browser:
+&lt;a href=&quot;https://centos7-luna-devel.sharvit-fedorabook-t480s.example.com/&quot;&gt;https://centos7-luna-devel.sharvit-fedorabook-t480s.example.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Login with the username &lt;code class=&quot;language-text&quot;&gt;admin&lt;/code&gt; and password &lt;code class=&quot;language-text&quot;&gt;changeme&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Go to my &lt;code class=&quot;language-text&quot;&gt;host_path&lt;/code&gt; and open the source code with atom:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; /home/asharvit/Projects/theforeman/vagrant-shares/centos7-luna-devel/foreman
+atom &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Happy Hacking...&lt;/p&gt;
+&lt;p&gt;To stop &lt;code class=&quot;language-text&quot;&gt;centos7-luna-devel&lt;/code&gt; run&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;vagrant &lt;span class=&quot;token function&quot;&gt;halt&lt;/span&gt; centos7-luna-devel&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Testing React-Redux Applications with Jest - QECAMP2019 Brno]]></title><description><![CDATA[In this talk, you will learn about testing React-Redux applications with Jest using the best practices I learned and developed while working…]]></description><link>https://sharvit.github.io/blog/testing-react-redux-applications-with-jest---qecamp2019-brno</link><guid isPermaLink="false">https://sharvit.github.io/blog/testing-react-redux-applications-with-jest---qecamp2019-brno</guid><pubDate>Sat, 17 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In this talk, you will learn about testing React-Redux applications with Jest using the best practices I learned and developed while working on &lt;a href=&quot;https://theforeman.org&quot;&gt;https://theforeman.org&lt;/a&gt; UI.&lt;/p&gt;
 &lt;p&gt;&lt;iframe width=&quot;480&quot; height=&quot;270&quot; src=&quot;https://www.youtube.com/embed/O4NHrmQ0XLY?feature=oembed&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;react-redux-test-utils:
 &lt;a href=&quot;https://sharvit.github.io/react-redux-test-utils/&quot;&gt;https://sharvit.github.io/react-redux-test-utils/&lt;/a&gt;&lt;/p&gt;

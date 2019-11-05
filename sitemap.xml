@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://sharvit.github.io/blog/testing-react-redux-applications-with-jest---qecamp2019-brno</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharvit.github.io/blog/using-travisci-to-automate-your-gatsbyjs-website-deployment-to-github-pages</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharvit.github.io/blog/hello-gatsby-world</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharvit.github.io/blog/serving-your-angular-client-with-nodejs-microservice</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharvit.github.io/blog/build-your-i18n-translation-files-using-gulp</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sharvit.github.io/blog/hello-world</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharvit.github.io/blog/2019-11-05-i-recived-my-new-pc-and-it-is-the-time-to-install-fedora-and-setup-my-work-enviorment</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharvit.github.io/blog/2019-08-17-testing-react-redux-applications-with-jest---qecamp2019-brno</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharvit.github.io/blog/2019-08-09-using-travisci-to-automate-your-gatsbyjs-website-deployment-to-github-pages</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharvit.github.io/blog/2019-08-09-hello-gatsby-world</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharvit.github.io/blog/2016-07-01-serving-your-angular-client-with-nodejs-microservice</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharvit.github.io/blog/2016-01-22-build-your-i18n-translation-files-using-gulp</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sharvit.github.io/blog/2015-12-21-hello-world</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharvit.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharvit.github.io/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sharvit.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
