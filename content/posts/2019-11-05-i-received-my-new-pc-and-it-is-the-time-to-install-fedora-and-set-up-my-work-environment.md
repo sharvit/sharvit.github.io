@@ -81,26 +81,31 @@ eval "$(ssh-agent -s)"
 
 ### Connect to Redhat VPN
 
+To be able to connect to the Redhat VPN, you will need to be inside the Redhat VPN, to do that you will need to be in a Redhat office and connect to the secured network (wired, wifi).
+
+Duo some restrictions, I can't share the full VPN urls, you can find the URLs in this secured link:
+https://mojo.redhat.com/docs/DOC-1199033-set-up-vpn-in-fedora-silverblue
+
 ```bash
 sudo dnf install NetworkManager-openvpn NetworkManager-openvpn-gnome
 
 # download the redhat certificate
-sudo wget -O /etc/pki/tls/certs/RH-IT-Root-CA.crt https://password.corp.redhat.com/RH-IT-Root-CA.crt
+sudo wget -O /etc/pki/tls/certs/RH-IT-Root-CA.crt https://-------------.redhat.com/RH-IT-Root-CA.crt
 sudo cp /etc/pki/tls/certs/RH-IT-Root-CA.crt /etc/pki/tls/certs/2015-RH-IT-Root-CA.pem
 
 # download some vpn profiles
-sudo wget -O /etc/NetworkManager/system-connections/AMS2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/AMS2.ovpn\?h\=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/PEK2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/PEK2.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/BNE.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/BNE.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/BRQ.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/BRQ.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/FAB.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/FAB.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/PHX2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/PHX2.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/PNQ2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/PNQ2.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/RDU2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/RDU2.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/GRU2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/GRU2.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/SIN2.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/SIN2.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/TLV.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/TLV.ovpn?h=it-csb-rhel-7
-sudo wget -O /etc/NetworkManager/system-connections/NRT.ovpn http://pkgs.devel.redhat.com/cgit/rpms/redhat-internal-NetworkManager-openvpn-profiles/plain/redhat-internal-NetworkManager-openvpn-profiles-0.1/NRT.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/AMS2.ovpn http://----------.redhat.com/--------------------------------/AMS2.ovpn
+sudo wget -O /etc/NetworkManager/system-connections/PEK2.ovpn http://----------.redhat.com/--------------------------------/PEK2.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/BNE.ovpn http://----------.redhat.com/--------------------------------/BNE.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/BRQ.ovpn http://----------.redhat.com/--------------------------------/BRQ.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/FAB.ovpn http://----------.redhat.com/--------------------------------/FAB.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/PHX2.ovpn http://----------.redhat.com/--------------------------------/PHX2.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/PNQ2.ovpn http://----------.redhat.com/--------------------------------/PNQ2.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/RDU2.ovpn http://----------.redhat.com/--------------------------------/RDU2.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/GRU2.ovpn http://----------.redhat.com/--------------------------------/GRU2.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/SIN2.ovpn http://----------.redhat.com/--------------------------------/SIN2.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/TLV.ovpn http://----------.redhat.com/--------------------------------/TLV.ovpn?h=it-csb-rhel-7
+sudo wget -O /etc/NetworkManager/system-connections/NRT.ovpn http://----------.redhat.com/--------------------------------/NRT.ovpn?h=it-csb-rhel-7
 
 # enable the redhat VPN
 sudo restorecon -RvF /etc/pki/tls/certs/
