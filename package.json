@@ -49,7 +49,7 @@
     "react-social-sharing": "^3.0.1"
   },
   "devDependencies": {
-    "eslint": "^6.7.1",
+    "eslint": "^6.7.2",
     "eslint-plugin-patternfly-react": "^0.2.3",
     "gh-pages": "2.1.1",
     "prettier": "^1.18.2",
