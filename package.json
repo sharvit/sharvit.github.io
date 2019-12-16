@@ -23,7 +23,7 @@
     "@raae/gatsby-remark-oembed": "^0.1.1",
     "bootstrap-sass": "^3.4.1",
     "classnames": "^2.2.6",
-    "gatsby": "^2.18.7",
+    "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-disqus": "^1.1.4",
     "gatsby-plugin-feed": "^2.3.23",
