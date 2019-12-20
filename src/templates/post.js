@@ -18,7 +18,10 @@ const PostTemplate = ({
   },
 }) => (
   <Layout
-    breadcrumbs={[{ title: 'Blog', path: '/blog' }, { title, path: postPath }]}
+    breadcrumbs={[
+      { title: 'Blog', path: '/blog' },
+      { title, path: postPath },
+    ]}
   >
     <SEO title={title} description={excerpt} />
     <BlogPost
