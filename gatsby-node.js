@@ -57,7 +57,7 @@ const getPostFiles = async graphql => {
   return result.data.allFile;
 };
 
-const mapPostFileToPostData = async (postFileEdge, graphql) => {
+const mapPostFileToPostData = (postFileEdge, graphql) => {
   const {
     node: { name, childMarkdownRemark },
   } = postFileEdge;
@@ -80,13 +80,13 @@ const mapPostFileToPostData = async (postFileEdge, graphql) => {
 };
 
 const createPostsPages = async (createPage, graphql) => {
-  const component = path.resolve(`src/templates/post.js`);
+  const component = path.resolve(__dirname, 'src/templates/post.js');
 
   const postFiles = await getPostFiles(graphql);
 
   // eslint-disable-next-line no-unused-vars
   for (const edge of postFiles.edges) {
-    const postData = await mapPostFileToPostData(edge, graphql); // eslint-disable-line no-await-in-loop
+    const postData = mapPostFileToPostData(edge, graphql);
 
     createPage({
       component,
