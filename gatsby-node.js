@@ -65,7 +65,7 @@ const mapPostFileToPostData = (postFileEdge, graphql) => {
   const [year, month, day] = name.split('-');
   const date = `${year}-${month}-${day}`;
 
-  const postPath = `/blog/${name}`;
+  const postPath = `/blog/${name}/`;
   const postUrl = `${siteMetadata.siteUrl}${postPath}`;
 
   const {
