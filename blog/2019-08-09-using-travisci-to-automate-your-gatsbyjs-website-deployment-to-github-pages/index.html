@@ -62,7 +62,7 @@ In this blog post, you will learn how I deploy my <a href="https://www.gatsbyjs.
 <p>First, create your Github repository based on the website type you wish to have, clone your repository, and put your project source-code in the <code class="language-text">source-code</code> branch.</p>
 <h2>Install gh-pages</h2>
 <p>The <code class="language-text">gh-pages</code> library can publish files to a branch on GitHub. It is useful to push anything to Github.</p>
-<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">npm install --save-dev gh-pages</code></pre></div>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save-dev gh-pages</code></pre></div>
 <h2>Create a deploy script</h2>
 <p>Add a deploy script to your <code class="language-text">package.json</code> scripts:</p>
 <div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
@@ -102,8 +102,8 @@ Replace <code class="language-text">SOURCE_CODE_BRANCH_NAME</code> with your <co
 </blockquote>
 <h3>Enable Travis</h3>
 <p>To enable Travis for your project, you can go to Travis website and use their dashboard, or you can use the CLI:</p>
-<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">gem install travis
-travis enable</code></pre></div>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">gem <span class="token function">install</span> travis
+travis <span class="token builtin class-name">enable</span></code></pre></div>
 <h3>Create a Github token</h3>
 <p>To let Travis deploy to GitHub, Travis needs to have the right credentials.<br>
 To do so, you to create a Github token with a <code class="language-text">repo</code> scope.<br>
@@ -111,7 +111,7 @@ This can be done by visiting <a href="https://github.com/settings/tokens">https:
 <h3>Set your Github token in Travis</h3>
 <p>Set up an environment variable in Travis with the name <code class="language-text">GH_TOKEN</code> and the value of the created token.<br>
 This can be done from Travis dashboard or by the cli by running:</p>
-<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">travis env set GH_TOKEN GITHUB_TOKEN_VALUE_HERE</code></pre></div>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">travis <span class="token function">env</span> <span class="token builtin class-name">set</span> GH_TOKEN GITHUB_TOKEN_VALUE_HERE</code></pre></div>
 <blockquote>
 <p>Replace <code class="language-text">GITHUB_TOKEN_VALUE_HERE</code> with your newly created token.</p>
 </blockquote>
