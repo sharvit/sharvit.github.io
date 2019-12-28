@@ -30,7 +30,7 @@ const BlogPost = ({ id, title, coverImage, date, url, html }) => {
           </div>
           <br />
           <br />
-          <p className="entry" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="entry" dangerouslySetInnerHTML={{ __html: html }} />
           <br />
           <br />
           <ShareButtons url={url} />
