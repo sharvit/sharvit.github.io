@@ -22,7 +22,7 @@ First, create your Github repository based on the website type you wish to have,
 
 The `gh-pages` library can publish files to a branch on GitHub. It is useful to push anything to Github.
 
-```sh
+```bash
 npm install --save-dev gh-pages
 ```
 
@@ -78,7 +78,7 @@ deploy:
 ### Enable Travis
 
 To enable Travis for your project, you can go to Travis website and use their dashboard, or you can use the CLI:
-```sh
+```bash
 gem install travis
 travis enable
 ```
@@ -93,7 +93,7 @@ This can be done by visiting https://github.com/settings/tokens.
 
 Set up an environment variable in Travis with the name `GH_TOKEN` and the value of the created token.  
 This can be done from Travis dashboard or by the cli by running:
-```sh
+```bash
 travis env set GH_TOKEN GITHUB_TOKEN_VALUE_HERE
 ```
 
