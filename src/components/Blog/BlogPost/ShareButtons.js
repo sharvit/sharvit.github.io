@@ -10,8 +10,8 @@ import {
 
 const ShareButtons = ({ url }) => (
   <div>
-    {[Twitter, Facebook, Mail, Whatsapp, Telegram].map(ShareButton => (
-      <ShareButton link={url} solid big />
+    {[Twitter, Facebook, Mail, Whatsapp, Telegram].map((ShareButton, index) => (
+      <ShareButton key={index} link={url} solid big />
     ))}
   </div>
 );
