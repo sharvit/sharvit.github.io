@@ -112,35 +112,35 @@ In this post, you will learn how to use webpack and babel to build your own libr
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-  entry<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  entry<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    filename<span class="token punctuation">:</span> <span class="token string">'index.js'</span><span class="token punctuation">,</span>
-    globalObject<span class="token punctuation">:</span> <span class="token string">'this'</span><span class="token punctuation">,</span>
-    libraryTarget<span class="token punctuation">:</span> <span class="token string">'umd'</span><span class="token punctuation">,</span>
-    library<span class="token punctuation">:</span> <span class="token string">'evenNumbers'</span><span class="token punctuation">,</span>
+  output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    filename<span class="token operator">:</span> <span class="token string">'index.js'</span><span class="token punctuation">,</span>
+    globalObject<span class="token operator">:</span> <span class="token string">'this'</span><span class="token punctuation">,</span>
+    libraryTarget<span class="token operator">:</span> <span class="token string">'umd'</span><span class="token punctuation">,</span>
+    library<span class="token operator">:</span> <span class="token string">'evenNumbers'</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+  module<span class="token operator">:</span> <span class="token punctuation">{</span>
+    rules<span class="token operator">:</span> <span class="token punctuation">[</span>
       <span class="token punctuation">{</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
-        exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
-        loader<span class="token punctuation">:</span> <span class="token string">'babel-loader'</span><span class="token punctuation">,</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+        exclude<span class="token operator">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+        loader<span class="token operator">:</span> <span class="token string">'babel-loader'</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <p>The first part of the config is the <code class="language-text">entry</code> field, and this is the entry point of the library:</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">  entry<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre></div>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">  entry<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre></div>
 <p>The second field is the <code class="language-text">output</code>, and this will configure what output webpack should produce.</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-  path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  filename<span class="token punctuation">:</span> <span class="token string">'index.js'</span><span class="token punctuation">,</span>
-  library<span class="token punctuation">:</span> <span class="token string">'evenNumbers'</span><span class="token punctuation">,</span>
-  globalObject<span class="token punctuation">:</span> <span class="token string">'this'</span><span class="token punctuation">,</span>
-  libraryTarget<span class="token punctuation">:</span> <span class="token string">'umd'</span><span class="token punctuation">,</span>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">output<span class="token operator">:</span> <span class="token punctuation">{</span>
+  path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  filename<span class="token operator">:</span> <span class="token string">'index.js'</span><span class="token punctuation">,</span>
+  library<span class="token operator">:</span> <span class="token string">'evenNumbers'</span><span class="token punctuation">,</span>
+  globalObject<span class="token operator">:</span> <span class="token string">'this'</span><span class="token punctuation">,</span>
+  libraryTarget<span class="token operator">:</span> <span class="token string">'umd'</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre></div>
 <ul>
 <li><code class="language-text">path</code> together with <code class="language-text">filename</code> - will be resolved to the build result destination, in this case, <code class="language-text">./dist/index.js</code>.</li>
@@ -191,21 +191,21 @@ In this case, you would want to avoid building <code class="language-text">react
 <p>We can tell webpack not build <code class="language-text">react</code> into the library target by adding the <code class="language-text">externals</code> field to the webpack config.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token operator">...</span>
-  externals <span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    react<span class="token punctuation">:</span> <span class="token string">'react'</span>
+  externals <span class="token operator">:</span> <span class="token punctuation">{</span>
+    react<span class="token operator">:</span> <span class="token string">'react'</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token operator">...</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <p>If the library uses <code class="language-text">jquery</code> and <code class="language-text">lodash</code>, those can be added as well:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token operator">...</span>
-  externals <span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    react<span class="token punctuation">:</span> <span class="token string">'react'</span><span class="token punctuation">,</span>
-    jquery<span class="token punctuation">:</span> <span class="token string">'jQuery'</span><span class="token punctuation">,</span>
-    lodash <span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      commonjs<span class="token punctuation">:</span> <span class="token string">'lodash'</span><span class="token punctuation">,</span>
-      amd<span class="token punctuation">:</span> <span class="token string">'lodash'</span><span class="token punctuation">,</span>
-      root<span class="token punctuation">:</span> <span class="token string">'_'</span> <span class="token comment">// indicates global variable</span>
+  externals <span class="token operator">:</span> <span class="token punctuation">{</span>
+    react<span class="token operator">:</span> <span class="token string">'react'</span><span class="token punctuation">,</span>
+    jquery<span class="token operator">:</span> <span class="token string">'jQuery'</span><span class="token punctuation">,</span>
+    lodash <span class="token operator">:</span> <span class="token punctuation">{</span>
+      commonjs<span class="token operator">:</span> <span class="token string">'lodash'</span><span class="token punctuation">,</span>
+      amd<span class="token operator">:</span> <span class="token string">'lodash'</span><span class="token punctuation">,</span>
+      root<span class="token operator">:</span> <span class="token string">'_'</span> <span class="token comment">// indicates global variable</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
