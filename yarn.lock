@@ -4719,10 +4719,10 @@ eslint-plugin-node@^6.0.1:
     resolve "^1.3.3"
     semver "^5.4.1"
 
-eslint-plugin-patternfly-react@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-patternfly-react/-/eslint-plugin-patternfly-react-0.2.3.tgz#e9096268a928ed7f11bb96d17ede1693b68accfe"
-  integrity sha512-DiGFp5KTX124C/CrnL7Pjxvt5bk5vEIU08BcrMBQOXNLR9cuaTB5tj8PhiURTwd64iol+UcQeXG4WxjXMkBeDw==
+eslint-plugin-patternfly-react@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-patternfly-react/-/eslint-plugin-patternfly-react-0.4.1.tgz#98f217ddd370607dd51a9310f46a554005ff92ad"
+  integrity sha512-50xEN+HVFcUdGhpaqtb9xYtOtjRghb15i3v18+Of/C/MDuTcrtWIzn/cR3dW6nbB71guTtGBBghNLKemnKPotw==
   dependencies:
     babel-eslint "^9.0.0"
     eslint-config-airbnb "^16.1.0"
@@ -4737,6 +4737,7 @@ eslint-plugin-patternfly-react@^0.2.3:
     eslint-plugin-prettier "^2.6.0"
     eslint-plugin-promise "^3.7.0"
     eslint-plugin-react "^7.7.0"
+    eslint-plugin-react-hooks "^2.5.0"
     eslint-plugin-rulesdir "^0.1.0"
     eslint-plugin-standard "^3.0.1"
 
@@ -4757,6 +4758,11 @@ eslint-plugin-react-hooks@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
   integrity sha512-iXTCFcOmlWvw4+TOE8CLWj6yX1GwzT0Y6cUfHHZqWnSk144VmVIRcVGtUAzrLES7C798lmvnt02C7rxaOX1HNA==
+
+eslint-plugin-react-hooks@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.5.0.tgz#c50ab7ca5945ce6d1cf8248d9e185c80b54171b6"
+  integrity sha512-bzvdX47Jx847bgAYf0FPX3u1oxU+mKU8tqrpj4UX9A96SbAmj/HVEefEy6rJUog5u8QIlOPTKZcBpGn5kkKfAQ==
 
 eslint-plugin-react@^7.17.0, eslint-plugin-react@^7.7.0:
   version "7.17.0"
