@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "eslint-plugin-patternfly-react": "^0.2.3",
+    "eslint-plugin-patternfly-react": "^0.4.2",
     "gh-pages": "2.1.1",
     "prettier": "^1.18.2",
     "resolve-url-loader": "^3.1.1"
