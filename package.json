@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.8.4",
-    "@fortawesome/fontawesome-free": "^5.12.1",
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "@raae/gatsby-remark-oembed": "^0.1.1",
     "bootstrap-sass": "^3.4.1",
     "classnames": "^2.2.6",
