@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Avi Sharvit Blog's RSS Feed]]></title><description><![CDATA[Expert Full Stack Developer]]></description><link>https://sharvit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Jun 2020 04:00:41 GMT</lastBuildDate><item><title><![CDATA[Using webpack to build a javascript library]]></title><description><![CDATA[Like building applications, webpack can be used to build libraries.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Avi Sharvit Blog's RSS Feed]]></title><description><![CDATA[Expert Full Stack Developer]]></description><link>https://sharvit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 12 Sep 2020 07:19:30 GMT</lastBuildDate><item><title><![CDATA[Using webpack to build a javascript library]]></title><description><![CDATA[Like building applications, webpack can be used to build libraries.
 In this post, you will learn how to use webpack and babel to build your…]]></description><link>https://sharvit.github.io/blog/using-webpack-to-build-a-javascript-library</link><guid isPermaLink="false">https://sharvit.github.io/blog/using-webpack-to-build-a-javascript-library</guid><pubDate>Sat, 28 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Like building applications, webpack can be used to build libraries.
 In this post, you will learn how to use webpack and babel to build your own library.&lt;/p&gt;
 &lt;h2&gt;Demo Library&lt;/h2&gt;
@@ -35,7 +35,7 @@ In this post, you will learn how to use webpack and babel to build your own libr
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Directly in the browser&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;https://unpkg.com/even-numbers&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;https://unpkg.com/even-numbers&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;span class=&quot;token language-javascript&quot;&gt;
  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; isEven&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; isOdd &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;evenNumbers&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -386,32 +386,32 @@ compinit&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; vagrant/boxes.d/99-local.yaml.bak&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Edit the &lt;code class=&quot;language-text&quot;&gt;vagrant/boxes.d/99-local.yaml&lt;/code&gt; file with the following changes:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;diff&quot;&gt;&lt;pre class=&quot;language-diff&quot;&gt;&lt;code class=&quot;language-diff&quot;&gt;centos7-katello-devel:
-&lt;span class=&quot;token unchanged&quot;&gt;  primary: true
-  box: centos7
-&lt;/span&gt;&lt;span class=&quot;token inserted-arrow inserted&quot;&gt;&gt; sshfs:
-&gt;   host_path: &apos;/home/sharvit/Projects/theforeman/vagrant-shares/centos7-katello-devel&apos;
-&gt;   guest_path: &apos;/home/vagrant&apos;
-&gt;   reverse: True
-&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;  ansible:
-    playbook: &apos;playbooks/katello_devel.yml&apos;
-    group: &apos;devel&apos;
-    variables:
-      ssh_forward_agent: true
-      foreman_devel_github_push_ssh: True
-      katello_devel_github_username: sharvit
-&lt;/span&gt;
+&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; primary: true
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; box: centos7
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token inserted-arrow inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; sshfs:
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   host_path: &apos;/home/sharvit/Projects/theforeman/vagrant-shares/centos7-katello-devel&apos;
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   guest_path: &apos;/home/vagrant&apos;
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   reverse: True
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; ansible:
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   playbook: &apos;playbooks/katello_devel.yml&apos;
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   group: &apos;devel&apos;
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   variables:
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;     ssh_forward_agent: true
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;     foreman_devel_github_push_ssh: True
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;     katello_devel_github_username: sharvit
+&lt;/span&gt;&lt;/span&gt;
 centos7-luna-devel:
-&lt;span class=&quot;token unchanged&quot;&gt;  box: centos7
-  memory: 9000
-&lt;/span&gt;&lt;span class=&quot;token inserted-arrow inserted&quot;&gt;&gt; sshfs:
-&gt;   host_path: &apos;/home/sharvit/Projects/theforeman/vagrant-shares/centos7-luna-devel&apos;
-&gt;   guest_path: &apos;/home/vagrant&apos;
-&gt;   reverse: True
-&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;  ansible:
-    playbook: &apos;playbooks/luna-devel.yml&apos;
-    group: &apos;devel&apos;
-    variables:
-      katello_devel_github_username: sharvit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; box: centos7
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; memory: 9000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token inserted-arrow inserted&quot;&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; sshfs:
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   host_path: &apos;/home/sharvit/Projects/theforeman/vagrant-shares/centos7-luna-devel&apos;
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   guest_path: &apos;/home/vagrant&apos;
+&lt;/span&gt;&lt;span class=&quot;token prefix inserted&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   reverse: True
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token unchanged&quot;&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt; ansible:
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   playbook: &apos;playbooks/luna-devel.yml&apos;
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   group: &apos;devel&apos;
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;   variables:
+&lt;/span&gt;&lt;span class=&quot;token prefix unchanged&quot;&gt; &lt;/span&gt;&lt;span class=&quot;token line&quot;&gt;     katello_devel_github_username: sharvit&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Set the &lt;code class=&quot;language-text&quot;&gt;host_path&lt;/code&gt; to a preferred location on your machine and make sure it exists so you can have access to the foreman source code.&lt;/p&gt;
 &lt;h3&gt;Run &lt;code class=&quot;language-text&quot;&gt;centos7-luna-devel&lt;/code&gt;&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;rvm use system
@@ -577,7 +577,7 @@ Angular will do it well until you will try to reload or open &lt;code class=&quo
 Add this line to your &lt;code class=&quot;language-text&quot;&gt;index.html&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
     ...
-    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;base&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;/&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;base&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;/&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
     ...
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Install dependencies&lt;/p&gt;
@@ -660,14 +660,14 @@ Add this line to your &lt;code class=&quot;language-text&quot;&gt;index.html&lt;
             &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-        &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; Use res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sendFile&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; it streams instead &lt;span class=&quot;token keyword&quot;&gt;of&lt;/span&gt; reading the file into memory&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// Use res.sendFile, as it streams instead of reading the file into memory.&lt;/span&gt;
         res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sendFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;INDEX_FILE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-    &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; run the server and start listen to the port
+    &lt;span class=&quot;token comment&quot;&gt;// run the server and start listen to the port&lt;/span&gt;
     server&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-    &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; Render some console log output
+    &lt;span class=&quot;token comment&quot;&gt;// Render some console log output&lt;/span&gt;
     console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Angular app is running on port &apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;PORT&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Just run&lt;/p&gt;
