@@ -28,7 +28,7 @@
 
 ### October 2017 to Current
 
-#### RedHat - [TheForeman.org](https://theforeman.org/) - Senior software engineer
+#### RedHat - [TheForeman.org](https://theforeman.org/) - Senior software engineer and team leader
 TheForeman is an open source project for managing lifecycle of physical and virtual servers on-premise or in the cloud.
 
 Help migrating from JQuery to React in order to make the UX rich and modern.
