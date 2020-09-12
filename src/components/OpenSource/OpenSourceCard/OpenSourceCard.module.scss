@@ -9,12 +9,12 @@
     .title {
       margin: 0;
 
-      svg {
+      svg.title-icon {
         margin-right: 8px;
         fill: currentColor;
       }
 
-      a {
+      .title-link {
         color: #0366d6;
         font-weight: 400;
         font-size: 18px;

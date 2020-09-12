@@ -46,6 +46,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.0",
     "react-helmet": "^6.1.0",
+    "react-loading-skeleton": "^2.1.1",
     "react-social-sharing": "^3.0.1"
   },
   "devDependencies": {

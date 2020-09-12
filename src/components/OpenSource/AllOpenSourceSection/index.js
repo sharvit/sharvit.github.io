@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import { getAllOpenSourceProjects } from './AllOpenSourceSectionData';
+import { useOpenSourceProjects } from '../OpenSourceData';
 import AllOpenSourceSection from './AllOpenSourceSection';
 
 const Component = () => {
-  const [repositories, setRepositories] = useState([]);
+  const { openSourceProjects, error, isLoading } = useOpenSourceProjects();
 
-  const loadRepositories = async () => {
-    setRepositories(await getAllOpenSourceProjects());
-  };
-
-  useEffect(() => {
-    loadRepositories();
-  }, []);
-
-  return <AllOpenSourceSection repositories={repositories} />;
+  return (
+    <AllOpenSourceSection
+      repositories={openSourceProjects}
+      error={error}
+      isLoading={isLoading}
+    />
+  );
 };
 
 export default Component;
