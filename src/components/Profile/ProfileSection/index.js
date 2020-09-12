@@ -2,7 +2,7 @@ import React from 'react';
 import { useProfileData } from './ProfileSectionData';
 import ProfileSection from './ProfileSection';
 
-const Component = () => {
+const Component = (props) => {
   const { title, description, avatar, bio } = useProfileData();
 
   return (
@@ -11,6 +11,7 @@ const Component = () => {
       description={description}
       avatar={avatar}
       bio={bio}
+      {...props}
     />
   );
 };

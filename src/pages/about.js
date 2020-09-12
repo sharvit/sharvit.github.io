@@ -8,7 +8,7 @@ import AboutSection from '../components/Profile/AboutSection';
 const AboutPage = () => (
   <Layout transparent>
     <SEO title="About" />
-    <ProfileSection />
+    <ProfileSection button="download" />
     <Breadcrumbs
       items={[
         { title: 'Avi Sharvit', path: '/' },
