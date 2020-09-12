@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-export const getSiteTitle = () =>
+export const useSiteTitle = () =>
   useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

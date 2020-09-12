@@ -7,7 +7,7 @@
 const path = require('path');
 const siteMetadata = require('./content/meta/siteMetadata');
 
-const getPostFiles = async graphql => {
+const getPostFiles = async (graphql) => {
   const result = await graphql(`
     query {
       allFile(

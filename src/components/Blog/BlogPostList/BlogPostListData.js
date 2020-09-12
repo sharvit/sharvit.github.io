@@ -1,3 +1,3 @@
-import { getBlogPosts } from '../BlogData';
+import { useBlogPosts } from '../BlogData';
 
-export const getBlogPostsList = limit => getBlogPosts().slice(0, limit);
+export const useBlogPostsList = (limit) => useBlogPosts().slice(0, limit);

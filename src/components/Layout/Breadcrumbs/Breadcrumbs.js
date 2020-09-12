@@ -8,7 +8,7 @@ import styles from './Breadcrumbs.module.scss';
 const Breadcrumbs = ({ items }) => (
   <nav className={classNames(styles.breadcrumbs, 'breadcrumbs')}>
     <ol className="breadcrumb" style={{ margin: 0 }}>
-      {items.map(item => (
+      {items.map((item) => (
         <BreadcrumbItem key={item.path} {...item} />
       ))}
     </ol>

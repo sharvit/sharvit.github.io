@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-export const getSocialLinks = () =>
+export const useSocialLinks = () =>
   useStaticQuery(
     graphql`
       query {

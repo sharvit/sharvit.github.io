@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import classNames from 'classnames';
 
 import BlogPostListItem from './BlogPostListItem';
-import { getBlogPostsList } from './BlogPostListData';
-// import styles from './LatestBlogPostsSection.module.scss';
+import { useBlogPostsList } from './BlogPostListData';
 
 const BlogPostList = ({ limit }) => (
   <div className="articles">
-    {getBlogPostsList(limit).map(post => (
+    {useBlogPostsList(limit).map((post) => (
       <BlogPostListItem key={post.path} {...post} />
     ))}
   </div>

@@ -12,7 +12,7 @@ const AllOpenSourceSection = ({ repositories }) => (
       <h1>Latest Open Source Projects</h1>
 
       <div className="row open-source">
-        {repositories.map(repository => (
+        {repositories.map((repository) => (
           <div className="col-md-4" key={repository.name}>
             <OpenSourceCard {...repository} />
           </div>

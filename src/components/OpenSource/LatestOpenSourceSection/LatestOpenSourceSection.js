@@ -24,7 +24,7 @@ const LatestOpenSourceSection = ({ repositories }) => (
       </div>
 
       <div className="row open-source open-source-section">
-        {repositories.map(repository => (
+        {repositories.map((repository) => (
           <div className="col-md-4" key={repository.name}>
             <OpenSourceCard {...repository} />
           </div>

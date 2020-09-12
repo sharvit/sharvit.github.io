@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { getSocialLinks } from './ProfileIconLinksData';
+import { useSocialLinks } from './ProfileIconLinksData';
 import ProfileIconLinks from './ProfileIconLinks';
 
 export default () => {
-  const socialLinks = getSocialLinks();
+  const socialLinks = useSocialLinks();
 
   return <ProfileIconLinks socialLinks={socialLinks} />;
 };
