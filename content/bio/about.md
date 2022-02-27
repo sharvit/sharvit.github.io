@@ -13,7 +13,7 @@
 - PostgreSQL, MongoDB, Redis, MySQL, MsSQL, Oracle
 
 #### Blockchain:
-- Solidity, web3, ethers, geth, mining
+- Solidity, hardhat, web3, ethers, geth, mining
 
 #### Mobile Platforms:
 - IOS, Android
