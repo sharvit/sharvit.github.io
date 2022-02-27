@@ -1,22 +1,25 @@
 ## Highlights
 
 #### Languages
-- JavaScript expert, Ruby, HTML, CSS, SQL, TypeScript, PHP, Java, C#, C++, C
+- JavaScript expert, TypeScript, Solidity, Ruby, HTML, CSS, SQL, PHP, Java, C#, C++, C
 
 #### Libraries:
-- Node.JS, ES2015+, ROR, React, React Native, AngularJS, Angular2/4, Ionic, Webpack, Backbone, Gulp, Bootstrap, Cordova, Underscore.js, Sass
+- NodeJS, React, React Native, Graphql, ROR, Angular, Ionic, Webpack, Backbone, Gulp, Bootstrap, Cordova, Underscore.js, Sass
+
+#### Cloud Platforms:
+- Kubernetes, Docker, AWS, Google CloudPlatform, Linode, Heroku, OpenShift, S3, Ansible
+
+#### Databases:
+- PostgreSQL, MongoDB, Redis, MySQL, MsSQL, Oracle
+
+#### Blockchain:
+- Solidity, web3, ethers, geth, mining
 
 #### Mobile Platforms:
 - IOS, Android
 
 #### IOT Platforms:
 - Arduino, Raspberry PI​​
-
-#### Cloud Platforms:
-- Heroku, OpenShift, AWS, S3, Google CloudPlatform, Docker, Kubernetes, Ansible
-
-#### Databases:
-- PostgreSQL, MongoDB, Redis, MySQL, MsSQL, Oracle
 
 #### Dev. Environment:
 - OS X, Linux, Git, Atom, XCode, Adobe CC
@@ -26,9 +29,9 @@
 
 ## Experience
 
-### October 2017 to Current
+### October 2017 to February 2022
 
-#### RedHat - [TheForeman.org](https://theforeman.org/) - Senior software engineer and team leader
+#### RedHat - [TheForeman.org](https://theforeman.org/) - Team leader and Senior software engineer
 TheForeman is an open source project for managing lifecycle of physical and virtual servers on-premise or in the cloud.
 
 Help migrating from JQuery to React in order to make the UX rich and modern.
