@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require('path');
 const siteMetadata = require('./content/meta/siteMetadata');
 
 const getPostFiles = async (graphql) => {
@@ -25,20 +24,7 @@ const getPostFiles = async (graphql) => {
                 title
                 coverImage {
                   childImageSharp {
-                    fluid(maxHeight: 500, maxWidth: 1200) {
-                      base64
-                      tracedSVG
-                      aspectRatio
-                      src
-                      srcSet
-                      srcWebp
-                      srcSetWebp
-                      sizes
-                      originalImg
-                      originalName
-                      presentationWidth
-                      presentationHeight
-                    }
+                    gatsbyImageData(layout: FULL_WIDTH)
                   }
                 }
               }
@@ -74,30 +60,24 @@ const mapPostFileToPostData = (postFileEdge, graphql) => {
     frontmatter: { title, coverImage: coverImageFile },
   } = childMarkdownRemark;
 
-  const coverImage = coverImageFile && coverImageFile.childImageSharp.fluid;
+  const coverImage =
+    coverImageFile && coverImageFile.childImageSharp.gatsbyImageData;
 
   return { name, date, postPath, postUrl, html, excerpt, title, coverImage };
-};
-
-const createPostsPages = async (createPage, graphql) => {
-  const component = path.resolve(__dirname, 'src/templates/post.js');
-
-  const postFiles = await getPostFiles(graphql);
-
-  // eslint-disable-next-line no-unused-vars
-  for (const edge of postFiles.edges) {
-    const postData = mapPostFileToPostData(edge, graphql);
-
-    createPage({
-      component,
-      path: postData.postPath,
-      context: postData,
-    });
-  }
 };
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  await createPostsPages(createPage, graphql);
+  const postFiles = await getPostFiles(graphql);
+
+  for (const edge of postFiles.edges) {
+    const postData = mapPostFileToPostData(edge, graphql);
+
+    createPage({
+      component: require.resolve('./src/templates/post.js'),
+      path: postData.postPath,
+      context: postData,
+    });
+  }
 };

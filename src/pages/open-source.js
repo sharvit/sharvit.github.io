@@ -1,14 +1,13 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import AllOpenSourceSection from '../components/OpenSource/AllOpenSourceSection';
+import { Layout, Seo } from '../components';
+import { AllOpenSourceSection } from '../modules/open-source';
 
 const OpenSourcePage = () => (
   <Layout
     breadcrumbs={[{ title: 'Open Source Projects', path: '/open-source' }]}
   >
-    <SEO title="Open Source Projects" />
+    <Seo title="Open Source Projects" />
     <AllOpenSourceSection />
   </Layout>
 );

@@ -1,13 +1,12 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import Breadcrumbs from '../components/Layout/Breadcrumbs';
-import SEO from '../components/SEO';
-import ProfileSection from '../components/Profile/ProfileSection';
-import AboutSection from '../components/Profile/AboutSection';
+
+import { Layout, Seo } from '../components';
+import Breadcrumbs from '../components/Layout/components/Breadcrumbs';
+import { ProfileSection, AboutSection } from '../modules/profile';
 
 const AboutPage = () => (
   <Layout transparent>
-    <SEO title="About" />
+    <Seo title="About" />
     <ProfileSection button="download" />
     <Breadcrumbs
       items={[

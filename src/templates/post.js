@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import BlogPost from '../components/Blog/BlogPost';
+import { Layout, Seo } from '../components';
+import { BlogPost } from '../modules/blog';
 
 const PostTemplate = ({
   pageContext: {
@@ -23,7 +22,7 @@ const PostTemplate = ({
       { title, path: postPath },
     ]}
   >
-    <SEO title={title} description={excerpt} />
+    <Seo title={title} description={excerpt} />
     <BlogPost
       id={name}
       title={title}

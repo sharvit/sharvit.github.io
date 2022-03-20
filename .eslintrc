@@ -1,4 +1,14 @@
 {
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ]
+    },
+  },
   "plugins": ["patternfly-react"],
   "extends": ["plugin:patternfly-react/recommended"],
   "rules": {

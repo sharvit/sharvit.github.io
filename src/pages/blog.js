@@ -1,12 +1,11 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import AllBlogPostsSection from '../components/Blog/AllBlogPostsSection';
+import { Layout, Seo } from '../components';
+import { AllBlogPostsSection } from '../modules/blog';
 
 const BlogPage = () => (
   <Layout breadcrumbs={[{ title: 'Blog', path: '/blog' }]}>
-    <SEO title="Blog" />
+    <Seo title="Blog" />
     <AllBlogPostsSection />
   </Layout>
 );

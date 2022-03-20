@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import ProfileSection from '../components/Profile/ProfileSection';
-import LatestOpenSourceSection from '../components/OpenSource/LatestOpenSourceSection';
-import LatestBlogPostsSection from '../components/Blog/LatestBlogPostsSection';
+import { Layout, Seo } from '../components';
+
+import { ProfileSection } from '../modules/profile';
+import { LatestBlogPostsSection } from '../modules/blog';
+import { LatestOpenSourceSection } from '../modules/open-source';
 
 const IndexPage = () => (
   <Layout transparent>
-    <SEO />
+    <Seo />
     <ProfileSection button="navigate" />
     <LatestOpenSourceSection />
     <LatestBlogPostsSection />
