@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-post-js","path":"/blog/2015-12-21-hello-world","result":{"pageContext":{"name":"2015-12-21-hello-world","date":"2015-12-21","postPath":"/blog/2015-12-21-hello-world","postUrl":"https://sharvit.github.io/blog/2015-12-21-hello-world","html":"<p>Its took a minute to set everything up, and it feel so great working on that platform!</p>","excerpt":"Its took a minute to set everything up, and it feel so great working on that platform!","title":"Hello World!","coverImage":null}},"staticQueryHashes":["3649515864","776282618"]}
+{
+    "componentChunkName": "component---src-templates-post-js",
+    "path": "/blog/2015-12-21-hello-world",
+    "result": {"pageContext":{"name":"2015-12-21-hello-world","date":"2015-12-21","postPath":"/blog/2015-12-21-hello-world","postUrl":"https://sharvit.github.io/blog/2015-12-21-hello-world","html":"<p>Its took a minute to set everything up, and it feel so great working on that platform!</p>","excerpt":"Its took a minute to set everything up, and it feel so great working on that platform!","title":"Hello World!","coverImage":null}},
+    "staticQueryHashes": ["344905928","3649515864","776282618"]}
