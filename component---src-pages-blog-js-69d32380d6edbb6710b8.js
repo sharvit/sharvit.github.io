@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksharvit_github_io=self.webpackChunksharvit_github_io||[]).push([[7],{5502:function(e,t,n){n.r(t),n.d(t,{Head:function(){return l}});var r=n(7294),u=n(8258),i=n(9163),l=function(){return r.createElement(u.p,{title:"Blog"})};t.default=function(){return r.createElement(u.A,{breadcrumbs:[{title:"Blog",path:"/blog"}]},r.createElement(i.T_,null))}}}]);
+//# sourceMappingURL=component---src-pages-blog-js-69d32380d6edbb6710b8.js.map
