@@ -4,9 +4,10 @@ import { Layout, Seo } from '../components';
 import Breadcrumbs from '../components/Layout/components/Breadcrumbs';
 import { ProfileSection, AboutSection } from '../modules/profile';
 
+export const Head = () => <Seo title="About" />;
+
 const AboutPage = () => (
   <Layout transparent>
-    <Seo title="About" />
     <ProfileSection button="download" />
     <Breadcrumbs
       items={[

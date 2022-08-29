@@ -1,91 +1,88 @@
-/**
- * Seo component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+
+const metadataSeoQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+        author {
+          twitter
+          avatar
+        }
+      }
+    }
+    file(sourceInstanceName: { eq: "bio" }, name: { eq: "short-bio" }) {
+      childMarkdownRemark {
+        rawMarkdownBody
+      }
+    }
+  }
+`;
 
 const Seo = ({ description, lang, meta, title }) => {
   const {
     site: { siteMetadata },
     file,
-  } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author {
-              twitter
-              avatar
-            }
-          }
-        }
-        file(sourceInstanceName: { eq: "bio" }, name: { eq: "short-bio" }) {
-          childMarkdownRemark {
-            rawMarkdownBody
-          }
-        }
-      }
-    `
-  );
+  } = useStaticQuery(metadataSeoQuery);
 
-  const titleTemplate = title ? `${siteMetadata.title} | %s` : '%s';
-
-  const metaTitle =
-    title || `${siteMetadata.title} | ${siteMetadata.description}`;
+  const metaTitle = title
+    ? `${siteMetadata.title} | ${title}`
+    : `${siteMetadata.title} | ${siteMetadata.description}`;
 
   const metaDescription =
     description || file.childMarkdownRemark.rawMarkdownBody;
 
+  const metaElements = [
+    {
+      name: `description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:title`,
+      content: metaTitle,
+    },
+    {
+      property: `og:description`,
+      content: metaDescription,
+    },
+    {
+      property: 'og:image',
+      content: siteMetadata.author.avatar,
+    },
+    {
+      property: `og:type`,
+      content: `website`,
+    },
+    {
+      name: `twitter:card`,
+      content: `summary`,
+    },
+    {
+      name: `twitter:site`,
+      content: `@${siteMetadata.author.twitter}`,
+    },
+    {
+      name: `twitter:creator`,
+      content: `@${siteMetadata.author.twitter}`,
+    },
+    ...meta,
+  ];
+
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={metaTitle}
-      titleTemplate={titleTemplate}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: metaTitle,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: 'og:image',
-          content: siteMetadata.author.avatar,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:site`,
-          content: `@${siteMetadata.author.twitter}`,
-        },
-        {
-          name: `twitter:creator`,
-          content: `@${siteMetadata.author.twitter}`,
-        },
-      ].concat(meta)}
-    />
+    <>
+      <title>{metaTitle}</title>
+      {metaElements.map(({ name, property, content }) => (
+        <meta
+          key={name || property}
+          name={name}
+          property={property}
+          content={content}
+        />
+      ))}
+    </>
   );
 };
 

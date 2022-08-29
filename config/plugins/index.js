@@ -8,7 +8,6 @@ module.exports = [
   ...imagePlugins,
   ...markdownPlugins,
   ...rssPlugins,
-  'gatsby-plugin-react-helmet',
   'gatsby-plugin-sitemap',
   {
     resolve: 'gatsby-plugin-google-analytics',

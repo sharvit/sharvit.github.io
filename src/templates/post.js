@@ -4,17 +4,13 @@ import PropTypes from 'prop-types';
 import { Layout, Seo } from '../components';
 import { BlogPost } from '../modules/blog';
 
+// eslint-disable-next-line react/prop-types
+export const Head = ({ pageContext: { excerpt, title } }) => (
+  <Seo title={title} description={excerpt} />
+);
+
 const PostTemplate = ({
-  pageContext: {
-    name,
-    date,
-    postPath,
-    postUrl,
-    html,
-    excerpt,
-    title,
-    coverImage,
-  },
+  pageContext: { name, date, postPath, postUrl, html, title, coverImage },
 }) => (
   <Layout
     breadcrumbs={[
@@ -22,7 +18,6 @@ const PostTemplate = ({
       { title, path: postPath },
     ]}
   >
-    <Seo title={title} description={excerpt} />
     <BlogPost
       id={name}
       title={title}
@@ -41,7 +36,6 @@ PostTemplate.propTypes = {
     date: PropTypes.string.isRequired,
     postPath: PropTypes.string.isRequired,
     postUrl: PropTypes.string.isRequired,
-    excerpt: PropTypes.string.isRequired,
     html: PropTypes.string.isRequired,
     coverImage: PropTypes.object,
   }).isRequired,

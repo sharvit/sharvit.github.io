@@ -6,9 +6,10 @@ import { ProfileSection } from '../modules/profile';
 import { LatestBlogPostsSection } from '../modules/blog';
 import { LatestOpenSourceSection } from '../modules/open-source';
 
+export const Head = () => <Seo />;
+
 const IndexPage = () => (
   <Layout transparent>
-    <Seo />
     <ProfileSection button="navigate" />
     <LatestOpenSourceSection />
     <LatestBlogPostsSection />

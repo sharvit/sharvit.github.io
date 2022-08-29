@@ -37,7 +37,6 @@
     "gatsby-plugin-image": "^2.10.0",
     "gatsby-plugin-manifest": "^4.10.0",
     "gatsby-plugin-offline": "^5.10.0",
-    "gatsby-plugin-react-helmet": "^5.10.0",
     "gatsby-plugin-sass": "^5.10.1",
     "gatsby-plugin-sharp": "^4.10.1",
     "gatsby-plugin-sitemap": "^5.10.1",
@@ -51,7 +50,6 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-loading-skeleton": "^3.0.3",
     "react-social-sharing": "^3.3.0",
     "sass": "^1.49.9"

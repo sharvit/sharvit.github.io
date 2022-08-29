@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Layout, Seo } from '../components';
 
+export const Head = () => <Seo title="404: Not found" />;
+
 const NotFoundPage = () => (
   <Layout>
     <Seo title="404: Not found" />
