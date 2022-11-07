@@ -1,0 +1,34 @@
+.page,
+.page-fluid {
+  padding-bottom: var(--page-inline-gap);
+
+  & .page-title,
+  & .page-title-centered {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-fluid-2);
+
+    margin-top: var(--size-fluid-4);
+    margin-bottom: var(--size-fluid-5);
+  }
+
+  & .page-title-centered {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+.page {
+  padding-inline: var(--page-inline-gap);
+}
+
+.page-fluid {
+  padding-inline: 0;
+
+  & .fluid-section {
+    padding-inline: var(--page-fluid-inline-gap);
+  }
+}
+
+.page-about {
+  padding-bottom: 0;
+}

@@ -75,7 +75,7 @@ ssh-keygen -t rsa -b 4096 -C "sharvita@gmail.com"
 eval "$(ssh-agent -s)"
 ```
 
-> Add the ssh key to your Github account https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+Add the ssh key to your Github account https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
 
 ## Redhat workspace related
 

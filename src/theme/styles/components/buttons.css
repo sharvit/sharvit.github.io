@@ -1,0 +1,108 @@
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
+  --_text-color: initial;
+  --_text-color-hover: initial;
+  --_font-size: initial;
+  --_font-weight: var(--font-weight-7);
+
+  --_gap: var(--size-2);
+
+  --_bg-light: white;
+  --_bg-dark: var(--surface-3);
+  --_bg: var(--_bg-light);
+
+  --_border-color: var(--surface-3);
+  --_border-radius: var(--radius-2);
+  --_border: none;
+
+  --_text-shadow-light: 0 1px 0 var(--gray-3);
+  --_text-shadow-dark: 0 1px 0 var(--surface-1);
+  --_text-shadow: var(--_text-shadow-light);
+
+  --_box-shadow: var(--shadow-1);
+  --_box-shadow-hover: var(--shadow-3);
+
+  --_icon-size: 2ch;
+  --_icon-color: var(--link);
+
+  --_padding-block: .75ch;
+  --_padding-inline: 1.75ch;
+
+  font-size: var(--_font-size);
+  background: var(--_bg);
+  color: var(--_text-color);
+  border: var(--_border);
+  box-shadow: var(--_box-shadow);
+  text-shadow: var(--_text-shadow);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--_gap);
+
+  font-weight: var(--_font-weight);
+  border-radius: var(--_border-radius);
+  padding-block: var(--_padding-block);
+  padding-inline: var(--_padding-inline);
+
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+
+  @nest :--dark-color-scheme & {
+    --_bg: var(--_bg-dark);
+    --_text-shadow: var(--_text-shadow-dark);
+  }
+
+  @media (--motionOK) {
+    transition: box-shadow 145ms var(--ease-4);
+  }
+
+  &[disabled] {
+    --_bg: none;
+    --_text-color: var(--gray-6);
+
+    @nest :--dark-color-scheme & {
+      --_text-color: var(--gray-5);
+    }
+
+    cursor: not-allowed;
+  }
+
+  /* pressing */
+  &:where(:not(:active):hover) {
+    --_box-shadow: var(--_box-shadow-hover);
+  }
+
+  /* icons */
+  &> :where(svg) {
+    flex-shrink: 0;
+    filter: drop-shadow(var(--_text-shadow));
+    block-size: var(--_icon-size);
+    inline-size: var(--_icon-size);
+  }
+
+  &> :where(svg > *) {
+    stroke: var(--_icon-color);
+    stroke-width: var(--border-size-2);
+  }
+}
+
+:where([type="submit"]) {
+  --_text-color: var(--link);
+}
+
+:where([type="reset"]) {
+  --_text-color: var(--red-6);
+  --_border-color: var(--red-3);
+
+  @nest :--dark-color-scheme & {
+    --_text-color: var(--red-2);
+    --_border-color: var(--surface-3);
+  }
+
+  &:focus-visible {
+    outline-color: var(--red-6);
+  }
+}
+

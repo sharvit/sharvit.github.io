@@ -1,27 +1,25 @@
 name: Test workflow
 
-on: ["push", "pull_request"]
+on: ['push', 'pull_request']
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+        uses: actions/checkout@v3
 
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: 'yarn'
+          node-version: 18
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: yarn install
+        run: npm ci
 
-      - name: Lint
-        run: yarn lint
-
-      - name: Build
-        run: yarn build
+      - name: Test
+        run: |
+          npm run typecheck
+          npm run lint
+          npm run build

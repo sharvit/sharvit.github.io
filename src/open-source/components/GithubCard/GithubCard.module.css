@@ -1,0 +1,106 @@
+article.card {
+  --_background-color: var(--surface-1);
+  --_box-shadow: var(--shadow-2);
+  --_border-color: var(--surface-3);
+  --_link-color: var(--link);
+  --_text-color: var(--text-2);
+  --_font-size: 0.85rem;
+  --_font-size-title: var(--font-size-2);
+  --_border-radius: var(--radius-2);
+  --_padding: var(--size-4);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: var(--_text-color);
+  background-color: var(--_background-color);
+
+  border: 1px solid var(--_border-color);
+  box-shadow: var(--_box-shadow);
+  border-radius: var(--_border-radius);
+
+  padding: var(--_padding);
+  font-size: var(--_font-size);
+
+  & .body {
+    & h4 {
+      font-size: var(--_font-size-title);
+      font-weight: var(--font-weight-4);
+      margin: 0;
+
+      & svg {
+        fill: var(--_text-color);
+        stroke: none;
+        margin-right: 8px;
+
+        top: 3px;
+        position: relative;
+        display: inline-block;
+      }
+
+      & a {
+        color: var(--_link-color);
+        text-decoration-color: var(--_link-color);
+
+        &:visited {
+          color: var(--_link-color);
+        }
+
+        & span.owner {
+          font-weight: 400;
+        }
+
+        & span.repository-name {
+          font-weight: 700;
+        }
+      }
+    }
+
+    & p {
+      font-size: var(--_font-size);
+      line-height: var(--font-lineheight-3);
+      min-height: calc(var(--font-lineheight-3) * 2em);
+      margin-block: var(--size-4);
+    }
+  }
+
+  & footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    font-size: var(--font-size-0);
+    font-family: var(--font-mono);
+
+    gap: var(--size-4);
+
+    &.skeleton {
+      display: block;
+      height: 21px;
+    }
+
+    & .footer-item {
+      padding: 0;
+      margin: 0;
+
+      &:is(a) {
+        color: var(--_text-color);
+
+        &:hover {
+          text-decoration: none;
+          color: var(--_link-color);
+        }
+      }
+
+      & .language-icon,
+      & svg {
+        top: 3px;
+        position: relative;
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+nav.navbar {
+  --navbar-links-color: var(--text-2);
+  --navbar-links-color-hover: var(--hue-2);
+
+  --navbar-icons-color: var(--navbar-links-color);
+  --navbar-icons-color-hover: var(--text-1);
+
+  --navbar-background: var(--surface-1);
+
+  --navbar-gap: var(--page-inline-gap);
+  --navbar-padding: var(--size-4) var(--navbar-gap);
+  --navbar-font-family: var(--font-mono);
+  --navbar-font-size: var(--font-size-1);
+  --navbar-lineheight: var(--font-lineheight-1);
+
+  --navbar-grid-template-areas: 'links theme-toggler';
+  --navbar-grid-template-columns: 1fr auto;
+
+  font-family: var(--navbar-font-family);
+
+  &.transparent {
+    --navbar-background: transparent;
+    --navbar-links-color: var(--text-1);
+    --navbar-links-color-hover: var(--text-1);
+    --navbar-icons-color-hover: var(--text-2);
+
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: var(--layer-5);
+  }
+
+  display: grid;
+  grid-template-areas: var(--navbar-grid-template-areas);
+  grid-template-columns: var(--navbar-grid-template-columns);
+
+  background: var(--navbar-background);
+  font-size: var(--navbar-font-size);
+
+  align-items: center;
+
+  & button.toggler {
+    grid-area: toggler;
+
+    display: none;
+    justify-self: start;
+
+    --_bg: none;
+    --_text-shadow: none;
+    --_box-shadow: none;
+    --_border: none;
+
+    --_text-color: var(--navbar-links-color);
+    --_font-size: var(--navbar-font-size);
+
+    line-height: var(--navbar-lineheight);
+    padding: var(--navbar-padding);
+
+    & svg {
+      stroke: var(--navbar-links-color);
+    }
+
+    &:hover {
+      stroke: var(--navbar-links-color-hover);
+    }
+  }
+
+  & a.title-link {
+    grid-area: title;
+    display: none;
+
+    color: var(--navbar-links-color);
+    padding: var(--navbar-padding);
+    font-size: var(--navbar-font-size);
+    line-height: var(--navbar-lineheight);
+    font-weight: bold;
+    text-decoration: none;
+
+    margin: 0;
+    padding-block: 0;
+
+    &:hover {
+      color: var(--navbar-links-color-hover);
+    }
+  }
+
+  & ul.link-list {
+    grid-area: links;
+
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    gap: var(--size-6);
+    padding: var(--navbar-padding);
+
+    & li {
+      display: inline-block;
+      padding: 0;
+
+      & a {
+        color: var(--navbar-links-color);
+        font-size: var(--navbar-font-size);
+        line-height: var(--navbar-lineheight);
+        text-decoration-color: var(--navbar-links-color-hover);
+
+        &:hover {
+          color: var(--navbar-links-color-hover);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  & ul.icon-lists {
+    grid-area: theme-toggler;
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+
+    gap: var(--size-6);
+    padding: var(--navbar-padding);
+
+    & :where(a, button) {
+      --_bg: none;
+      --_text-shadow: none;
+      --_box-shadow: none;
+      --_border: none;
+
+      --_color: var(--navbar-icons-color);
+      --_color-hover: var(--navbar-icons-color-hover);
+
+      display: block;
+      padding: 0;
+      margin: 0;
+
+      line-height: var(--navbar-lineheight);
+      font-size: var(--navbar-font-size);
+
+      color: var(--navbar-icons-color);
+
+      &:hover {
+        color: var(--navbar-icons-color-hover);
+      }
+
+      & svg {
+        width: 2.5ch;
+        height: 2.5ch;
+      }
+    }
+  }
+
+  @media (--sm-n-below) {
+    --navbar-grid-template-areas: 'toggler theme-toggler' 'links links';
+
+    & button.toggler {
+      display: inline-block;
+    }
+
+    & ul.link-list {
+      display: none;
+    }
+
+    &.display-navigation {
+      & ul.link-list {
+        display: flex;
+        flex-direction: column;
+        justify-self: start;
+        padding-top: 0;
+
+        & li {
+          display: block;
+        }
+      }
+    }
+  }
+}

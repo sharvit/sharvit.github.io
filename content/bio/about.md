@@ -1,37 +1,39 @@
 ## Highlights
 
 #### Languages
-- JavaScript expert, TypeScript, Solidity, Ruby, HTML, CSS, SQL, PHP, Java, C#, C++, C
 
-#### Libraries:
+- JavaScript, TypeScript, Solidity, Ruby, HTML, CSS, SQL, PHP, Java, C#, C++, C
+
+#### Libraries
+
 - NodeJS, React, React Native, Graphql, ROR, Angular, Ionic, Webpack, Backbone, Gulp, Bootstrap, Cordova, Underscore.js, Sass
 
-#### Cloud Platforms:
+#### Cloud Platforms
+
 - Kubernetes, Docker, AWS, Google CloudPlatform, Linode, Heroku, OpenShift, S3, Ansible
 
-#### Databases:
+#### Databases
+
 - PostgreSQL, MongoDB, Redis, MySQL, MsSQL, Oracle
 
-#### Blockchain:
+#### Blockchain
+
 - Solidity, hardhat, web3, ethers, geth, mining
 
-#### Mobile Platforms:
+#### Mobile Platforms
+
 - IOS, Android
 
-#### IOT Platforms:
-- Arduino, Raspberry PI​​
+#### IOT Platforms
 
-#### Dev. Environment:
-- OS X, Linux, Git, Atom, XCode, Adobe CC
-
-#### Management Tools:
-- Asana
+- Arduino, Raspberry PI
 
 ## Experience
 
 ### October 2017 to February 2022
 
 #### RedHat - [TheForeman.org](https://theforeman.org/) - Team leader and Senior software engineer
+
 TheForeman is an open source project for managing lifecycle of physical and virtual servers on-premise or in the cloud.
 
 Help migrating from JQuery to React in order to make the UX rich and modern.
@@ -40,6 +42,7 @@ Contributed to the patterfly-react project:
 [https://github.com/patternfly/patternfly-react](https://github.com/patternfly/patternfly-react)
 
 #### Technologies:
+
 - ROR, React
 - PostgreSQL, MySQL
 - ES2015-2017, Babel, Webapck, Jest
@@ -48,11 +51,13 @@ Contributed to the patterfly-react project:
 ### August 2016 to October 2017
 
 #### Lived in East Asia and worked as a freelancer
+
 Traveled and lived in East Asia while doing consulting and freelance jobs.
 
 On my free time, i worked hard to sharpen my skills and worked on open source projects.
 
 #### Technologies:
+
 - NodeJS
 - ExpressJS, Mongoose
 - ES2015-2017, Babel, Typescript, Webapck
@@ -62,10 +67,12 @@ On my free time, i worked hard to sharpen my skills and worked on open source pr
 
 ### September 2014 to August 2016
 
-#### Yumday - Founder and CTO - Single Full Stack Developer / Owner    
+#### Yumday - Founder and CTO - Single Full Stack Developer / Owner
+
 I started the company because I believed that people all over the world should buy and pay for food from their own mobile phone.
 
 #### Technologies:
+
 - ROR, NodeJS
 - AngularJS, Cordova, Ionic, Gulp
 - Heroku, GoogleCloud, S3, Pusher, NewRelic, PaperTail, Postmark
@@ -74,25 +81,19 @@ I started the company because I believed that people all over the world should b
 - Stripe
 
 #### Products:
+
 - API
 - Cloud Manager App (Angular)
 - Restaurant Manager App (Angular)
 - Restaurant Real Time POS App (Angular)
 - IOS, Android App for the Food Buyers (Ionic, Cordova, Angular)
 
-### December 2012 to September 2014
-
-#### Traveled the world
-
-I took the time to travel the world.
-
-- India, Thailand, Brazil (Football World Cup), Columbia
-
 ### November 2011 to December 2012
 
 #### Rubysoft Israel - Full Stack Developer
 
 #### Technologies:
+
 - ROR mostly, PHP, .NET
 - Cordova, Sencha, AngularJS
 - Heroku, AWS, S3
@@ -100,20 +101,23 @@ I took the time to travel the world.
 - Google Analytics, UrbanAirship
 
 #### Projects:
+
 - Retail Web POS
 - Social Network
 - Mobile Apps
 
 ### March 2009 to November 2011
 
-#### IDF intelligence, the satellite unit - .NET Developer    
+#### IDF intelligence, the satellite unit - .NET Developer
 
 #### Technologies:
+
 - .NET, Oracle, GIS
 
-### January 2005 to March 2009
+### 2005 - 2009
 
-#### Sharvit Software Solutions  - Full Stack Developer / Owner
+#### Sharvit Software Solutions - Full Stack Developer / Founder
+
 I started my first business because I wanted to use my knowledge and develop apps even that I am only 14 years old.
 
 - Renting Linux hosts

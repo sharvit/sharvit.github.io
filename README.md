@@ -1,42 +1,54 @@
-# sharvit.github.io
-
-Avi Sharvit's personal blog
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby minimal TypeScript starter
+</h1>
 
 ## 🚀 Quick start
 
-1.  **Install dependencies.**
+1.  **Create a Gatsby site.**
 
-    Use `yarn` to install dependencies.
-
-    ```shell
-    yarn install
-    ```
-
-1.  **Start developing.**
-
-    Start a development server.
+    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
 
     ```shell
-    gatsby start
+    # create a new Gatsby site using the minimal TypeScript starter
+    npm init gatsby
     ```
 
-1.  **Open the source code and start editing!**
+2.  **Start developing.**
 
-    Your site is now running at `http://localhost:8000`!
-    
-    Happy hacking 🚀
+    Navigate into your new site’s directory and start it up.
 
-    > Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
 
-## 🎓 Learning Gatsby
+3.  **Open the code and start customizing!**
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+    Your site is now running at http://localhost:8000!
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+    Edit `src/pages/index.tsx` to see your site update in real-time!
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+4.  **Learn more**
 
-## 💫 Deploy
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-This project uses `github-actions` to deploy the website into `github-pages`.
-For more information see: `.github/wrokflows/deploy-wrokflow.yaml`.
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+
+## 🚀 Quick start (Gatsby Cloud)
+
+Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)

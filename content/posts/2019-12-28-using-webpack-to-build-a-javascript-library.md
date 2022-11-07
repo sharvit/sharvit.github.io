@@ -36,36 +36,36 @@ export const isOdd = number => !isEven(number);
 
 - I want my library to be compatible with all the browsers with a market share bigger than `1%`.
  
-- Different developers have different javascript stack, and I would like my library to be consumed in various ways as well.
+- Different developers have different javascript stacks, and I would like my library to be consumed in various ways as well.
 
-  **ES Module import**
-  ```js
-  import { isEven, isOdd } from 'even-numbers';
-  ```
+**ES Module import**
+```js
+import { isEven, isOdd } from 'even-numbers';
+```
 
   **CommonJS Module require**
-  ```js
-  const { isEven, isOdd } = require('even-numbers');
-  ```
+```js
+const { isEven, isOdd } = require('even-numbers');
+```
 
-  **AMD Module require**
-  ```js
-  require('even-numbers');
-  
-  require(['evenNumbers'], function (evenNumbers) {
-   const { isEven, isOdd } = evenNumbers;
-  });
-  ```
+**AMD Module require**
+```js
+require('even-numbers');
 
-  **Directly in the browser**
-  ```html
-  <html>
-   <script src="https://unpkg.com/even-numbers"></script>
-   <script>
-     const { isEven, isOdd } = window.evenNumbers;
-   </script>
-  </html>
-  ```
+require(['evenNumbers'], function (evenNumbers) {
+ const { isEven, isOdd } = evenNumbers;
+});
+```
+
+**Directly in the browser**
+```html
+<html>
+ <script src="https://unpkg.com/even-numbers"></script>
+ <script>
+   const { isEven, isOdd } = window.evenNumbers;
+ </script>
+</html>
+```
 
 
 ## Step-1 Installing babel

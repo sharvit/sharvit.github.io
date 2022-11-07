@@ -1,0 +1,45 @@
+@media not print {
+  :--dark-color-scheme {
+    color-scheme: dark;
+
+    --mono-1: hsl(220, 14%, 71%);
+    --mono-2: hsl(220, 9%, 55%);
+    --mono-3: hsl(220, 10%, 40%);
+    --hue-1: hsl(187, 47%, 55%);
+    --hue-2: hsl(207, 82%, 66%);
+    --hue-3: hsl(286, 60%, 67%);
+    --hue-4: hsl(95, 38%, 62%);
+    --hue-5: hsl(355, 65%, 65%);
+    --hue-5-2: hsl(5, 48%, 51%);
+    --hue-6: hsl(29, 54%, 61%);
+
+    --link: var(--hue-2);
+    --link-visited: var(--hue-2);
+
+    --text-1: var(--gray-1);
+    --text-2: var(--gray-4);
+
+    --surface-1: var(--gray-9);
+    --surface-2: var(--gray-8);
+    --surface-3: var(--gray-7);
+    --surface-4: var(--gray-6);
+
+    --shadow-color: 220 40% 2%;
+    --shadow-strength: 25%;
+
+    --scrollthumb-color: var(--gray-6);
+
+    --brand-bg-gradient: linear-gradient(
+      to bottom,
+      var(--grape-3),
+      var(--violet-3),
+      var(--indigo-3),
+      var(--cyan-3)
+    );
+
+    & .react-loading-skeleton {
+      --base-color: var(--gray-8);
+      --highlight-color: #2c3136;
+    }
+  }
+}

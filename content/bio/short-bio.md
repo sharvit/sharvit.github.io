@@ -1,7 +1,3 @@
-Expert full-stack software developer with more than 12 years of
-experience.  
-I started to learn and write code when I was ten years old
-because I have found it very cool and I thought it can give me
-superpowers.
+I started writing code when I was ten years old because I found it very cool and thought it could give me superpowers.
 
-All my knowledge is from self-learning as I believe self-learning is the best way to control the bits and bytes.
+During the years, I worked on independent projects, founded and developed multiple startups, built and led remote teams, worked for big companies, and was involved in big and small open-source projects.
