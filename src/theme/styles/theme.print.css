@@ -1,0 +1,54 @@
+:root {
+  @media print {
+    --font-family: var(--font-serif);
+
+    --page-inline-gap: 2cm;
+    --page-fluid-inline-gap: 2cm;
+
+    --mono-1: hsl(230, 8%, 24%);
+    --mono-2: hsl(230, 6%, 44%);
+    --mono-3: hsl(230, 4%, 64%);
+    --hue-1: hsl(198, 99%, 37%);
+    --hue-2: hsl(221, 87%, 60%);
+    --hue-3: hsl(301, 63%, 40%);
+    --hue-4: hsl(119, 34%, 47%);
+    --hue-5: hsl(5, 74%, 59%);
+    --hue-5-2: hsl(344, 84%, 43%);
+    --hue-6: hsl(35, 99%, 36%);
+
+    --font-size-00: 4pt;
+    --font-size-0: 6;
+    --font-size-1: 8pt
+    --font-size-2: 10pt;
+    --font-size-3: 12pt;
+    --font-size-4: 14pt;
+    --font-size-5: 16pt;
+    --font-size-6: 18pt;
+    --font-size-7: 20pt;
+    --font-size-8: 22pt;
+
+    --font-size-fluid-0: var(--font-size-2);
+    --font-size-fluid-1: var(--font-size-4);
+    --font-size-fluid-2: var(--font-size-6);
+    --font-size-fluid-3: var(--font-size-8);
+
+    --font-size-text: 8pt;
+    --font-size-mono-text: 8pt;
+    --font-size-title-1: 18pt;
+    --font-size-title-2: 16pt;
+    --font-size-title-3: 14pt;
+    --font-size-title-4: 10pt;
+
+    --surface-1: #fff;
+    --surface-2: #fff;
+    --surface-3: #fff;
+    --surface-4: #fff;
+
+    --text-1: #000000;
+    --text-2: #343a40;
+    --text-3: #a0a1a7;
+
+    --link: #4078f2;
+    --link-visited: #4078f2;
+  }
+}

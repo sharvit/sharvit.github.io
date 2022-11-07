@@ -1,0 +1,56 @@
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: var(--size-6);
+  justify-content: center;
+
+  margin-block: var(--size-6);
+  flex-wrap: wrap;
+
+  @media print {
+    display: none;
+  }
+}
+
+a.social-link {
+  --_color: var(--text-2);
+
+  color: var(--_color);
+  text-decoration-color: var(--_color);
+
+  text-align: center;
+
+  display: inline-flex;
+  gap: var(--size-2);
+  align-items: center;
+
+  & svg {
+    width: 2ch;
+  }
+}
+
+a.github-link {
+  --_color: var(--text-2);
+}
+
+a.twitter-link {
+  --_color: #55acee;
+}
+
+a.stack-overflow-link {
+  --_color: #e58131;
+
+  & svg {
+    align-self: baseline;
+    width: 1.8ch;
+  }
+}
+
+a.email-link {
+  --_color: var(--text-2);
+
+  & svg {
+    fill: none;
+    stroke: currentColor;
+  }
+}

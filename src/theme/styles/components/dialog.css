@@ -1,0 +1,18 @@
+:where(dialog) {
+  background-color: var(--surface-1);
+  color: inherit;
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-6);
+
+  @media (--OSdark) {
+    background-color: var(--surface-2);
+  }
+
+  &::backdrop {
+    backdrop-filter: blur(25px);
+  }
+}
+
+:where(html:has(dialog[open])) {
+  overflow: hidden;
+}

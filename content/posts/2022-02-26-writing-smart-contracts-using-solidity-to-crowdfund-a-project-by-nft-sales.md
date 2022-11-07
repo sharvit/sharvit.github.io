@@ -13,44 +13,37 @@ https://wizard.openzeppelin.com/#erc721
 
 ## Constants
 
-Token Price
 ```solidity
+// Token Price
 uint256 public constant MINT_PRICE = 0.4 ether;
-```
-Token price for the extra supply
-```solidity
+
+// Token price for the extra supply
 uint256 public constant MINT_EXTRA_PRICE = 0.5 ether;
-```
-The minimum amount of tokens that should be sold.
-This is the goal, if not reached, token holders can ask for refund.
-```solidity
+
+// The minimum amount of tokens that should be sold.
+// This is the goal, if not reached, token holders can ask for refund.
 uint256 public constant MIN_SUPPLY = 100;
-```
-Extra supply to be minted for the higer price
-```solidity
+
+// Extra supply to be minted for the higer price
 uint256 public constant EXTRA_SUPPLY = 50;
-```
-Duration in seconds of the minting phase
-```solidity
+
+// Duration in seconds of the minting phase
 uint256 public constant MINTING_DURATION = 2 weeks;
-```
-Maximum to mint per transaction
-```solidity
+
+// Maximum to mint per transaction
 uint256 public constant MAX_MINT_PER_TRANSACTION = 10;
 ```
 
 ## Private variables
 
-Indicator if sale is started and when started
 ```solidity
+//Indicator if sale is started and when started
 uint256 private _saleStartedAt = 0;
-```
-The amount of tokens that already minted
-```solidity
+
+// The amount of tokens that already minted
 uint256 private _supplyMinted = 0;
-```
-TokenId counter
-```solidity
+
+// TokenId counter
 Counters.Counter private _tokenIdCounter;
 ```
 

@@ -1,0 +1,110 @@
+section.profile-section {
+  --_inline-gap: var(--page-fluid-inline-gap);
+  --_footer-gap: var(--size-4);
+  --_avatar-size: 200px;
+  --_top: calc(var(--_avatar-size) / -2);
+
+  position: relative;
+  top: var(--_top);
+  margin-bottom: var(--_top);
+  padding-top: 0;
+
+  color: var(--hue-6);
+  font-family: var(--font-mono);
+  text-align: center;
+
+  @media print {
+    color: var(--text-2);
+    text-align: left;
+    margin: 0;
+    --_top: var(--page-inline-gap);
+  }
+
+  & :where(h1, h2, p, img) {
+    margin-inline: auto;
+  }
+
+  & .avatar {
+    width: var(--_avatar-size);
+    height: var(--_avatar-size);
+    border-radius: var(--radius-round);
+    margin: 0 auto;
+
+    @media print {
+      display: none;
+    }
+  }
+
+  & h1 {
+    color: var(--hue-4);
+    font-weight: var(--font-weight-3);
+
+    @media print {
+      color: var(--text-1);
+      font-size: var(--font-size-6);
+      font-weight: var(--font-weight-9);
+      margin-inline: 0;
+      margin-block: 0;
+      display: inline;
+
+      & br {
+        content: '';
+        &:after {
+          content: ' ';
+        }
+      }
+
+      &:after {
+        content: ' | ';
+      }
+    }
+  }
+
+  & h2 {
+    color: var(--hue-1);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-fluid-1);
+    max-width: fit-content;
+
+    @media print {
+      color: var(--text-1);
+      font-size: var(--font-size-6);
+      font-weight: var(--font-weight-9);
+      display: inline;
+      margin-inline: 0;
+      margin-block: 0;
+    }
+  }
+
+  & .short-bio {
+    & p {
+      @media print {
+        font-size: var(--font-size-1);
+        text-align: left;
+        /* margin-block: 0; */
+        margin-inline: 0;
+      }
+    }
+  }
+
+  & > footer {
+    padding-top: var(--size-4);
+
+    @media print {
+      display: none;
+    }
+  }
+
+  & a.full-bio-link {
+    color: var(--link);
+    text-decoration-color: var(--link);
+    font-size: var(--font-size-fluid-1);
+
+    padding: 0;
+    margin-top: var(--size-8);
+
+    &:visited {
+      color: var(--link);
+    }
+  }
+}

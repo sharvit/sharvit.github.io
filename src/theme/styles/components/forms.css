@@ -1,0 +1,25 @@
+:where(input, textarea) {
+  padding-inline: var(--size-2);
+  padding-block: var(--size-1);
+}
+
+:where(select) {
+  padding-inline: 1.25ch 0;
+  padding-block: .75ch;
+}
+
+:where(textarea, select, input:not(button,button[type],input[type="button"],input[type="submit"],input[type="reset"])) {
+  background-color: var(--surface-2);
+  border-radius: var(--radius-2);
+
+  @media (--OSdark) {
+    background-color: hsl(210deg 11% 10%);
+  }
+}
+
+:where(input[type="checkbox"], input[type="radio"]) {
+  block-size: var(--size-3);
+  inline-size: var(--size-3);
+}
+
+:where(textarea) { resize: block }

@@ -1,0 +1,24 @@
+:where(html) {
+  scrollbar-color: var(--scrollthumb-color) transparent;
+  accent-color: var(--link);
+  caret-color: var(--link);
+
+  background: var(--surface-1);
+}
+
+:where(body) {
+  color: var(--text-2);
+  background-color: var(--surface-1);
+
+  font-family: var(--font-family);
+  line-height: var(--font-lineheight-3);
+
+  overflow-wrap: break-word;
+}
+
+:where(body, nav, section, article) {
+  @media (--motionOK) {
+    transition: background-color 250ms var(--ease-out-1),
+      border-color 250ms var(--ease-out-1);
+  }
+}

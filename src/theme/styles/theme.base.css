@@ -1,0 +1,31 @@
+@import '//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css';
+
+:root {
+  --font-mono: Hack, Dank Mono, Operator Mono, Inconsolata, Fira Mono,
+    ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
+
+  --font-family: var(--font-sans);
+
+  --page-inline-gap: var(--size-fluid-2);
+  --page-fluid-inline-gap: var(--size-fluid-2);
+
+  @media (--md-n-above) {
+    --page-inline-gap: var(--size-fluid-4);
+    --page-fluid-inline-gap: var(--size-fluid-4);
+  }
+
+  @media (--lg-n-above) {
+    --page-inline-gap: var(--size-fluid-6);
+    --page-fluid-inline-gap: var(--size-fluid-4);
+  }
+
+  @media (--xl-n-above) {
+    --page-inline-gap: var(--size-fluid-8);
+    --page-fluid-inline-gap: var(--size-fluid-4);
+  }
+
+  @media (--xxl-n-above) {
+    --page-inline-gap: var(--size-fluid-10);
+    --page-fluid-inline-gap: var(--size-fluid-4);
+  }
+}

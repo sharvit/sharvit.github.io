@@ -1,0 +1,470 @@
+@import 'prismjs/plugins/line-numbers/prism-line-numbers';
+
+code[class*='language-'],
+pre[class*='language-'] {
+  --syntax-mono-1: var(--mono-1);
+  --syntax-mono-2: var(--mono-2);
+  --syntax-mono-3: var(--mono-3);
+  --syntax-hue-1: var(--hue-1);
+  --syntax-hue-2: var(--hue-2);
+  --syntax-hue-3: var(--hue-3);
+  --syntax-hue-4: var(--hue-4);
+  --syntax-hue-5: var(--hue-5);
+  --syntax-hue-5-2: var(--hue-5-2);
+  --syntax-hue-6: var(--hue-6);
+
+  --syntax-box-shadow: var(--shadow-2);
+
+  @nest :--light-color-scheme & {
+    --syntax-fg: var(--syntax-mono-1);
+    --syntax-bg: #fff;
+    --syntax-gutter: hsl(230, 1%, 62%);
+    --syntax-guide: hsla(230, 8%, 24%, 0.2);
+    --syntax-accent: hsl(230, 100%, 66%);
+    --syntax-selection-color: hsl(230, 1%, 90%);
+    --syntax-gutter-background-color-selected: hsl(230, 1%, 90%);
+    --syntax-cursor-line: hsla(230, 8%, 24%, 0.05);
+  }
+
+  @nest :--dark-color-scheme & {
+    --syntax-fg: var(--syntax-mono-1);
+    --syntax-bg: var(--surface-2);
+    --syntax-gutter: hsl(220, 14%, 45%);
+    --syntax-guide: hsla(220, 14%, 71%, 0.15);
+    --syntax-accent: hsl(220, 100%, 66%);
+    --syntax-selection-color: hsl(220, 13%, 28%);
+    --syntax-gutter-background-color-selected: hsl(220, 13%, 26%);
+    --syntax-cursor-line: hsla(220, 100%, 80%, 0.04);
+  }
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: var(--syntax-fg);
+  font-family: var(--font-mono);
+  line-height: var(--font-lineheight-2);
+
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 2;
+  hyphens: none;
+}
+
+/* Selection */
+code[class*='language-']::-moz-selection,
+code[class*='language-'] *::-moz-selection,
+pre[class*='language-'] *::-moz-selection {
+  background: var(--syntax-selection-color);
+  color: inherit;
+  text-shadow: none;
+}
+
+code[class*='language-']::selection,
+code[class*='language-'] *::selection,
+pre[class*='language-'] *::selection {
+  background: var(--syntax-selection-color);
+  color: inherit;
+  text-shadow: none;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  box-shadow: var(--syntax-box-shadow);
+  background: var(--syntax-bg);
+
+  margin-block: var(--size-6);
+  border-radius: var(--radius-2);
+  border: var(--border-size-1) solid var(--surface-3);
+
+  padding: var(--size-4);
+  overflow: auto;
+
+  @media (--md-n-below) {
+    min-width: 100vw;
+    margin-inline: calc(0rem - var(--page-inline-gap));
+    border-radius: 0;
+    border-right: none;
+    border-left: none;
+  }
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  padding: 0.2em 0.3em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+/* Print */
+@media print {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    text-shadow: none;
+    white-space: break-spaces;
+    page-break-inside: avoid;
+    page-break-before: avoid;
+    page-break-after: auto;
+  }
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: var(--syntax-mono-3);
+}
+
+.token.doctype,
+.token.punctuation,
+.token.entity {
+  color: var(--syntax-fg);
+}
+
+.token.attr-name,
+.token.class-name,
+.token.boolean,
+.token.constant,
+.token.number,
+.token.atrule {
+  color: var(--syntax-hue-6);
+}
+
+.token.keyword {
+  color: var(--syntax-hue-3);
+}
+
+.token.property,
+.token.tag,
+.token.symbol,
+.token.deleted,
+.token.important {
+  color: var(--syntax-hue-5);
+}
+
+.token.selector,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.regex,
+.token.attr-value,
+.token.attr-value > .token.punctuation {
+  color: var(--syntax-hue-4);
+}
+
+.token.variable,
+.token.operator,
+.token.function {
+  color: var(--syntax-hue-2);
+}
+
+.token.url {
+  color: var(--syntax-hue-1);
+}
+
+/* HTML overrides */
+.token.attr-value > .token.punctuation.attr-equals,
+.token.special-attr > .token.attr-value > .token.value.css {
+  color: var(--syntax-fg);
+}
+
+/* CSS overrides */
+.language-css .token.selector {
+  color: var(--syntax-hue-5);
+}
+
+.language-css .token.property {
+  color: var(--syntax-fg);
+}
+
+.language-css .token.function,
+.language-css .token.url > .token.function {
+  color: var(--syntax-hue-1);
+}
+
+.language-css .token.url > .token.string.url {
+  color: var(--syntax-hue-4);
+}
+
+.language-css .token.important,
+.language-css .token.atrule .token.rule {
+  color: var(--syntax-hue-3);
+}
+
+/* JS overrides */
+.language-javascript .token.operator {
+  color: var(--syntax-hue-3);
+}
+
+.language-javascript
+  .token.template-string
+  > .token.interpolation
+  > .token.interpolation-punctuation.punctuation {
+  color: var(--syntax-hue-5-2);
+}
+
+/* JSON overrides */
+.language-json .token.operator {
+  color: var(--syntax-fg);
+}
+
+.language-json .token.null.keyword {
+  color: var(--syntax-hue-6);
+}
+
+/* MD overrides */
+.language-markdown .token.url,
+.language-markdown .token.url > .token.operator,
+.language-markdown .token.url-reference.url > .token.string {
+  color: var(--syntax-fg);
+}
+
+.language-markdown .token.url > .token.content {
+  color: var(--syntax-hue-2);
+}
+
+.language-markdown .token.url > .token.url,
+.language-markdown .token.url-reference.url {
+  color: var(--syntax-hue-1);
+}
+
+.language-markdown .token.blockquote.punctuation,
+.language-markdown .token.hr.punctuation {
+  color: var(--syntax-mono-3);
+  font-style: italic;
+}
+
+.language-markdown .token.code-snippet {
+  color: var(--syntax-hue-4);
+}
+
+.language-markdown .token.bold .token.content {
+  color: var(--syntax-hue-6);
+}
+
+.language-markdown .token.italic .token.content {
+  color: var(--syntax-hue-3);
+}
+
+.language-markdown .token.strike .token.content,
+.language-markdown .token.strike .token.punctuation,
+.language-markdown .token.list.punctuation,
+.language-markdown .token.title.important > .token.punctuation {
+  color: var(--syntax-hue-5);
+}
+
+/* General */
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.namespace {
+  opacity: 0.8;
+}
+
+/* Plugin overrides */
+/* Selectors should have higher specificity than those in the plugins' default stylesheets */
+
+/* Show Invisibles plugin overrides */
+.token.token.tab:not(:empty):before,
+.token.token.cr:before,
+.token.token.lf:before,
+.token.token.space:before {
+  color: var(--syntax-guide);
+  text-shadow: none;
+}
+
+/* Toolbar plugin overrides */
+/* Space out all buttons and move them away from the right edge of the code block */
+div.code-toolbar > .toolbar.toolbar > .toolbar-item {
+  margin-right: 0.4em;
+}
+
+/* Styling the buttons */
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
+  background: var(--syntax-gutter-background-color-selected);
+  color: var(--syntax-mono-2);
+  padding: 0.1em 0.4em;
+  border-radius: 0.3em;
+}
+
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+  background: var(--syntax-selection-color);
+  color: var(--syntax-fg);
+}
+
+/* Line Highlight plugin overrides */
+/* The highlighted line itself */
+.line-highlight.line-highlight {
+  background: var(--syntax-cursor-line);
+}
+
+/* Default line numbers in Line Highlight plugin */
+.line-highlight.line-highlight:before,
+.line-highlight.line-highlight[data-end]:after {
+  background: var(--syntax-gutter-background-color-selected);
+  color: var(--syntax-fg);
+  padding: 0.1em 0.6em;
+  border-radius: 0.3em;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); /* same as Toolbar plugin default */
+}
+
+pre[class*='language-'].line-numbers {
+  padding-left: var(--size-10);
+}
+
+/* Hovering over a linkable line number (in the gutter area) */
+/* Requires Line Numbers plugin as well */
+pre[id].linkable-line-numbers.linkable-line-numbers
+  span.line-numbers-rows
+  > span:hover:before {
+  background-color: var(--syntax-cursor-line);
+}
+
+/* Line Numbers and Command Line plugins overrides */
+/* Line separating gutter from coding area */
+.line-numbers.line-numbers .line-numbers-rows,
+.command-line .command-line-prompt {
+  border-right-color: var(--syntax-guide);
+  padding: var(--size-4) var(--size-2) var(--size-4) var(--size-4);
+}
+
+/* Stuff in the gutter */
+.line-numbers .line-numbers-rows > span:before,
+.command-line .command-line-prompt > span:before {
+  color: var(--syntax-gutter);
+}
+
+/* Match Braces plugin overrides */
+/* Note: Outline colour is inherited from the braces */
+.rainbow-braces .token.token.punctuation.brace-level-1,
+.rainbow-braces .token.token.punctuation.brace-level-5,
+.rainbow-braces .token.token.punctuation.brace-level-9 {
+  color: var(--syntax-hue-5);
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-2,
+.rainbow-braces .token.token.punctuation.brace-level-6,
+.rainbow-braces .token.token.punctuation.brace-level-10 {
+  color: var(--syntax-hue-4);
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-3,
+.rainbow-braces .token.token.punctuation.brace-level-7,
+.rainbow-braces .token.token.punctuation.brace-level-11 {
+  color: var(--syntax-hue-2);
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-4,
+.rainbow-braces .token.token.punctuation.brace-level-8,
+.rainbow-braces .token.token.punctuation.brace-level-12 {
+  color: var(--syntax-hue-3);
+}
+
+/* Diff Highlight plugin overrides */
+/* Taken from https://github.com/atom/github/blob/master/styles/variables.less */
+pre.diff-highlight > code .token.token.deleted:not(.prefix),
+pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+  background-color: hsla(353, 100%, 66%, 0.15);
+}
+
+pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection,
+pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
+  background-color: hsla(353, 95%, 66%, 0.25);
+}
+
+pre.diff-highlight > code .token.token.deleted:not(.prefix)::selection,
+pre.diff-highlight > code .token.token.deleted:not(.prefix) *::selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix)::selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix) *::selection {
+  background-color: hsla(353, 95%, 66%, 0.25);
+}
+
+pre.diff-highlight > code .token.token.inserted:not(.prefix),
+pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+  background-color: hsla(137, 100%, 55%, 0.15);
+}
+
+pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
+pre.diff-highlight > code .token.token.inserted:not(.prefix) *::-moz-selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection {
+  background-color: hsla(135, 73%, 55%, 0.25);
+}
+
+pre.diff-highlight > code .token.token.inserted:not(.prefix)::selection,
+pre.diff-highlight > code .token.token.inserted:not(.prefix) *::selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix)::selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
+  background-color: hsla(135, 73%, 55%, 0.25);
+}
+
+/* Previewers plugin overrides */
+/* Based on https://github.com/atom-community/atom-ide-datatip/blob/master/styles/atom-ide-datatips.less and https://github.com/atom/atom/blob/master/packages/one-dark-ui */
+/* Border around popup */
+.prism-previewer.prism-previewer:before,
+.prism-previewer-gradient.prism-previewer-gradient div {
+  border-color: hsl(224, 13%, 17%);
+}
+
+/* Angle and time should remain as circles and are hence not included */
+.prism-previewer-color.prism-previewer-color:before,
+.prism-previewer-gradient.prism-previewer-gradient div,
+.prism-previewer-easing.prism-previewer-easing:before {
+  border-radius: 0.3em;
+}
+
+/* Triangles pointing to the code */
+.prism-previewer.prism-previewer:after {
+  border-top-color: hsl(224, 13%, 17%);
+}
+
+.prism-previewer-flipped.prism-previewer-flipped.after {
+  border-bottom-color: hsl(224, 13%, 17%);
+}
+
+/* Background colour within the popup */
+.prism-previewer-angle.prism-previewer-angle:before,
+.prism-previewer-time.prism-previewer-time:before,
+.prism-previewer-easing.prism-previewer-easing {
+  background: hsl(219, 13%, 22%);
+}
+
+/* For angle, this is the positive area (eg. 90deg will display one quadrant in this colour) */
+/* For time, this is the alternate colour */
+.prism-previewer-angle.prism-previewer-angle circle,
+.prism-previewer-time.prism-previewer-time circle {
+  stroke: var(--syntax-fg);
+  stroke-opacity: 1;
+}
+
+/* Stroke colours of the handle, direction point, and vector itself */
+.prism-previewer-easing.prism-previewer-easing circle,
+.prism-previewer-easing.prism-previewer-easing path,
+.prism-previewer-easing.prism-previewer-easing line {
+  stroke: var(--syntax-fg);
+}
+
+/* Fill colour of the handle */
+.prism-previewer-easing.prism-previewer-easing circle {
+  fill: transparent;
+}
