@@ -8,6 +8,7 @@
     "node": ">= 18.12.0"
   },
   "scripts": {
+    "post": "./scripts/create-blog-post.sh",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
