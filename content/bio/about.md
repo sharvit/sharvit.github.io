@@ -26,11 +26,24 @@
 
 #### IOT Platforms
 
-- Arduino, Raspberry PI
+- Arduino
 
 ## Experience
 
-### October 2017 to February 2022
+### 2023 - today
+
+#### [Cannabox](https://cannabox.co.th) - CEO, CTO
+
+Cannabox is a mobile application and a platform, allowing on-demand cannabis
+delivery from legal cannabis despensaries around thailand.
+
+#### Technologies
+
+- Typescript, NodeJS, React
+- MongoDB
+- Kubernetes, Docker
+
+### 2017 - 2022
 
 #### RedHat - [TheForeman.org](https://theforeman.org/) - Team leader and Senior software engineer
 
@@ -48,24 +61,7 @@ Contributed to the patterfly-react project:
 - ES2015-2017, Babel, Webapck, Jest
 - NPM, Github, Centos
 
-### August 2016 to October 2017
-
-#### Lived in East Asia and worked as a freelancer
-
-Traveled and lived in East Asia while doing consulting and freelance jobs.
-
-On my free time, i worked hard to sharpen my skills and worked on open source projects.
-
-#### Technologies:
-
-- NodeJS
-- ExpressJS, Mongoose
-- ES2015-2017, Babel, Typescript, Webapck
-- Angular2, Angular4, React, Rxjs, Redux
-- NPM, Github
-- AWS
-
-### September 2014 to August 2016
+### 2014 - 2016
 
 #### Yumday - Founder and CTO - Single Full Stack Developer / Owner
 
@@ -88,7 +84,7 @@ I started the company because I believed that people all over the world should b
 - Restaurant Real Time POS App (Angular)
 - IOS, Android App for the Food Buyers (Ionic, Cordova, Angular)
 
-### November 2011 to December 2012
+### 2012 - 2013
 
 #### Rubysoft Israel - Full Stack Developer
 
@@ -106,7 +102,7 @@ I started the company because I believed that people all over the world should b
 - Social Network
 - Mobile Apps
 
-### March 2009 to November 2011
+### 2009 - 2012
 
 #### IDF intelligence, the satellite unit - .NET Developer
 
