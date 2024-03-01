@@ -1,5 +1,5 @@
-@media not print {
-  :--light-color-scheme {
+:root {
+  @media not print {
     color-scheme: light;
 
     --mono-1: hsl(230, 8%, 24%);
