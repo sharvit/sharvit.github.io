@@ -1,26 +1,26 @@
-import { useStaticQuery, graphql } from 'gatsby';
-import { IAuthorProfile } from '../../../content/bio/types';
+import { useStaticQuery, graphql } from "gatsby";
+import { IAuthorProfile } from "../../../content/bio/types";
 
 // eslint-disable-next-line no-undef
 export type AuthorProfileQuery = Queries.AuthorProfileQuery;
 
 export const mapAuthorProfileQuery = (
-  data: AuthorProfileQuery
+  data: AuthorProfileQuery,
 ): IAuthorProfile => {
   const { profile } = data.file?.childYaml || {};
 
   return {
-    name: profile?.name || '',
-    nickname: profile?.nickname || '',
-    title: profile?.title || '',
-    website: profile?.website || '',
-    phone: profile?.phone || '',
-    email: profile?.email || '',
-    github: profile?.github || '',
-    twitter: profile?.twitter || '',
-    stackoverflow: profile?.stackoverflow?.toString() || '',
-    disqus: profile?.disqus || '',
-    avatar: profile?.avatar || '',
+    name: profile?.name || "",
+    nickname: profile?.nickname || "",
+    title: profile?.title || "",
+    website: profile?.website || "",
+    phone: profile?.phone || "",
+    email: profile?.email || "",
+    github: profile?.github || "",
+    twitter: profile?.twitter || "",
+    stackoverflow: profile?.stackoverflow?.toString() || "",
+    disqus: profile?.disqus || "",
+    avatar: profile?.avatar || "",
   };
 };
 

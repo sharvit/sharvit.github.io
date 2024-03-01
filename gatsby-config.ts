@@ -1,7 +1,7 @@
-import type { GatsbyConfig } from 'gatsby';
+import type { GatsbyConfig } from "gatsby";
 
-import { getAuthorProfile } from './content/bio/getAuthorProfile';
-import plugins from './config/plugins';
+import { getAuthorProfile } from "./content/bio/getAuthorProfile";
+import plugins from "./config/plugins";
 
 const profile = getAuthorProfile();
 

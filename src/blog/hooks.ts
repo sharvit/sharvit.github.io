@@ -1,8 +1,8 @@
-import { useStaticQuery, graphql } from 'gatsby';
-import { useMemo } from 'react';
+import { useStaticQuery, graphql } from "gatsby";
+import { useMemo } from "react";
 
-import { GetBlogPostsQuery, IBlogPost, PostFileFragment } from './types';
-import { mapBlogPostData } from './utils';
+import { GetBlogPostsQuery, IBlogPost, PostFileFragment } from "./types";
+import { mapBlogPostData } from "./utils";
 
 export const useGetBlogPostsQuery = (top?: number) => {
   const postFileFragments = useStaticQuery<GetBlogPostsQuery>(graphql`

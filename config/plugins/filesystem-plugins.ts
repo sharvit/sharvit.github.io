@@ -1,21 +1,21 @@
-import path from 'path';
-import type { PluginRef } from 'gatsby';
+import path from "path";
+import type { PluginRef } from "gatsby";
 
-const root = path.resolve(__dirname, '../../');
+const root = path.resolve(__dirname, "../../");
 
 const plugins: PluginRef[] = [
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       path: `${root}/content/bio`,
-      name: 'bio',
+      name: "bio",
     },
   },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       path: `${root}/content/posts`,
-      name: 'posts',
+      name: "posts",
     },
   },
   {

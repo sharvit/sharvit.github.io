@@ -1,2 +1,2 @@
-export * from './SocialLinks';
-export * from './SocialLinkItem';
+export * from "./SocialLinks";
+export * from "./SocialLinkItem";

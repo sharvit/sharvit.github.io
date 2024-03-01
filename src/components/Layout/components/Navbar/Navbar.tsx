@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import classNames from 'classnames';
-import { Link } from 'gatsby';
-import { Menu } from 'react-feather';
+import React, { useContext } from "react";
+import classNames from "classnames";
+import { Link } from "gatsby";
+import { Menu } from "react-feather";
 
-import { ThemeToggler } from '../../../../theme/ThemeToggler';
-import { GithubIcon } from '../../../Icons';
-import { LayoutContext } from '../../LayoutContext';
+import { ThemeToggler } from "../../../../theme/ThemeToggler";
+import { GithubIcon } from "../../../Icons";
+import { LayoutContext } from "../../LayoutContext";
 
-import * as styles from './Navbar.module.css';
+import * as styles from "./Navbar.module.css";
 
 export interface NavbarProps {
   transparent?: boolean;

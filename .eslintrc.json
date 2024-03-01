@@ -9,19 +9,16 @@
     "es2021": true,
     "node": true
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint"],
   "extends": [
+    "eslint:recommended",
     "plugin:react/recommended",
     "standard",
-    "prettier",
-    "plugin:prettier/recommended"
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": ["./tsconfig.json"]
-  },
-  "rules": {
-    "prettier/prettier": "error"
   },
   "overrides": [
     {
@@ -29,10 +26,10 @@
       "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "eslint:recommended",
         "plugin:react/recommended",
         "standard",
-        "prettier",
-        "plugin:prettier/recommended"
+        "prettier"
       ]
     }
   ]

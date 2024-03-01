@@ -1,4 +1,4 @@
-import { IGithubRepository } from '../types';
+import { IGithubRepository } from "../types";
 
 export interface IGithubRepoResponse {
   id: string;
@@ -16,7 +16,7 @@ export interface IGithubRepoResponse {
 }
 
 export const fetchGithubProject = async (
-  projectId: string
+  projectId: string,
 ): Promise<IGithubRepository> => {
   const response = await fetch(`https://api.github.com/repos/${projectId}`);
 

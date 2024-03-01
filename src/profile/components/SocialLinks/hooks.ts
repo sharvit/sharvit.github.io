@@ -1,21 +1,21 @@
-import { useMemo } from 'react';
-import { Twitter as TwitterIcon, Mail as MailIcon } from 'react-feather';
+import { useMemo } from "react";
+import { Twitter as TwitterIcon, Mail as MailIcon } from "react-feather";
 
-import { GithubIcon, StackOverflowIcon } from '../../../components';
-import { SocialLinkType } from './types';
+import { GithubIcon, StackOverflowIcon } from "../../../components";
+import { SocialLinkType } from "./types";
 
-import * as styles from './SocialLinks.module.css';
+import * as styles from "./SocialLinks.module.css";
 
 export const useSocialLinkIcon = (type: SocialLinkType) => {
   return useMemo(() => {
     switch (type) {
-      case 'github':
+      case "github":
         return GithubIcon;
-      case 'twitter':
+      case "twitter":
         return TwitterIcon;
-      case 'stackoverflow':
+      case "stackoverflow":
         return StackOverflowIcon;
-      case 'email':
+      case "email":
         return MailIcon;
     }
   }, [type]);
@@ -24,13 +24,13 @@ export const useSocialLinkIcon = (type: SocialLinkType) => {
 export const useSocialLinkClassName = (type: SocialLinkType) => {
   return useMemo(() => {
     switch (type) {
-      case 'github':
+      case "github":
         return styles.githubLink;
-      case 'twitter':
+      case "twitter":
         return styles.twitterLink;
-      case 'stackoverflow':
+      case "stackoverflow":
         return styles.stackOverflowLink;
-      case 'email':
+      case "email":
         return styles.emailLink;
     }
   }, [type]);

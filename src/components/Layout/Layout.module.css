@@ -1,4 +1,4 @@
-@import 'theme/styles/theme.selectors.css';
+@import "theme/styles/theme.selectors.css";
 
 header.layout-header {
   --_cover-image-height: 300px;

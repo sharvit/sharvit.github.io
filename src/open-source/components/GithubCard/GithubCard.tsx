@@ -1,10 +1,10 @@
-import React, { useMemo } from 'react';
-import Skeleton from 'react-loading-skeleton';
+import React, { useMemo } from "react";
+import Skeleton from "react-loading-skeleton";
 
-import { IGithubRepository } from '../../types';
-import { TitleIcon, LanguageIcon, StarIcon, ForksIcon } from './components';
+import { IGithubRepository } from "../../types";
+import { TitleIcon, LanguageIcon, StarIcon, ForksIcon } from "./components";
 
-import * as styles from './GithubCard.module.css';
+import * as styles from "./GithubCard.module.css";
 
 export interface IGithubCardProps {
   repositoryId: string;
@@ -13,13 +13,13 @@ export interface IGithubCardProps {
 
 export const GithubCard = ({ repositoryId, repository }: IGithubCardProps) => {
   const [repositoryOwner, repositoryName] = useMemo(
-    () => repositoryId.split('/'),
-    [repositoryId]
+    () => repositoryId.split("/"),
+    [repositoryId],
   );
 
   const repositoryUrl = useMemo(
     () => `https://github.com/${repositoryOwner}/${repositoryName}`,
-    [repositoryOwner, repositoryName]
+    [repositoryOwner, repositoryName],
   );
 
   const isLoading = !repository;
@@ -46,7 +46,7 @@ export const GithubCard = ({ repositoryId, repository }: IGithubCardProps) => {
             <LanguageIcon
               className={styles.languageIcon}
               programingLanguage={repository.language}
-            />{' '}
+            />{" "}
             <span itemProp="programmingLanguage">{repository.language}</span>
           </span>
           <a

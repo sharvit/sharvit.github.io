@@ -1,7 +1,7 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
-import { ISocialLink } from '../components/SocialLinks/types';
-import { useAuthorProfile } from './useAuthorProfile';
+import { ISocialLink } from "../components/SocialLinks/types";
+import { useAuthorProfile } from "./useAuthorProfile";
 
 export const useSocialLinks = (): ISocialLink[] => {
   const profile = useAuthorProfile();
@@ -9,26 +9,26 @@ export const useSocialLinks = (): ISocialLink[] => {
   return useMemo(
     () => [
       {
-        type: 'github',
+        type: "github",
         href: `https://github.com/${profile.github}`,
         label: profile.github,
       },
       {
-        type: 'twitter',
+        type: "twitter",
         href: `https://www.twitter.com/${profile.twitter}`,
         label: profile.twitter,
       },
       {
-        type: 'stackoverflow',
+        type: "stackoverflow",
         href: `https://stackoverflow.com/users/${profile.stackoverflow}`,
         label: profile.nickname,
       },
       {
-        type: 'email',
+        type: "email",
         href: `mailto:${profile.email}`,
         label: profile.email,
       },
     ],
-    [profile]
+    [profile],
   );
 };

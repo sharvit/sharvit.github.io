@@ -1,8 +1,8 @@
-import React from 'react';
-import classNames from 'classnames';
-import { Link } from 'gatsby';
+import React from "react";
+import classNames from "classnames";
+import { Link } from "gatsby";
 
-import * as styles from './Section.module.css';
+import * as styles from "./Section.module.css";
 
 export interface ISectionProps {
   className?: string;

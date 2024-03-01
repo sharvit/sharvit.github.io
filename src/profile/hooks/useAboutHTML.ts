@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from "gatsby";
 
 // eslint-disable-next-line no-undef
 export type AboutMarkdownQuery = Queries.AboutMarkdownQuery;
@@ -12,4 +12,4 @@ export const useAboutHTML = (): string =>
         }
       }
     }
-  `).file?.childMarkdownRemark?.html || '';
+  `).file?.childMarkdownRemark?.html || "";

@@ -1,9 +1,9 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
-import { getProgramingLanguageColor } from '../../../utils';
+import { getProgramingLanguageColor } from "../../../utils";
 
-import * as styles from './LanguageIcon.module.css';
+import * as styles from "./LanguageIcon.module.css";
 
 export interface ILanguageIconProps {
   programingLanguage: string;

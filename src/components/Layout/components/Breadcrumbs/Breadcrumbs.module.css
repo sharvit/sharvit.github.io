@@ -1,4 +1,4 @@
-@import 'theme/styles/theme.selectors.css';
+@import "theme/styles/theme.selectors.css";
 
 .breadcrumbs {
   --_background-color: var(--surface-2);
@@ -48,7 +48,7 @@
       }
 
       &:not(:last-child):after {
-        content: '➜';
+        content: "➜";
         margin-inline: var(--size-2);
         color: var(--_seperator-color);
       }

@@ -113,11 +113,11 @@
       margin-block: 0;
       & .skill {
         &::after {
-          content: ', ';
+          content: ", ";
           color: var(--text-3);
         }
         &:last-child::after {
-          content: '.';
+          content: ".";
         }
       }
     }
@@ -178,7 +178,7 @@
         max-width: var(--size-content-3);
 
         &::before {
-          content: '➜';
+          content: "➜";
           display: inline-block;
           margin-left: -2em;
           width: 2em;

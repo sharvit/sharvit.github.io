@@ -78,6 +78,7 @@ deploy:
 ### Enable Travis
 
 To enable Travis for your project, you can go to Travis website and use their dashboard, or you can use the CLI:
+
 ```bash
 gem install travis
 travis enable
@@ -93,6 +94,7 @@ This can be done by visiting https://github.com/settings/tokens.
 
 Set up an environment variable in Travis with the name `GH_TOKEN` and the value of the created token.  
 This can be done from Travis dashboard or by the cli by running:
+
 ```bash
 travis env set GH_TOKEN GITHUB_TOKEN_VALUE_HERE
 ```

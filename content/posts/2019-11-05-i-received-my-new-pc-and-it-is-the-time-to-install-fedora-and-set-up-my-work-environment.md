@@ -7,6 +7,7 @@ Two years after I joined Redhat to work on the [foreman](https://theforeman.org)
 In this post, I will describe my process of setting up a new PC.
 
 ## Goals
+
 - Be able to work inside Redhat and use Redhat office tools
 - Have a javascript development environment
 - Have a ruby development environment
@@ -14,12 +15,12 @@ In this post, I will describe my process of setting up a new PC.
 - Have a [forklift](https://github.com/theforeman/forklift) development environment so I can work on [the foreman project](https://theforeman.org).
 
 ## My Tools
+
 - Zsh - https://ohmyz.sh/
 - NVM - https://github.com/nvm-sh/nvm
 - RVM - https://rvm.io/
 - ATOM - https://atom.io/
 - Ferdi - https://getferdi.com/
-
 
 ## Installing Fedora
 
@@ -31,10 +32,10 @@ In this post, I will describe my process of setting up a new PC.
 
 Install google chrome by running `sudo dnf install google-chrome-stable` and sign in to sync with my previous setup.
 
-
 ## Installing ZSH and some essential terminal tools
 
 ### Install ZSH
+
 ```bash
 sudo dnf install zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -47,6 +48,7 @@ sudo hostname sharvit-fedorabook-t480s
 ```
 
 ### Install some essential tools
+
 ```bash
 sudo dnf install vim hub
 ```
@@ -141,7 +143,8 @@ Once you installed the printers, you should find them in the printer settings.
 
 First fix the gnome-terminal command login using: https://rvm.io/integration/gnome-terminal
 
-Install Ruby and RVM 
+Install Ruby and RVM
+
 ```bash
 # install system ruby
 sudo dnf install ruby
@@ -153,6 +156,7 @@ gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D69
 **Restart the terminal.**
 
 Install Ruby using RVM
+
 ```bash
 # enable autolibs
 rvm get stable --autolibs=enable
@@ -168,6 +172,7 @@ sudo dnf install -y nodejs npm
 # install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 ```
+
 **Restart the terminal**
 
 ```bash
@@ -192,7 +197,7 @@ newgrp libvirt
 sudo dnf install sshfs vagrant-hostmanager vagrant-sshfs
 ```
 
-> NOTICE: before working with vagrant make sure you work with the system ruby (`rvm use system`) 
+> NOTICE: before working with vagrant make sure you work with the system ruby (`rvm use system`)
 
 ## Customizing the zsh
 
@@ -288,11 +293,12 @@ Set the `host_path` to a preferred location on your machine and make sure it exi
 rvm use system
 vagrant up centos7-luna-devel
 # the provisioning may fail by unknown reasons
-# in this case keep running until a successful provisioning 
+# in this case keep running until a successful provisioning
 vagrant up centos7-luna-devel --provision
 ```
 
 After successful provisioning, ssh into the machine and run foreman:
+
 ```bash
 vagrant ssh centos7-luna-devel
 cd foreman
@@ -312,6 +318,7 @@ https://centos7-luna-devel.sharvit-fedorabook-t480s.example.com/
 Log in with the username `admin` and password `changeme`.
 
 Go to my `host_path` and open the source code with atom:
+
 ```bash
 cd /home/asharvit/Projects/theforeman/vagrant-shares/centos7-luna-devel/foreman
 atom .
@@ -320,6 +327,7 @@ atom .
 Happy Hacking
 
 To stop `centos7-luna-devel` run
+
 ```bash
 vagrant halt centos7-luna-devel
 ```

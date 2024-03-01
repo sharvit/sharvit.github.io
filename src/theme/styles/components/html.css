@@ -18,7 +18,8 @@
 
 :where(body, nav, section, article) {
   @media (--motionOK) {
-    transition: background-color 250ms var(--ease-out-1),
+    transition:
+      background-color 250ms var(--ease-out-1),
       border-color 250ms var(--ease-out-1);
   }
 }

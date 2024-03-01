@@ -13,7 +13,7 @@ nav.navbar {
   --navbar-font-size: var(--font-size-1);
   --navbar-lineheight: var(--font-lineheight-1);
 
-  --navbar-grid-template-areas: 'links theme-toggler';
+  --navbar-grid-template-areas: "links theme-toggler";
   --navbar-grid-template-columns: 1fr auto;
 
   font-family: var(--navbar-font-family);
@@ -150,7 +150,7 @@ nav.navbar {
   }
 
   @media (--sm-n-below) {
-    --navbar-grid-template-areas: 'toggler theme-toggler' 'links links';
+    --navbar-grid-template-areas: "toggler theme-toggler" "links links";
 
     & button.toggler {
       display: inline-block;

@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from "gatsby";
 
 // eslint-disable-next-line no-undef
 export type AuthorCVQuery = Queries.AuthorCVQuery;
@@ -20,14 +20,14 @@ export const mapAuthorCVQuery = (data: AuthorCVQuery): IAuthorCV => {
   const { cv } = data.file?.childYaml || {};
 
   return {
-    skills: cv?.skills?.trim().split(', ') || [],
+    skills: cv?.skills?.trim().split(", ") || [],
     experiences:
       cv?.experiences?.map((e) => ({
-        company: e?.company || '',
-        position: e?.position || '',
-        years: e?.years || '',
-        tags: e?.tags?.trim().split(', ') || [],
-        bulletPoints: e?.bullet_points?.map((bp) => bp?.trim() || '') || [],
+        company: e?.company || "",
+        position: e?.position || "",
+        years: e?.years || "",
+        tags: e?.tags?.trim().split(", ") || [],
+        bulletPoints: e?.bullet_points?.map((bp) => bp?.trim() || "") || [],
       })) || [],
   };
 };

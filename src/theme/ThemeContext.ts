@@ -1,6 +1,6 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
-export type ColorSchemeType = 'light' | 'dark';
+export type ColorSchemeType = "light" | "dark";
 
 export interface IThemeContext {
   colorScheme?: ColorSchemeType;

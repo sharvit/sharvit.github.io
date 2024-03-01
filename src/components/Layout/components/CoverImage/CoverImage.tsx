@@ -1,9 +1,9 @@
-import React from 'react';
-import classNames from 'classnames';
-import { graphql } from 'gatsby';
-import { getImage, GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import React from "react";
+import classNames from "classnames";
+import { graphql } from "gatsby";
+import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
-import * as styles from './CoverImage.module.css';
+import * as styles from "./CoverImage.module.css";
 
 // eslint-disable-next-line no-undef
 export type CoverImageSharp = Queries.CoverImageSharpFragment;

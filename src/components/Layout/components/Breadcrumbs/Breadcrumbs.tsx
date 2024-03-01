@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { IBreadcrumbItem, BreadcrumbItem } from './BreadcrumbItem';
-import * as styles from './Breadcrumbs.module.css';
+import { IBreadcrumbItem, BreadcrumbItem } from "./BreadcrumbItem";
+import * as styles from "./Breadcrumbs.module.css";
 
 export interface IBreadcrumbs {
   items: IBreadcrumbItem[];

@@ -13,16 +13,19 @@ I prefer `podman` over `docker` since it has the `create` command that can creat
 ## Use mongodb development database
 
 Pull the `tutum/mongodb` image from the docker.io registry:
+
 ```bash
 podman pull docker.io/tutum/mongodb
 ```
 
 Create another layer over the base container and name it as `mongo_dev` for ease of use (this option does not exist in docker):
+
 ```bash
 podman create --name=mongo_dev -d -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb
 ```
 
 Run your `mongo_dev` container:
+
 ```bash
 podman start mongo_dev
 ```
@@ -34,6 +37,7 @@ Your mongodb database should be accessible from without a password: `mongodb://l
 ## Stopping and starting your containers
 
 To see a list of running containers run:
+
 ```bash
 podman ps
 # see stopped containers as well

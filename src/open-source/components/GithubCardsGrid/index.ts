@@ -1,1 +1,1 @@
-export * from './GithubCardsGrid';
+export * from "./GithubCardsGrid";

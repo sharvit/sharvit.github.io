@@ -1,11 +1,11 @@
-import { CreatePagesArgs } from 'gatsby';
+import { CreatePagesArgs } from "gatsby";
 
-import { createPdfPageDefenitions } from './utils';
+import { createPdfPageDefenitions } from "./utils";
 
 const createPdfPage = (
   component: string,
   path: string,
-  createPagesArgs: CreatePagesArgs
+  createPagesArgs: CreatePagesArgs,
 ) =>
   createPagesArgs.actions.createPage<{ pdf: boolean }>({
     component,
@@ -21,7 +21,7 @@ export interface CreatePdfPagesArgs extends CreatePagesArgs {
 export const createPdfPages = (createPagesArgs: CreatePdfPagesArgs) => {
   const pdfPageDefenitions = createPdfPageDefenitions(
     createPagesArgs.inputPath,
-    createPagesArgs.outputPath
+    createPagesArgs.outputPath,
   );
 
   for (const { component, path } of pdfPageDefenitions) {

@@ -1,4 +1,4 @@
-@import '//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css';
+@import "//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css";
 
 :root {
   --font-mono: Hack, Dank Mono, Operator Mono, Inconsolata, Fira Mono,

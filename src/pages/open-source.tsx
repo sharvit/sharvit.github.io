@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Layout, Seo } from '../components';
-import { GithubCardsGrid } from '../open-source';
+import { Layout, Seo } from "../components";
+import { GithubCardsGrid } from "../open-source";
 
-import * as pageStyles from './page.module.css';
+import * as pageStyles from "./page.module.css";
 
 export const Head = () => <Seo title="Open source projects" />;
 

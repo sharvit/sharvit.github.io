@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Section } from '../../../components';
-import { useAuthorCV } from '../../hooks';
+import { Section } from "../../../components";
+import { useAuthorCV } from "../../hooks";
 
-import * as styles from './BioSection.module.css';
+import * as styles from "./BioSection.module.css";
 
 const SkillsList = ({ skills }: { skills: string[] }) => (
   <p className={styles.skills}>

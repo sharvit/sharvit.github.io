@@ -1,8 +1,8 @@
-import React from 'react';
-import classNames from 'classnames';
-import { useColorSchemeToggler } from '../ThemeHooks';
+import React from "react";
+import classNames from "classnames";
+import { useColorSchemeToggler } from "../ThemeHooks";
 
-import * as styles from './ThemeToggler.module.css';
+import * as styles from "./ThemeToggler.module.css";
 
 export interface IThemeToggler {
   className?: string;

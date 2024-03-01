@@ -1,4 +1,8 @@
-*, ::before, ::after { box-sizing: border-box; }
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 
 :where(html) {
   block-size: 100%;
@@ -16,7 +20,7 @@
   background-repeat: no-repeat;
 }
 
-:where(body) { 
+:where(body) {
   min-block-size: 100%;
 }
 
@@ -28,7 +32,17 @@
   }
 }
 
-:where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+:where(
+    a[href],
+    area,
+    button,
+    input,
+    label[for],
+    select,
+    summary,
+    textarea,
+    [tabindex]:not([tabindex*="-"])
+  ) {
   cursor: pointer;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
@@ -50,6 +64,3 @@
   color: inherit;
   letter-spacing: inherit;
 }
-
-
-

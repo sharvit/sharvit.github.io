@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Layout, Seo } from '../components';
-import { BlogPostList } from '../blog';
+import { Layout, Seo } from "../components";
+import { BlogPostList } from "../blog";
 
-import * as pageStyles from './page.module.css';
+import * as pageStyles from "./page.module.css";
 
 export const Head = () => <Seo title="Latest blog posts" />;
 

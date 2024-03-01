@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Section } from '../../../components';
-import { SocialLinks } from '../SocialLinks';
-import { useAuthorProfile, useShortAboutHTML } from '../../hooks';
+import { Section } from "../../../components";
+import { SocialLinks } from "../SocialLinks";
+import { useAuthorProfile, useShortAboutHTML } from "../../hooks";
 
-import * as styles from './ProfileSection.module.css';
+import * as styles from "./ProfileSection.module.css";
 
 export interface IPorfileSectionProps {
   link?: string;
@@ -13,14 +13,14 @@ export interface IPorfileSectionProps {
 }
 
 export const ProfileSection = ({
-  link = '/about',
+  link = "/about",
   linkExternal = false,
-  footer = '#full_bio',
+  footer = "#full_bio",
 }: IPorfileSectionProps) => {
   const profile = useAuthorProfile();
   const aboutHTML = useShortAboutHTML();
 
-  const [firstName, lastName] = profile.name.split(' ');
+  const [firstName, lastName] = profile.name.split(" ");
 
   return (
     <Section

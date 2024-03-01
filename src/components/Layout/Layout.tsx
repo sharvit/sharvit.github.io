@@ -1,17 +1,17 @@
-import React, { useState, ReactNode, useCallback } from 'react';
-import classNames from 'classnames';
+import React, { useState, ReactNode, useCallback } from "react";
+import classNames from "classnames";
 
-import { LayoutContext, DEFAULT_LAYOUT_CONTEXT } from './LayoutContext';
+import { LayoutContext, DEFAULT_LAYOUT_CONTEXT } from "./LayoutContext";
 import {
   Navbar,
   Breadcrumbs,
   IBreadcrumbItem,
   CoverImage,
   CoverImageProps,
-} from './components';
-import { useAuthorProfile } from '../../profile';
+} from "./components";
+import { useAuthorProfile } from "../../profile";
 
-import * as styles from './Layout.module.css';
+import * as styles from "./Layout.module.css";
 
 export interface ILayout {
   coverImage?: CoverImageProps;
@@ -32,13 +32,13 @@ export const Layout = ({
 
   // display/hide navigation menu
   const [displayNavigation, setDisplayNavigation] = useState(
-    DEFAULT_LAYOUT_CONTEXT.navigation.displayNavigation
+    DEFAULT_LAYOUT_CONTEXT.navigation.displayNavigation,
   );
 
   // toggle navigation menu
   const toggleNavigation = useCallback(
     () => setDisplayNavigation(!displayNavigation),
-    [setDisplayNavigation, displayNavigation]
+    [setDisplayNavigation, displayNavigation],
   );
 
   return (
@@ -59,7 +59,7 @@ export const Layout = ({
         )}
         {breadcrumbs && breadcrumbs.length > 0 && (
           <Breadcrumbs
-            items={[{ title: author.name, path: '/' }, ...breadcrumbs]}
+            items={[{ title: author.name, path: "/" }, ...breadcrumbs]}
           />
         )}
       </header>

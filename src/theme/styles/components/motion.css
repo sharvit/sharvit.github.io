@@ -6,7 +6,7 @@
     transition: outline-offset 145ms var(--ease-2);
   }
   :where(:not(:active):focus-visible) {
-    transition-duration: .25s;
+    transition-duration: 0.25s;
   }
 }
 

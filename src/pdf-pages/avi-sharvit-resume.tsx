@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 import {
   useAuthorProfile,
   useAuthorCV,
   useShortAboutHTML,
-} from '../profile/hooks';
+} from "../profile/hooks";
 
 // import { ThemeProvider } from '../theme';
 
-import * as styles from './avi-sharvit-resume.module.css';
+import * as styles from "./avi-sharvit-resume.module.css";
 
 export default function AviSharvitResumePDF() {
   const authorProfile = useAuthorProfile();
@@ -24,15 +24,15 @@ export default function AviSharvitResumePDF() {
       <section className={styles.contact}>
         <ul>
           <li>
-            <strong>phone:</strong>{' '}
+            <strong>phone:</strong>{" "}
             <a href={`tel: ${authorProfile.phone}`}>{authorProfile.phone}</a>
           </li>
           <li>
-            <strong>e-mail:</strong>{' '}
+            <strong>e-mail:</strong>{" "}
             <a href={`mailto: ${authorProfile.email}`}>{authorProfile.email}</a>
           </li>
           <li>
-            <strong>website:</strong>{' '}
+            <strong>website:</strong>{" "}
             <a href={authorProfile.website}>{authorProfile.website}</a>
           </li>
         </ul>

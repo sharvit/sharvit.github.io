@@ -1,10 +1,10 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
-import { Layout, Seo } from '../components';
-import { ProfileSection, BioSection, useAboutCoverImage } from '../profile';
+import { Layout, Seo } from "../components";
+import { ProfileSection, BioSection, useAboutCoverImage } from "../profile";
 
-import * as pageStyles from './page.module.css';
+import * as pageStyles from "./page.module.css";
 
 export const Head = () => <Seo title="About" />;
 
@@ -18,7 +18,7 @@ export default function AboutPage() {
       coverImage={
         coverImage && {
           image: coverImage,
-          alt: 'Avi Sharvit',
+          alt: "Avi Sharvit",
         }
       }
     >

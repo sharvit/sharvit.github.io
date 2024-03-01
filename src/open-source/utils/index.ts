@@ -1,2 +1,2 @@
-export * from './githubFetcher';
-export * from './getProgramingLanguageColor';
+export * from "./githubFetcher";
+export * from "./getProgramingLanguageColor";

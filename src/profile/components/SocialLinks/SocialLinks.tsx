@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { useSocialLinks } from '../../hooks';
-import { SocialLinkItem } from './SocialLinkItem';
+import { useSocialLinks } from "../../hooks";
+import { SocialLinkItem } from "./SocialLinkItem";
 
-import * as styles from './SocialLinks.module.css';
+import * as styles from "./SocialLinks.module.css";
 
 export const SocialLinks = () => {
   const socialLinks = useSocialLinks();

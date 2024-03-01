@@ -1,1 +1,1 @@
-export * from './BioSection';
+export * from "./BioSection";

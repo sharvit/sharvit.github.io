@@ -1,15 +1,15 @@
-import path from 'path';
-import fs from 'fs';
-import { Actions, Node } from 'gatsby';
+import path from "path";
+import fs from "fs";
+import { Actions, Node } from "gatsby";
 
-import { createBrowser, createPdfFile } from './utils';
+import { createBrowser, createPdfFile } from "./utils";
 
 export const createPdfsFromPages = async (
   gatsbyNodes: Node[],
-  gatsbyActions: Actions
+  gatsbyActions: Actions,
 ) => {
   const pdfNodes = gatsbyNodes.filter(
-    (node) => (node.context as { pdf: boolean })?.pdf === true
+    (node) => (node.context as { pdf: boolean })?.pdf === true,
   );
 
   const browser = await createBrowser();
@@ -19,7 +19,7 @@ export const createPdfsFromPages = async (
     const nodeHtmlPath = path.resolve(`./public/${nodePath}/index.html`);
     const nodePdfPath = path.resolve(`./public/${nodePath}.pdf`);
 
-    const pdfHtmlContent = fs.readFileSync(nodeHtmlPath, 'utf8');
+    const pdfHtmlContent = fs.readFileSync(nodeHtmlPath, "utf8");
 
     await createPdfFile({
       browser,

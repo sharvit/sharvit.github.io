@@ -1,7 +1,7 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import { useAuthorProfile } from '../profile/hooks';
+import { useAuthorProfile } from "../profile/hooks";
 
 // eslint-disable-next-line no-undef
 export type RawShortBioQuery = Queries.RawShortBioQuery;
@@ -52,7 +52,7 @@ export const Seo = ({ title, description, meta = [] }: SeoProps) => {
       content: metaDescription,
     },
     {
-      property: 'og:image',
+      property: "og:image",
       content: profile.avatar,
     },
     {

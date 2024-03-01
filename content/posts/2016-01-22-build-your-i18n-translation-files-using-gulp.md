@@ -4,11 +4,11 @@ title: Build your I18n translation files using gulp
 
 From one hand, i want to have a flexible and dynamic source files for my app I18n/translations.
 [ROR] have a great I18n source structure that split you translations to many files and i want to adopt it in my [angularjs] project.
-From the other hand, serving  so many translation files to the end user can be a bad idea, i prefer to serve only one file with the specific locale that the user want.
+From the other hand, serving so many translation files to the end user can be a bad idea, i prefer to serve only one file with the specific locale that the user want.
 
 The goal is to have a source folder with all the translation files, then use [gulp] to build a destination folder.
 
-The source folder contain list of folder, named as the locale name (```en-US```) and contain all the translations for this specific locale.
+The source folder contain list of folder, named as the locale name (`en-US`) and contain all the translations for this specific locale.
 
 ## Source folder
 
@@ -49,24 +49,24 @@ locales/en-US/country.json
 
 ```json
 {
-    "country": {
-        "navbarTitle": "World Countries",
-        "list": {
-            "pageTitle": "World Countries"
-        },
-        "name": "Name in english",
-        "nativeName": "Name in native language",
-        "capital": "Capital",
-        "region": "Region",
-        "subregion": "Sub Region",
-        "population": "Population",
-        "timezones": "Timezones",
-        "altSpellings": "Spellings",
-        "currencies": "Currencies",
-        "languages": "Languages",
-        "translations": "Translations",
-        "borders": "Borders"
-    }
+  "country": {
+    "navbarTitle": "World Countries",
+    "list": {
+      "pageTitle": "World Countries"
+    },
+    "name": "Name in english",
+    "nativeName": "Name in native language",
+    "capital": "Capital",
+    "region": "Region",
+    "subregion": "Sub Region",
+    "population": "Population",
+    "timezones": "Timezones",
+    "altSpellings": "Spellings",
+    "currencies": "Currencies",
+    "languages": "Languages",
+    "translations": "Translations",
+    "borders": "Borders"
+  }
 }
 ```
 
@@ -74,24 +74,23 @@ locales/en-US/dashboard.json
 
 ```json
 {
-    "dashboard": {
-        "title": "dashboard",
-        "navbarTitle": "Dashboard"
-    }
+  "dashboard": {
+    "title": "dashboard",
+    "navbarTitle": "Dashboard"
+  }
 }
 ```
-
 
 locales/en-US/dashboard.state1.json
 
 ```json
 {
-    "dashboard": {
-        "state1": {
-            "paragraph1": "This is the a paragraph for state number one.",
-            "navbarTitle": "state 1"
-        }
+  "dashboard": {
+    "state1": {
+      "paragraph1": "This is the a paragraph for state number one.",
+      "navbarTitle": "state 1"
     }
+  }
 }
 ```
 
@@ -125,60 +124,52 @@ npm install --save-dev path streamqueue gulp-load-plugins gulp-extend
 ### The task source code
 
 ```js
-(function() {
+(function () {
+  "use strict";
 
-    'use strict';
+  // dependencies
+  var gulp = require("gulp");
+  var path = require("path");
+  var streamqueue = require("streamqueue");
+  var plugins = require("gulp-load-plugins")();
 
-    // dependencies
-    var gulp          = require('gulp');
-    var path          = require('path');
-    var streamqueue   = require('streamqueue');
-    var plugins       = require('gulp-load-plugins')();
+  /**
+   * Task Settings
+   */
+  var avilableLocales = ["en-US", "fr-FR", "he-IL"];
 
+  var localesSourcePattern = "config/locales/xxlocalexx/*.json";
 
-    /**
-    * Task Settings
-    */
-    var avilableLocales = ['en-US', 'fr-FR', 'he-IL'];
+  var targetDir = "dist/locales";
 
-    var localesSourcePattern = 'config/locales/xxlocalexx/*.json';
+  /**
+   * build each avilable locale (from localesSourcePattern)
+   * to his own json fle (en-US.json) at the target dir
+   */
+  gulp.task("build:locales", function () {
+    return buildLocalesQueue().pipe(gulp.dest(targetDir));
+  });
 
-    var targetDir = 'dist/locales';
+  // build each avilable locale
+  function buildLocalesQueue() {
+    // Prepare the stream queue
+    var localesQueue = streamqueue({ objectMode: true });
 
-    /**
-    * build each avilable locale (from localesSourcePattern)
-    * to his own json fle (en-US.json) at the target dir
-    */
-    gulp.task('build:locales', function () {
-        return buildLocalesQueue()
-            .pipe(gulp.dest(targetDir))
-        ;
-    });
-
-    // build each avilable locale
-    function buildLocalesQueue () {
-        // Prepare the stream queue
-        var localesQueue = streamqueue({ objectMode: true });
-
-        // For each avilable locales
-        for (var i = 0; i < avilableLocales.length; i++) {
-            // Build the local and add to the stream queue
-            localesQueue.queue(
-                buildLocale(avilableLocales[i])
-            );
-        }
-
-        return localesQueue.done();
+    // For each avilable locales
+    for (var i = 0; i < avilableLocales.length; i++) {
+      // Build the local and add to the stream queue
+      localesQueue.queue(buildLocale(avilableLocales[i]));
     }
 
-    // Combine all the source locale files to one dist locale file
-    function buildLocale (locale) {
-        var localePattern = localesSourcePattern.replace(/xxlocalexx/g, locale);
+    return localesQueue.done();
+  }
 
-        return gulp.src(localePattern)
-            .pipe(plugins.extend(locale + '.json'))
-        ;
-    }
+  // Combine all the source locale files to one dist locale file
+  function buildLocale(locale) {
+    var localePattern = localesSourcePattern.replace(/xxlocalexx/g, locale);
+
+    return gulp.src(localePattern).pipe(plugins.extend(locale + ".json"));
+  }
 })();
 ```
 

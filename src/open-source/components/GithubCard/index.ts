@@ -1,1 +1,1 @@
-export * from './GithubCard';
+export * from "./GithubCard";

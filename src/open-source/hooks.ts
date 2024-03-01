@@ -1,8 +1,8 @@
-import { useMemo, useState, useEffect } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useMemo, useState, useEffect } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import { fetchGithubProjects } from './utils';
-import { IGithubRepository } from './types';
+import { fetchGithubProjects } from "./utils";
+import { IGithubRepository } from "./types";
 
 // eslint-disable-next-line no-undef
 type OpenSourceProjectsQuery = Queries.OpenSourceProjectsQuery;

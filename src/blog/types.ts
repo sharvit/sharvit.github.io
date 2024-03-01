@@ -1,4 +1,4 @@
-import { CoverImageSharp } from '../components/Layout/components/CoverImage';
+import { CoverImageSharp } from "../components/Layout/components/CoverImage";
 
 // eslint-disable-next-line no-undef
 export type GetBlogPostsQuery = Queries.GetBlogPostsQuery;

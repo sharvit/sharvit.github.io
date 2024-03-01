@@ -1,10 +1,10 @@
-import React, { useMemo } from 'react';
-import classNames from 'classnames';
+import React, { useMemo } from "react";
+import classNames from "classnames";
 
-import { GithubCard } from '../GithubCard';
-import { useOpenSourceProjects } from '../../hooks';
+import { GithubCard } from "../GithubCard";
+import { useOpenSourceProjects } from "../../hooks";
 
-import * as styles from './GithubCardsGrid.module.css';
+import * as styles from "./GithubCardsGrid.module.css";
 
 export interface IGithubCardsGridProps {
   top?: number;
@@ -28,7 +28,7 @@ export const GithubCardsGrid = ({ top, className }: IGithubCardsGridProps) => {
           />
         );
       }),
-    [openSourceProjectsIds, openSourceProjects]
+    [openSourceProjectsIds, openSourceProjects],
   );
 
   return (

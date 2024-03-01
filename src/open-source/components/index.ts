@@ -1,3 +1,3 @@
-export * from './GithubCard';
-export * from './GithubCardsGrid';
-export * from './OpenSourceSection';
+export * from "./GithubCard";
+export * from "./GithubCardsGrid";
+export * from "./OpenSourceSection";

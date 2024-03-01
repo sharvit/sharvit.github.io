@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { graphql, HeadProps, PageProps } from 'gatsby';
+import * as React from "react";
+import { graphql, HeadProps, PageProps } from "gatsby";
 
-import { Layout, Seo } from '../components';
-import { BlogPost, mapBlogPostData, PostFileFragment } from '../blog';
+import { Layout, Seo } from "../components";
+import { BlogPost, mapBlogPostData, PostFileFragment } from "../blog";
 
-import * as pageStyles from '../pages/page.module.css';
+import * as pageStyles from "../pages/page.module.css";
 
 // eslint-disable-next-line no-undef
 export type IPostTemplateData = Queries.GetPostFileQuery;
@@ -48,14 +48,14 @@ const PostTemplate = ({
   pageContext,
 }: PageProps<IPostTemplateData, IPostTemplateContext>) => {
   const { title, coverImage, html, date } = mapBlogPostData(
-    data.file as PostFileFragment
+    data.file as PostFileFragment,
   );
 
   return (
     <Layout
       className={pageStyles.page}
       breadcrumbs={[
-        { title: 'Blog', path: '/blog' },
+        { title: "Blog", path: "/blog" },
         { title, path: pageContext.postPath },
       ]}
       coverImage={

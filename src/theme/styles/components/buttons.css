@@ -1,4 +1,10 @@
-:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
+:where(
+    button,
+    button[type],
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"]
+  ) {
   --_text-color: initial;
   --_text-color-hover: initial;
   --_font-size: initial;
@@ -24,7 +30,7 @@
   --_icon-size: 2ch;
   --_icon-color: var(--link);
 
-  --_padding-block: .75ch;
+  --_padding-block: 0.75ch;
   --_padding-inline: 1.75ch;
 
   font-size: var(--_font-size);
@@ -75,14 +81,14 @@
   }
 
   /* icons */
-  &> :where(svg) {
+  & > :where(svg) {
     flex-shrink: 0;
     filter: drop-shadow(var(--_text-shadow));
     block-size: var(--_icon-size);
     inline-size: var(--_icon-size);
   }
 
-  &> :where(svg > *) {
+  & > :where(svg > *) {
     stroke: var(--_icon-color);
     stroke-width: var(--border-size-2);
   }
@@ -105,4 +111,3 @@
     outline-color: var(--red-6);
   }
 }
-

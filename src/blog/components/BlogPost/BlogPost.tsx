@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from "react";
 
-import * as styles from './BlogPost.module.css';
+import * as styles from "./BlogPost.module.css";
 
 export interface IBlogPostProps {
   title: string;

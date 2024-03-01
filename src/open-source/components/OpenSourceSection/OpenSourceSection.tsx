@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Section } from '../../../components';
-import { GithubCardsGrid } from '../GithubCardsGrid';
+import { Section } from "../../../components";
+import { GithubCardsGrid } from "../GithubCardsGrid";
 
-import * as styles from './OpenSourceSection.module.css';
+import * as styles from "./OpenSourceSection.module.css";
 
 export const OpenSourceSection = () => (
   <Section

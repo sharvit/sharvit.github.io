@@ -1,10 +1,10 @@
-import path from 'path';
-import fs from 'fs';
-import puppeteer, { Browser, PDFOptions } from 'puppeteer';
+import path from "path";
+import fs from "fs";
+import puppeteer, { Browser, PDFOptions } from "puppeteer";
 
 export const createPdfPageDefenitions = (
   inputPath: string,
-  outputPath: string
+  outputPath: string,
 ) => {
   const pdfPagesFolder = path.resolve(inputPath);
   const pdfPages = fs.readdirSync(pdfPagesFolder);
@@ -13,7 +13,7 @@ export const createPdfPageDefenitions = (
     .filter((pdfPage) => pdfPage.match(/.\.[ts|tsx|js|jsx]/))
     .map((pdfPage) => ({
       component: path.resolve(inputPath, pdfPage),
-      path: `${outputPath}/${pdfPage.replace('.tsx', '')}`,
+      path: `${outputPath}/${pdfPage.replace(".tsx", "")}`,
     }));
 };
 
@@ -38,11 +38,11 @@ export const createPdfFile = async ({
   } else if (htmlContent) {
     await browserPage.setContent(htmlContent);
   } else {
-    throw new Error('Either url or htmlContent must be provided');
+    throw new Error("Either url or htmlContent must be provided");
   }
 
   const pdfOptions: PDFOptions = {
-    format: 'A4',
+    format: "A4",
     printBackground: true,
     omitBackground: true,
   };

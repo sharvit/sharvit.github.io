@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const GithubIcon = () => (
   <svg fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">

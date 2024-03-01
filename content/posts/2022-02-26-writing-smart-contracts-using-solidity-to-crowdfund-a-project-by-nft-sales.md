@@ -181,7 +181,7 @@ contract MyCoolProject is ERC721, ERC721Enumerable, Ownable {
   using Address for address payable;
   using SafeMath for uint256;
   using Counters for Counters.Counter;
-    
+
   /**
    * Token Price
    */
@@ -217,7 +217,7 @@ contract MyCoolProject is ERC721, ERC721Enumerable, Ownable {
   Counters.Counter private _tokenIdCounter;
 
   constructor() ERC721("MyCoolProject", "MCP") {}
-  
+
   /**
    * Amount of the supply that already been minted by users
    */
@@ -333,12 +333,12 @@ contract MyCoolProject is ERC721, ERC721Enumerable, Ownable {
       _burn(userTokens[index]);
     }
   }
-  
+
   function _mintMulti(address to, uint256 amount) internal {
     for (uint256 i = 0; i < amount; i++) {
       uint256 tokenId = _tokenIdCounter.current();
       _tokenIdCounter.increment();
-      
+
       _safeMint(to, tokenId);
       _supplyMinted = _supplyMinted.add(1);
     }

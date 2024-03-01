@@ -1,2 +1,2 @@
-@custom-selector :--light-color-scheme [color-scheme='light'];
-@custom-selector :--dark-color-scheme [color-scheme='dark'];
+@custom-selector :--light-color-scheme [color-scheme="light"];
+@custom-selector :--dark-color-scheme [color-scheme="dark"];

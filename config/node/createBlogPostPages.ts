@@ -1,5 +1,5 @@
-import path from 'path';
-import { CreatePagesArgs } from 'gatsby';
+import path from "path";
+import { CreatePagesArgs } from "gatsby";
 
 interface GetPostFilesQuery {
   allFile: {
@@ -32,10 +32,10 @@ const getPostFiles = async ({ graphql }: CreatePagesArgs) => {
 
   if (result.errors) {
     console.log(result.errors); // eslint-disable-line no-console
-    throw new Error('Things broke, see console output above');
+    throw new Error("Things broke, see console output above");
   }
 
-  if (result.data === undefined) throw new Error('No pages');
+  if (result.data === undefined) throw new Error("No pages");
 
   return result.data;
 };

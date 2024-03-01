@@ -1,4 +1,4 @@
-export type SocialLinkType = 'github' | 'twitter' | 'stackoverflow' | 'email';
+export type SocialLinkType = "github" | "twitter" | "stackoverflow" | "email";
 
 export interface ISocialLink {
   type: SocialLinkType;

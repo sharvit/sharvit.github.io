@@ -1,6 +1,6 @@
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from "gatsby";
 
-import { CoverImageSharp } from '../../components/Layout/components/CoverImage';
+import { CoverImageSharp } from "../../components/Layout/components/CoverImage";
 
 // eslint-disable-next-line no-undef
 export type AboutCoverImageQuery = Queries.AboutCoverImageQuery;

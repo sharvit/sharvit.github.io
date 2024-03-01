@@ -1,8 +1,8 @@
-import type { PluginRef } from 'gatsby';
+import type { PluginRef } from "gatsby";
 
-import filesystemPlugins from './filesystem-plugins';
-import imagePlugins from './image-plugins';
-import markdownPlugins from './markdown-plugins';
+import filesystemPlugins from "./filesystem-plugins";
+import imagePlugins from "./image-plugins";
+import markdownPlugins from "./markdown-plugins";
 
 const plugins: PluginRef[] = [
   ...filesystemPlugins,
@@ -14,12 +14,12 @@ const plugins: PluginRef[] = [
       typeName: `Yaml`,
     },
   },
-  'gatsby-plugin-postcss',
-  'gatsby-plugin-sitemap',
+  "gatsby-plugin-postcss",
+  "gatsby-plugin-sitemap",
   {
-    resolve: 'gatsby-plugin-google-analytics',
+    resolve: "gatsby-plugin-google-analytics",
     options: {
-      trackingId: 'UA-72542809-1',
+      trackingId: "UA-72542809-1",
     },
   },
 ];

@@ -1,4 +1,4 @@
-@import 'theme/styles/theme.selectors.css';
+@import "theme/styles/theme.selectors.css";
 
 section.bio-section {
   --_grid-template-columns: 200px 1fr;
@@ -77,11 +77,11 @@ section.bio-section {
 
     & .skill {
       &::after {
-        content: ', ';
+        content: ", ";
         color: var(--mono-3);
       }
       &:last-child::after {
-        content: '.';
+        content: ".";
       }
     }
   }
@@ -151,7 +151,7 @@ section.bio-section {
 
       & li {
         &::before {
-          content: '➜';
+          content: "➜";
           display: inline-block;
           margin-left: -2em;
           width: 2em;

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { BlogPostListItem } from '../BlogPostListItem';
-import { useBlogPosts } from '../../hooks';
+import { BlogPostListItem } from "../BlogPostListItem";
+import { useBlogPosts } from "../../hooks";
 
 export interface IBlogPostListProps {
   top?: number;

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react";
+import { Link } from "gatsby";
 
-import { IBlogPost } from '../../types';
-import { CoverImage } from '../../../components/Layout/components/CoverImage';
+import { IBlogPost } from "../../types";
+import { CoverImage } from "../../../components/Layout/components/CoverImage";
 
-import * as styles from './BlogPostListItem.module.css';
+import * as styles from "./BlogPostListItem.module.css";
 
 export interface IBlogPostListItemProps {
   blogPost: IBlogPost;

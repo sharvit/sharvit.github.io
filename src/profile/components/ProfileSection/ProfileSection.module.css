@@ -48,14 +48,14 @@ section.profile-section {
       display: inline;
 
       & br {
-        content: '';
+        content: "";
         &:after {
-          content: ' ';
+          content: " ";
         }
       }
 
       &:after {
-        content: ' | ';
+        content: " | ";
       }
     }
   }

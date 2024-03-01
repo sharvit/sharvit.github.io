@@ -1,4 +1,4 @@
-@import 'theme/styles/theme.selectors.css';
+@import "theme/styles/theme.selectors.css";
 
 button.theme-toggler {
   --_color: var(--text-2);
@@ -36,7 +36,8 @@ button.theme-toggler {
   & .sun-beams {
     --_opacity-dur: 0.15s;
     transform-origin: center center;
-    transition: transform 0.5s var(--ease-elastic-4),
+    transition:
+      transform 0.5s var(--ease-elastic-4),
       opacity var(--_opacity-dur) var(--ease-3);
 
     :--light-color-scheme & {

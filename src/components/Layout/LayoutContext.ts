@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
 export interface ILayoutContext {
   navigation: {
@@ -15,5 +15,5 @@ export const DEFAULT_LAYOUT_CONTEXT: ILayoutContext = {
 };
 
 export const LayoutContext = createContext<ILayoutContext>(
-  DEFAULT_LAYOUT_CONTEXT
+  DEFAULT_LAYOUT_CONTEXT,
 );

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Section } from '../../../components';
-import { BlogPostList } from '../BlogPostList';
+import { Section } from "../../../components";
+import { BlogPostList } from "../BlogPostList";
 
-import * as styles from './BlogSection.module.css';
+import * as styles from "./BlogSection.module.css";
 
 export const BlogSection = () => (
   <Section
