@@ -9,7 +9,7 @@ export const useGetBlogPostsQuery = (top?: number) => {
     query GetBlogPosts {
       allFile(
         filter: { sourceInstanceName: { eq: "posts" } }
-        sort: { order: DESC, fields: name }
+        sort: { name: DESC }
         limit: 10000
       ) {
         nodes {

@@ -17,7 +17,7 @@ const getPostFiles = async ({ graphql }: CreatePagesArgs) => {
     query GetPostFiles {
       allFile(
         filter: { sourceInstanceName: { eq: "posts" } }
-        sort: { order: DESC, fields: name }
+        sort: { name: DESC }
         limit: 10000
       ) {
         edges {
