@@ -3,8 +3,6 @@ import { Helmet } from 'react-helmet';
 import { useMediaQuery } from 'usehooks-ts';
 import { ThemeContext, ColorSchemeType } from './ThemeContext';
 
-import 'react-loading-skeleton/dist/skeleton.css';
-import 'open-props/style';
 import './styles/theme.css';
 
 export interface IThemeProvider {
