@@ -6,8 +6,6 @@ import {
   useShortAboutHTML,
 } from "../profile/hooks";
 
-// import { ThemeProvider } from '../theme';
-
 import * as styles from "./avi-sharvit-resume.module.css";
 
 export default function AviSharvitResumePDF() {
