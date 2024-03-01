@@ -1,3 +1,5 @@
+@import 'theme/styles/theme.selectors.css';
+
 section.bio-section {
   --_grid-template-columns: 200px 1fr;
   --_grid-years-column: 1;
@@ -7,7 +9,7 @@ section.bio-section {
   --_background-color: var(--surface-2);
   --_border-top: none;
 
-  @nest :--dark-color-scheme & {
+  :--dark-color-scheme & {
     --_background-color: var(--surface-1);
     --_border-top: 2px solid var(--surface-3);
   }

@@ -1,3 +1,5 @@
+@import 'theme/styles/theme.selectors.css';
+
 .breadcrumbs {
   --_background-color: var(--surface-2);
   --_text-color: var(--text-2);
@@ -5,7 +7,7 @@
   --_seperator-color: var(--gray-5);
   --_gap-bottom: var(--size-4);
 
-  @nest :--dark-color-scheme & {
+  :--dark-color-scheme & {
     --_seperator-color: var(--gray-6);
   }
 

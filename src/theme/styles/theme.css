@@ -1,9 +1,11 @@
 @import 'react-loading-skeleton/dist/skeleton.css';
 @import 'open-props/open-props.min.css';
+@import 'open-props/media.min.css';
 
 /**********************************************
 /**** Themes (custom-properties-definition) ***
 /**********************************************/
+@import './theme.selectors';
 @import './theme.base';
 @import './theme.light'; /* <html [color-scheme="light"] /> default theme */
 @import './theme.dark'; /* <html color-scheme="dark" /> */

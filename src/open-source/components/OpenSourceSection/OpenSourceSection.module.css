@@ -1,8 +1,10 @@
+@import 'theme/styles/theme.selectors.css';
+
 section.open-source-section {
   background-color: var(--surface-2);
   padding-inline: var(--page-fluid-inline-gap);
 
-  @nest :--dark-color-scheme & {
+  :--dark-color-scheme & {
     background-color: var(--surface-1);
     border-top: 2px solid var(--surface-3);
     border-bottom: 2px solid var(--surface-3);
