@@ -11,11 +11,9 @@ const plugins: PluginRef[] = [
   {
     resolve: "gatsby-plugin-manifest",
     options: {
-      name: "Avi Sharvit",
+      name: "Avi Sharvit | Full Stack Engineer",
       short_name: "Avi Sharvit",
       start_url: "/",
-      background_color: "#f8f9fa",
-      theme_color: "#50a14f",
       display: "standalone",
       icon: "src/images/icon.png",
     },
