@@ -30,12 +30,15 @@ export const ProfileSection = ({
       footer={footer}
     >
       <img className={styles.avatar} src={profile.avatar} alt={profile.name} />
+
       <h1>
         {firstName}
         <br />
         {lastName}
       </h1>
+
       <h2>{profile.title}</h2>
+
       <SocialLinks />
       <div
         className={styles.shortBio}

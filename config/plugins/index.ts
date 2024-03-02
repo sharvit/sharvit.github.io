@@ -9,6 +9,18 @@ const plugins: PluginRef[] = [
   ...imagePlugins,
   ...markdownPlugins,
   {
+    resolve: "gatsby-plugin-manifest",
+    options: {
+      name: "Avi Sharvit",
+      short_name: "Avi Sharvit",
+      start_url: "/",
+      background_color: "#f8f9fa",
+      theme_color: "#50a14f",
+      display: "standalone",
+      icon: "src/images/icon.png",
+    },
+  },
+  {
     resolve: `gatsby-transformer-yaml`,
     options: {
       typeName: `Yaml`,
