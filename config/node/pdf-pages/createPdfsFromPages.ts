@@ -16,8 +16,10 @@ export const createPdfsFromPages = async (
 
   for (const pdfNode of pdfNodes) {
     const nodePath = pdfNode.path as string;
-    const nodeHtmlPath = path.resolve(`./public/${nodePath}/index.html`);
-    const nodePdfPath = path.resolve(`./public/${nodePath}.pdf`);
+    const nodeName = nodePath.endsWith("/") ? nodePath.slice(0, -1) : nodePath;
+
+    const nodeHtmlPath = path.resolve(`./public/${nodeName}/index.html`);
+    const nodePdfPath = path.resolve(`./public/${nodeName}.pdf`);
 
     const pdfHtmlContent = fs.readFileSync(nodeHtmlPath, "utf8");
 

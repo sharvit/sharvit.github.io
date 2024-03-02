@@ -25,6 +25,8 @@
   --_grid-years-row: 1;
   --_grid-content-column: 2;
 
+  --_max-text-width: 70ch;
+
   font-family: var(--font-mono);
   font-size: var(--font-size-text);
   color: var(--text-2);
@@ -81,7 +83,7 @@
 
     & p {
       font-size: var(--font-size-text);
-      max-width: var(--size-content-3);
+      max-width: var(--_max-text-width);
 
       &:first-of-type {
         margin-top: 0;
@@ -109,7 +111,7 @@
     & .skills {
       font-size: var(--font-size-mono-text);
       font-family: var(--font-mono);
-      max-width: var(--size-content-3);
+      max-width: var(--_max-text-width);
       margin-block: 0;
       & .skill {
         &::after {
@@ -175,7 +177,7 @@
       border-bottom: 1px solid var(--gray-3);
 
       & li.bullet-point {
-        max-width: var(--size-content-3);
+        max-width: var(--_max-text-width);
 
         &::before {
           content: "➜";
