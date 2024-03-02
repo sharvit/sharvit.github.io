@@ -1,3 +1,5 @@
+@import "open-props/media.min.css";
+
 nav.navbar {
   --navbar-links-color: var(--text-2);
   --navbar-links-color-hover: var(--hue-2);

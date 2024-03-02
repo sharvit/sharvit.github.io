@@ -1,3 +1,5 @@
+@import "open-props/media.min.css";
+
 .section {
   --_inline-gap: var(--page-inline-gap);
   --_block-gap: var(--size-fluid-5);

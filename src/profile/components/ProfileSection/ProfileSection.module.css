@@ -1,3 +1,5 @@
+@import "open-props/media.min.css";
+
 section.profile-section {
   --_inline-gap: var(--page-fluid-inline-gap);
   --_footer-gap: var(--size-4);

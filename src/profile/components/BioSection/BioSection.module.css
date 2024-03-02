@@ -1,3 +1,4 @@
+@import "open-props/media.min.css";
 @import "theme/styles/theme.selectors.css";
 
 section.bio-section {
@@ -29,9 +30,6 @@ section.bio-section {
   }
 
   @media print {
-    /* padding: 0; */
-    /* margin: 0; */
-
     & hr {
       display: none;
     }
